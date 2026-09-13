@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-13T14:51:07.899Z",
+  "generatedAt": "2026-09-13T17:59:40.107Z",
   "apps": {
     "reminder": {
       "version": "2.27.0",
@@ -24,14 +24,6 @@
       "publishedAt": "2026-07-07T10:01:03Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/twinclean/twinclean.apk",
       "sizeBytes": 61255603
-    },
-    "family": {
-      "version": "0.19.0",
-      "versionCode": 20,
-      "notes": "## Bug fixes\n\n- **Fixed the app being told there was no update when there was one.** The list of published versions is cached for ten minutes by the network it comes from, and the app was reading whichever copy it was handed. So for at least ten minutes after a release — and longer if a phone or network held the file — checking for updates confidently reported that the current version was the newest. The app now always asks for a fresh copy.\n\n  An update check that answers wrongly is worse than one that does not run: it stops you looking.\n",
-      "publishedAt": "2026-08-25T13:53:06Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/family/familylive.apk",
-      "sizeBytes": 71772967
     },
     "taashclub": {
       "version": "1.17.8",
