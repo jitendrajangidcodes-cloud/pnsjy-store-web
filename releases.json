@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-16T13:18:06.611Z",
+  "generatedAt": "2026-09-16T13:52:49.057Z",
   "apps": {
     "reminder": {
       "version": "2.28.0",
@@ -42,12 +42,12 @@
       "sizeBytes": 123601315
     },
     "upkeep": {
-      "version": "0.1.0-alpha.4",
-      "versionCode": 4,
-      "notes": "# Upkeep 0.1.0-alpha.4 - Clean First Launch, Welcome Guide & Friendly Usability\n\n### Features\n- Clean First Launch: Removed automatic dummy data injection on startup so fresh installs start with a completely clean database.\n- Interactive Welcome Guide: Added a friendly Getting Started wizard on the Today Dashboard with 1-tap quick actions for bikes/cars, battery warranties, and daily medicines.\n- Simplified Everyday Terminology: Replaced technical jargon with plain language (Assets -> My Items, Urgent Action Radar -> Needs Attention Now, Routines -> Daily Doses, Domain Category -> Category).\n- Rich Actionable Empty States: Added informative guidance cards with direct template creation buttons across all main screens (My Items, Warranties, and Daily Doses).\n- Expanded Prebuilt Templates: Added daily morning/night prescriptions and post-lunch supplement templates with routine time slots and pill stock countdown tracking.\n- Global Tab Navigation: Quick start cards and empty states can seamlessly navigate to the template catalog and category forms.\n\n### Bug fixes\n- Resolved unwanted pre-population of demo vehicles, batteries, and medicines on fresh installations.\n- Retained optional manual demo starter pack loading in Settings for users who want to explore sample data.\n- Maintained zero emoji policy across all code, labels, dialogs, and commit logs.\n",
+      "version": "0.1.0-alpha.5",
+      "versionCode": 5,
+      "notes": "# Upkeep 0.1.0-alpha.5 - Brand Identity Redesign with Modern Stylized U Emblem\n\n### Features\n- Brand Identity Redesign: Replaced the previous industrial gear/shield icon with a sleek, minimalist monogram logo featuring a dynamic letter 'U' transitioning into an upward checkmark.\n- Modern Aesthetic: Cyan-to-sapphire blue gradient ribbon design on a clean, solid midnight squircle with soft subtle ambient glow.\n- Multi-density Launcher Deployment: Scaled and rendered across all Android mipmap densities (mdpi, hdpi, xhdpi, xxhdpi, xxxhdpi) and the in-app Settings screen brand card.\n- App Store Hub Synchronization: Deployed the new brand emblem directly to the PNSJY Store Web hub at store.pnsjy.in.\n\n### Bug fixes\n- Eliminated cluttered visual metaphors (gear, shield, photo background) in favor of a clean, recognizable consumer app icon.\n- Guaranteed high legibility on dark and light phone home screens and launcher dock sizes.\n",
       "publishedAt": "2026-09-16T10:17:20Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/upkeep/upkeep.apk",
-      "sizeBytes": 56512070
+      "sizeBytes": 56340958
     }
   }
 }
