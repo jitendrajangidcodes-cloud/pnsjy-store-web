@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-16T14:18:04.519Z",
+  "generatedAt": "2026-09-16T16:16:09.598Z",
   "apps": {
     "reminder": {
       "version": "2.28.0",
@@ -42,12 +42,12 @@
       "sizeBytes": 123601315
     },
     "upkeep": {
-      "version": "0.1.0-alpha.5",
-      "versionCode": 5,
-      "notes": "# Upkeep 0.1.0-alpha.5 - Brand Identity Redesign with Modern Stylized U Emblem\n\n### Features\n- Brand Identity Redesign: Replaced the previous industrial gear/shield icon with a sleek, minimalist monogram logo featuring a dynamic letter 'U' transitioning into an upward checkmark.\n- Modern Aesthetic: Cyan-to-sapphire blue gradient ribbon design on a clean, solid midnight squircle with soft subtle ambient glow.\n- Multi-density Launcher Deployment: Scaled and rendered across all Android mipmap densities (mdpi, hdpi, xhdpi, xxhdpi, xxxhdpi) and the in-app Settings screen brand card.\n- App Store Hub Synchronization: Deployed the new brand emblem directly to the PNSJY Store Web hub at store.pnsjy.in.\n\n### Bug fixes\n- Eliminated cluttered visual metaphors (gear, shield, photo background) in favor of a clean, recognizable consumer app icon.\n- Guaranteed high legibility on dark and light phone home screens and launcher dock sizes.\n",
+      "version": "0.1.0-alpha.6",
+      "versionCode": 6,
+      "notes": "# Upkeep v0.1.0-alpha.6: In-Place Editing, Streamlined 3-Tab UI & Easy Add\n\n## Features\n- Full In-Place Editing Across App:\n  - Edit Tracker details (name, category, model, identifier, notes).\n  - Edit Schedule rules (due date, km intervals, early warning lead times, routine slot times, or delete schedule).\n  - Edit Checklist & Pill Manager (add pills/tasks, edit name/instructions/dosage, update remaining stock and refill alert thresholds, or delete items).\n  - Edit & Delete Past Service Logs (update cost, odometer, date, notes, or delete obsolete entries).\n- Streamlined 3-Tab Navigation:\n  - Consolidated 5 tabs down to 3 intuitive destinations: Today (daily action center), My Trackers (unified list with category filters), and Templates (1-tap starter pack).\n  - Eliminates duplicate entries and navigation confusion.\n- Fast 10-Second Tracker Creation:\n  - Progressive disclosure flow: enter item name and due date/time to automatically create tracker, schedule, and checklist.\n  - Collapsible Advanced Options for power users (custom mileage intervals, claim lead times, pill inventory thresholds).\n\n## Bug fixes\n- Fixed missing checklist item import in repository layer.\n- Fixed async context access in tracker creation modal.\n- Fixed navigation tab index jumps in welcome guide and tracker empty-state cards.\n- Ensured zero emojis across all Dart files, UI strings, and logs.\n",
       "publishedAt": "2026-09-16T10:17:20Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/upkeep/upkeep.apk",
-      "sizeBytes": 56340958
+      "sizeBytes": 58094226
     }
   }
 }
