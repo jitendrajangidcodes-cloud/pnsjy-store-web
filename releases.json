@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-16T11:11:44.348Z",
+  "generatedAt": "2026-09-16T13:18:06.611Z",
   "apps": {
     "reminder": {
       "version": "2.28.0",
@@ -42,12 +42,12 @@
       "sizeBytes": 123601315
     },
     "upkeep": {
-      "version": "0.1.0-alpha.3",
-      "versionCode": 3,
-      "notes": "# Upkeep 0.1.0-alpha.3 - Modern 3D App Icon and Brand Refresh\n\n### Features\n- Modern 3D App Icon: Replaced default starter icons across all Android mipmap densities with a custom 3D glossy shield, mechanical gear, and clock checkmark emblem.\n- Brand Refresh: Integrated 3D logo into Settings screen above the version card and updated the store icon on the PNSJY app store.\n- Google Account & Cloud Backup: Google Sign-In with hidden Drive AppData folder backup and automatic restore on new phone login.\n\n### Bug fixes\n- Ensured 3D launcher icons are properly sized across mdpi, hdpi, xhdpi, xxhdpi, and xxxhdpi densities.\n- Preserved clean plain-text styling and zero emoji compliance across all screens.\n",
+      "version": "0.1.0-alpha.4",
+      "versionCode": 4,
+      "notes": "# Upkeep 0.1.0-alpha.4 - Clean First Launch, Welcome Guide & Friendly Usability\n\n### Features\n- Clean First Launch: Removed automatic dummy data injection on startup so fresh installs start with a completely clean database.\n- Interactive Welcome Guide: Added a friendly Getting Started wizard on the Today Dashboard with 1-tap quick actions for bikes/cars, battery warranties, and daily medicines.\n- Simplified Everyday Terminology: Replaced technical jargon with plain language (Assets -> My Items, Urgent Action Radar -> Needs Attention Now, Routines -> Daily Doses, Domain Category -> Category).\n- Rich Actionable Empty States: Added informative guidance cards with direct template creation buttons across all main screens (My Items, Warranties, and Daily Doses).\n- Expanded Prebuilt Templates: Added daily morning/night prescriptions and post-lunch supplement templates with routine time slots and pill stock countdown tracking.\n- Global Tab Navigation: Quick start cards and empty states can seamlessly navigate to the template catalog and category forms.\n\n### Bug fixes\n- Resolved unwanted pre-population of demo vehicles, batteries, and medicines on fresh installations.\n- Retained optional manual demo starter pack loading in Settings for users who want to explore sample data.\n- Maintained zero emoji policy across all code, labels, dialogs, and commit logs.\n",
       "publishedAt": "2026-09-16T10:17:20Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/upkeep/upkeep.apk",
-      "sizeBytes": 56495370
+      "sizeBytes": 56512070
     }
   }
 }
