@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T05:53:51.075Z",
+  "generatedAt": "2026-09-18T06:45:56.594Z",
   "apps": {
     "reminder": {
       "version": "2.28.0",
@@ -26,12 +26,12 @@
       "sizeBytes": 61255603
     },
     "taashclub": {
-      "version": "1.19.0",
-      "versionCode": 47,
-      "notes": "Taash Club 1.19.0 - Baazi and round selection, auto round stats popup, and friends match history\n\n### Features\n- Updated table creation and solo play setup to configure game length by Baazi (5, 10, 15) and Rounds (3, 5, 7, 9) with live total baazi computation.\n- Automatic Points Table and stats popup whenever a round completes (after every N baazi) and upon match conclusion.\n- Added always-accessible Points Table button in 3-2-5 table header row alongside Gochi table header.\n- Added GameHistoryService to persist friend match gameplay records with automatic 90-day (3 months) retention pruning.\n- Added Friends Match History list and scorecards view in Player Profile screen.\n\n### Bug fixes\n- Fixed setup flow labels to accurately reflect baazi per round and total match rounds.\n- Resolved showdown footer button label to distinguish intermediate baazi progression from new round starts.\n",
+      "version": "1.19.1",
+      "versionCode": 48,
+      "notes": "Taash Club 1.19.1 - In-game UI improvements, trick arrival animations, randomized bot gameplay, and robust updater\n\n### Features\n- Trick win visual timing: score updates now synchronize precisely when cards reach the winner seat, accompanied by a floating +1 animation over the winning seat avatar.\n- Randomized computer AI: bots in 3-2-5, Gochi, and Kali Begum now feature strategic unpredictability in leading, ducking, dumping, and bidding rather than purely deterministic script play.\n- Robust in-app updater: added HTTP Range resume, connection drop retry backoff, APK retention on disk, and one-tap install on device resume/unlock.\n\n### Bug fixes\n- Suppressed the top turn clock and turn indicator banner in Gochi during the bidding phase.\n- Fixed center countdown timer in Gochi bidding being obscured behind stats table by elevating it in front and clearing redundant felt placeholders.\n- Resolved premature score increments where trick points were counting before cards finished traveling across the table.\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/taashclub/taash-club.apk",
-      "sizeBytes": 95473203
+      "sizeBytes": 95505971
     },
     "cards": {
       "version": "2.5.3",
