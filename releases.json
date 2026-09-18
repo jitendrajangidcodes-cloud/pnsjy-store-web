@@ -41,14 +41,6 @@
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/cards/Cards-v2.5.3.apk",
       "sizeBytes": 123601315
     },
-    "upkeep": {
-      "version": "0.1.0-alpha.7",
-      "versionCode": 7,
-      "notes": "# Upkeep v0.1.0-alpha.7: Single-Screen Human-First UI & Templates Elimination\n\n## Features\n- Single Unified Main Screen:\n  - Eliminated bottom tab bar navigation and duplicate catalog screens.\n  - The entire app is now a single, beautiful dashboard showing all active trackers in one place.\n  - Added 1-tap category filter chips at the top (All, Bikes & Cars, Warranties, Daily Medicines, Home).\n- Built-In Smart Presets (Templates Tab Eliminated):\n  - Removed confusing separate \"Templates\" tab.\n  - Smart standard presets are now built directly into the single \"+\" Add Tracker button (e.g. 5,000 km / 6 months for vehicles, 36 months for warranties, 8:00 AM daily for medicines).\n- 1-Tap Quick Action Buttons on Every Card:\n  - Daily Medicines: 1-tap \"Mark Taken\" button decrements pill inventory and marks today's dose complete.\n  - Vehicles & Machinery: 1-tap \"Update Km / Service\" dialog saves new odometer reading, logs service, and advances countdown.\n  - Warranties: Clear countdown badge and proactive early replacement notice window.\n  - 3-dots menu on every card for 1-tap edit and delete.\n- Clean 0-Item Welcome Screen:\n  - Replaced text walls with 4 direct quick-add buttons to start tracking immediately.\n\n## Bug fixes\n- Eliminated confusing tab switching and cloning flows.\n- Fixed checklist stock decrement method calls in repository.\n- Verified zero emojis across all Dart files, UI strings, and logs.\n- All unit tests passing cleanly.\n",
-      "publishedAt": "2026-09-16T10:17:20Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/upkeep/upkeep.apk",
-      "sizeBytes": 57814250
-    },
     "langkeeper": {
       "version": "0.1.0-beta.1",
       "versionCode": null,
