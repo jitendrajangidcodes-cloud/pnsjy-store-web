@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T05:39:17.305Z",
+  "generatedAt": "2026-09-18T05:53:51.075Z",
   "apps": {
     "reminder": {
       "version": "2.28.0",
@@ -26,12 +26,12 @@
       "sizeBytes": 61255603
     },
     "taashclub": {
-      "version": "1.18.0",
-      "versionCode": 46,
-      "notes": "Taash Club 1.18.0 - Sets, rounds per set, next round deal rotation, and points table\n\n### Features\n- 3-2-5 and Gochi games now prompt for game length at setup, allowing players to choose the number of Sets (1-5) and Rounds per Set with a live total round calculation.\n- 3-2-5 single round completion now displays a round settlement showdown with targets vs won hands, points delta, an \"Agli baazi\" (Next Round) button, and dealer rotation.\n- In-game and post-match Points Table modal bottom sheet showing ranked leaderboard (position, target, won, score) and round-by-round point breakdown for 3-2-5 and Gochi.\n- Table headers now feature a compact round counter badge with one-tap access to the Points Table during active gameplay.\n- Lobby solo play now prompts for sets and rounds before launching offline games vs bots.\n\n### Bug fixes\n- Fixed 3-2-5 offline game ending abruptly after a single round without rotating the dealer or giving players the option to continue to subsequent rounds.\n- Replaced emoji glyphs across setup flow, lobby, and results panels with plain text Material icons.\n",
+      "version": "1.19.0",
+      "versionCode": 47,
+      "notes": "Taash Club 1.19.0 - Baazi and round selection, auto round stats popup, and friends match history\n\n### Features\n- Updated table creation and solo play setup to configure game length by Baazi (5, 10, 15) and Rounds (3, 5, 7, 9) with live total baazi computation.\n- Automatic Points Table and stats popup whenever a round completes (after every N baazi) and upon match conclusion.\n- Added always-accessible Points Table button in 3-2-5 table header row alongside Gochi table header.\n- Added GameHistoryService to persist friend match gameplay records with automatic 90-day (3 months) retention pruning.\n- Added Friends Match History list and scorecards view in Player Profile screen.\n\n### Bug fixes\n- Fixed setup flow labels to accurately reflect baazi per round and total match rounds.\n- Resolved showdown footer button label to distinguish intermediate baazi progression from new round starts.\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/taashclub/taash-club.apk",
-      "sizeBytes": 95456543
+      "sizeBytes": 95473203
     },
     "cards": {
       "version": "2.5.3",
