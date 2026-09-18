@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T06:45:56.594Z",
+  "generatedAt": "2026-09-18T08:46:05.960Z",
   "apps": {
     "reminder": {
       "version": "2.28.0",
@@ -26,12 +26,12 @@
       "sizeBytes": 61255603
     },
     "taashclub": {
-      "version": "1.19.1",
-      "versionCode": 48,
-      "notes": "Taash Club 1.19.1 - In-game UI improvements, trick arrival animations, randomized bot gameplay, and robust updater\n\n### Features\n- Trick win visual timing: score updates now synchronize precisely when cards reach the winner seat, accompanied by a floating +1 animation over the winning seat avatar.\n- Randomized computer AI: bots in 3-2-5, Gochi, and Kali Begum now feature strategic unpredictability in leading, ducking, dumping, and bidding rather than purely deterministic script play.\n- Robust in-app updater: added HTTP Range resume, connection drop retry backoff, APK retention on disk, and one-tap install on device resume/unlock.\n\n### Bug fixes\n- Suppressed the top turn clock and turn indicator banner in Gochi during the bidding phase.\n- Fixed center countdown timer in Gochi bidding being obscured behind stats table by elevating it in front and clearing redundant felt placeholders.\n- Resolved premature score increments where trick points were counting before cards finished traveling across the table.\n",
+      "version": "1.19.2",
+      "versionCode": 49,
+      "notes": "Taash Club 1.19.2 - 1-round match option, action-accurate feedback, and polished game setup\n\n### Features\n- Added 1-round match option for Gochi (rounds selection now offers 1, 3, 5, 7, 9) allowing quick 5-baazi matches that conclude cleanly.\n- Action-accurate haptics and feedback: card selection tap in hand (selectionClick), punchy card play (mediumImpact), triumphant trick collection (heavyImpact for self, lightImpact for opponents), capture pulse on trick arrival (mediumImpact), and decisive bandh/kaat feedback.\n- Persisted vibration switch in Settings via SharedPreferences so vibration preferences stay saved across app restarts.\n- Immediate turn feedback: synchronized turn alert and chime on initial table load so the player leading trick 1 is notified immediately.\n- Polished New Game flow: opening setup preselects the active game tab currently viewed in the lobby.\n- Redesigned Join Table dialog: modern styled dialog with auto-uppercase formatting, 1-tap clipboard paste (supporting invite links and raw codes), live 0/6 counter, and validation gating.\n\n### Bug fixes\n- Fixed vibration setting in Settings screen resetting to enabled on every app restart.\n- Fixed first-turn players not receiving turn chime/vibration when joining or resuming a game.\n- Fixed join code dialog accepting empty or partial input by disabling submit until all 6 characters are entered.\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/taashclub/taash-club.apk",
-      "sizeBytes": 95505971
+      "sizeBytes": 95653683
     },
     "cards": {
       "version": "2.5.3",
