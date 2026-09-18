@@ -125,5 +125,21 @@
     "about": "Upkeep is your personal asset life manager. Track bike and car service intervals (with dual odometer and elapsed time thresholds), keep a pre-expiry claim radar on inverter batteries and appliance warranties with proactive lead-time notifications, manage daily multi-pill medicine regimens with time-slot checklists and refill warnings, and build custom maintenance schedules for home RO filters, AC deep cleaning, passports, and pet care. Includes Google Drive AppData cloud backup and direct alarm handoff to Reminder App.",
     "requirements": "Android 8.0 (Oreo) or newer. Distributed outside the Play Store -- Android will ask permission to install from this source the first time.",
     "screenshots": []
+  },
+  {
+    "id": "langkeeper",
+    "name": "LangKeeper",
+    "tagline": "Save, organize, and navigate to your locations with Google Drive cloud backup.",
+    "category": "Utilities",
+    "beta": true,
+    "platform": "Android",
+    "color": "#1E88E5",
+    "requiresAccount": false,
+    "icon": "assets/icons/langkeeper.png",
+    "repo": "jitendrajangidcodes-cloud/pnsjy-store-web",
+    "packageId": "com.pnsjy.langkeeper",
+    "about": "LangKeeper is your personal location manager. Instantly save your current GPS coordinates with reverse-geocoded address details, fine-tune pins on an interactive map, and launch one-tap turn-by-turn navigation in Google Maps. Sign in with Google to back up and restore your location database seamlessly via Google Drive AppData.",
+    "requirements": "Android 8.0 (Oreo) or newer. Distributed outside the Play Store -- Android will ask permission to install from this source the first time.",
+    "screenshots": []
   }
 ]
