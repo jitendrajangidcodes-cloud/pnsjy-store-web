@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T13:09:00.550Z",
+  "generatedAt": "2026-09-18T13:49:55.847Z",
   "apps": {
     "reminder": {
       "version": "2.28.0",
@@ -48,6 +48,14 @@
       "publishedAt": "2026-09-16T10:17:20Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/upkeep/upkeep.apk",
       "sizeBytes": 57814250
+    },
+    "langkeeper": {
+      "version": "0.1.0-beta.1",
+      "versionCode": null,
+      "notes": "# LangKeeper 0.1.0-beta.1 - Initial Beta Release\n\n### Features\n\n- Automatic GPS Location Detection: Immediately captures high-accuracy latitude, longitude, altitude, accuracy, speed, and heading when creating a new location.\n- Reverse Geocoding: Automatically resolves coordinates into structured address fields including street, city, state, postal code, and country.\n- Interactive Map Pin Adjustment: Users can inspect and fine-tune location coordinates by tapping on an embedded OpenStreetMap view or re-centering to current GPS.\n- Comprehensive Location Metadata: Saves title, category (Home, Work, Landmark, Spot, Parking, Custom), complete address, custom notes/access directions, searchable tags, and favorites.\n- Turn-by-Turn Navigation Bridge: One-tap launch into Google Maps turn-by-turn navigation via Android native intents (google.navigation:q=lat,lng) with web fallback.\n- Location Dashboard: Instant search by query or tags, category filter chips, and real-time distance calculation relative to the user's current GPS position.\n- Google Sign-In & Drive AppData Cloud Backup: Authenticate with Google and back up or restore the entire database securely using Google Drive's hidden appDataFolder.\n- Local Database & Export: Offline SQLite database with JSON snapshot export and clipboard support.\n\n### Bug fixes\n\n- Initial project release; no previous bug fixes to report.\n",
+      "publishedAt": "2026-09-18T13:49:32Z",
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/langkeeper/langkeeper.apk",
+      "sizeBytes": 54822083
     }
   }
 }
