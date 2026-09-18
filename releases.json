@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T10:50:59.804Z",
+  "generatedAt": "2026-09-18T12:28:16.216Z",
   "apps": {
     "reminder": {
       "version": "2.28.0",
@@ -26,12 +26,12 @@
       "sizeBytes": 61255603
     },
     "taashclub": {
-      "version": "1.19.2",
-      "versionCode": 49,
-      "notes": "Taash Club 1.19.2 - 1-round match option, action-accurate feedback, and polished game setup\n\n### Features\n- Added 1-round match option for Gochi (rounds selection now offers 1, 3, 5, 7, 9) allowing quick 5-baazi matches that conclude cleanly.\n- Action-accurate haptics and feedback: card selection tap in hand (selectionClick), punchy card play (mediumImpact), triumphant trick collection (heavyImpact for self, lightImpact for opponents), capture pulse on trick arrival (mediumImpact), and decisive bandh/kaat feedback.\n- Persisted vibration switch in Settings via SharedPreferences so vibration preferences stay saved across app restarts.\n- Immediate turn feedback: synchronized turn alert and chime on initial table load so the player leading trick 1 is notified immediately.\n- Polished New Game flow: opening setup preselects the active game tab currently viewed in the lobby.\n- Redesigned Join Table dialog: modern styled dialog with auto-uppercase formatting, 1-tap clipboard paste (supporting invite links and raw codes), live 0/6 counter, and validation gating.\n\n### Bug fixes\n- Fixed vibration setting in Settings screen resetting to enabled on every app restart.\n- Fixed first-turn players not receiving turn chime/vibration when joining or resuming a game.\n- Fixed join code dialog accepting empty or partial input by disabling submit until all 6 characters are entered.\n",
+      "version": "1.19.3",
+      "versionCode": 50,
+      "notes": "Taash Club 1.19.3 - Resilient in-app updater and dynamic computer player AI\n\n### Features\n- Resilient In-App Updater: Auto-resumes interrupted downloads on app lifecycle resume, increases download retry budget to 8 attempts with exponential backoff, and performs APK integrity checks before attempting installation.\n- Preserved Update Dialog: Retains download completion state across screen sleep and lockscreens so users can tap Install Now immediately upon unlocking.\n- Dynamic Computer Bot AI: Integrated randomized decision-making and human-like gameplay variety across Gochi, Teen Do Paanch, and Kali Begum offline matches.\n- Tactical AI Play Variety: Computer players now employ personality weighting, tactical suit-voiding passes, varied lead cards, and non-deterministic trump/sluff selections rather than rigid predictable moves.\n\n### Bug fixes\n- Fixed in-app updater failing when phone is locked or network sockets are suspended during background download.\n- Fixed corrupt or truncated APK files triggering infinite retry loops by verifying file size and clearing damaged downloads.\n- Fixed computer bots playing predictable, deterministic cards and bids in offline card matches.\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/taashclub/taash-club.apk",
-      "sizeBytes": 95653683
+      "sizeBytes": 95653679
     },
     "cards": {
       "version": "2.5.3",
