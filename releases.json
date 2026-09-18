@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T13:49:55.847Z",
+  "generatedAt": "2026-09-18T14:17:28.329Z",
   "apps": {
     "reminder": {
       "version": "2.28.0",
@@ -42,12 +42,12 @@
       "sizeBytes": 123601315
     },
     "langkeeper": {
-      "version": "0.1.0-beta.1",
+      "version": "0.1.0-beta.2",
       "versionCode": null,
-      "notes": "# LangKeeper 0.1.0-beta.1 - Initial Beta Release\n\n### Features\n\n- Automatic GPS Location Detection: Immediately captures high-accuracy latitude, longitude, altitude, accuracy, speed, and heading when creating a new location.\n- Reverse Geocoding: Automatically resolves coordinates into structured address fields including street, city, state, postal code, and country.\n- Interactive Map Pin Adjustment: Users can inspect and fine-tune location coordinates by tapping on an embedded OpenStreetMap view or re-centering to current GPS.\n- Comprehensive Location Metadata: Saves title, category (Home, Work, Landmark, Spot, Parking, Custom), complete address, custom notes/access directions, searchable tags, and favorites.\n- Turn-by-Turn Navigation Bridge: One-tap launch into Google Maps turn-by-turn navigation via Android native intents (google.navigation:q=lat,lng) with web fallback.\n- Location Dashboard: Instant search by query or tags, category filter chips, and real-time distance calculation relative to the user's current GPS position.\n- Google Sign-In & Drive AppData Cloud Backup: Authenticate with Google and back up or restore the entire database securely using Google Drive's hidden appDataFolder.\n- Local Database & Export: Offline SQLite database with JSON snapshot export and clipboard support.\n\n### Bug fixes\n\n- Initial project release; no previous bug fixes to report.\n",
+      "notes": "# LangKeeper 0.1.0-beta.2 - Navigation & Dark Mode Overhaul\n\n### Features\n\n- Custom Brand App Icon: Replaced standard Flutter launcher icon with a high-resolution blue gradient location marker icon across all Android screen densities (mdpi to xxxhdpi) and the app store hub.\n- Turn-by-Turn Navigation: Updated navigation launcher to directly trigger Google Maps turn-by-turn driving mode using dir_action=navigate and travelmode=driving.\n- Full Dark Theme Usability: Overhauled chip, card, map controls, status banners, and search input contrast to ensure text and badges are legible in dark mode.\n\n### Bug fixes\n\n- Fixed Google Maps opening in location search/preview mode (\"lat/lng info\" sheet) instead of directly starting turn-by-turn navigation.\n- Fixed unselected category chips rendering in near-invisible black text in dark mode.\n- Fixed location card address, coordinates, and distance badges using static light-mode grey and pastel green colors in dark theme.\n- Fixed map coordinate picker buttons and status alert boxes appearing harsh and glaring in dark theme.\n",
       "publishedAt": "2026-09-18T13:49:32Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/langkeeper/langkeeper.apk",
-      "sizeBytes": 54822083
+      "sizeBytes": 54933307
     }
   }
 }
