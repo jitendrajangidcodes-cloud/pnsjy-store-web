@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T12:06:50.906Z",
+  "generatedAt": "2026-09-20T13:28:23.883Z",
   "apps": {
     "reminder": {
       "version": "2.28.0",
@@ -42,12 +42,12 @@
       "sizeBytes": 123601315
     },
     "langkeeper": {
-      "version": "0.1.0-beta.3",
-      "versionCode": null,
-      "notes": "# LangKeeper 0.1.0-beta.3 - Google Sign-In & Diagnostics Overhaul\n\n### Features\n\n- Google Sign-In Troubleshooting Dialog: Added AuthTroubleshootDialog displaying detailed error codes, exact package name, SHA-1 and SHA-256 fingerprints, and a one-tap copy button for easy GCP configuration verification.\n- Structured Authentication Results: Introduced AuthResult in AuthService providing structured status, cancellation tracking, and detailed diagnostic error strings across all sign-in attempts.\n- Drive Scope Permission Hinting: Pass drive.appdata scopeHint during interactive authentication to streamline authorization on compatible platforms.\n\n### Bug fixes\n\n- Fixed uncaught GoogleSignInException in BackupSyncScreen that could crash the UI when sign-in failed.\n- Fixed silent swallowing of Credential Manager cancellations and signature mismatches in AuthService.\n- Fixed unhandled rethrows during Drive authorization checks in AuthService.ensureUser.\n- Documented full Google Cloud Android OAuth client parameters and Credential Manager gotchas in Learnings.md.\n",
+      "version": "0.1.0-beta.4",
+      "versionCode": 4,
+      "notes": "# LangKeeper 0.1.0-beta.4 - Google Sign-In Credential Manager Alignment\n\n### Features\n\n- Credential Manager Flow Optimization: Removed scopeHint from initial authenticate() calls to ensure clean identity authentication across Android devices running Google Play Services Credential Manager.\n- Incremental Authorization Model: Hidden Google Drive appDataFolder authorization is cleanly requested on-demand when cloud backup or restore actions execute.\n\n### Bug fixes\n\n- Fixed Android Credential Manager reauthentication failure ([16] Account reauth failed) triggered when scopeHint conflicted with initial user sign-in.\n- Maintained detailed error handling and one-tap signing certificate copy in AuthTroubleshootDialog for clear diagnostic feedback.\n",
       "publishedAt": "2026-09-18T13:49:32Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/langkeeper/langkeeper.apk",
-      "sizeBytes": 55031607
+      "sizeBytes": 55031611
     }
   }
 }
