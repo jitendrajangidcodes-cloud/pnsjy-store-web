@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T11:14:49.946Z",
+  "generatedAt": "2026-09-23T11:19:29.329Z",
   "apps": {
     "reminder": {
       "version": "2.29.0",
@@ -26,12 +26,12 @@
       "sizeBytes": 61436099
     },
     "taashclub": {
-      "version": "1.19.3",
-      "versionCode": 50,
-      "notes": "Taash Club 1.19.3 - Resilient in-app updater and dynamic computer player AI\n\n### Features\n- Resilient In-App Updater: Auto-resumes interrupted downloads on app lifecycle resume, increases download retry budget to 8 attempts with exponential backoff, and performs APK integrity checks before attempting installation.\n- Preserved Update Dialog: Retains download completion state across screen sleep and lockscreens so users can tap Install Now immediately upon unlocking.\n- Dynamic Computer Bot AI: Integrated randomized decision-making and human-like gameplay variety across Gochi, Teen Do Paanch, and Kali Begum offline matches.\n- Tactical AI Play Variety: Computer players now employ personality weighting, tactical suit-voiding passes, varied lead cards, and non-deterministic trump/sluff selections rather than rigid predictable moves.\n\n### Bug fixes\n- Fixed in-app updater failing when phone is locked or network sockets are suspended during background download.\n- Fixed corrupt or truncated APK files triggering infinite retry loops by verifying file size and clearing damaged downloads.\n- Fixed computer bots playing predictable, deterministic cards and bids in offline card matches.\n",
+      "version": "1.20.0",
+      "versionCode": 51,
+      "notes": "# Taash Club 1.20.0 - Unified non-blocking in-app updater\n\n### Features\n\n- New in-app updater: a non-blocking prompt with Later and Update Now, live download progress, and release notes shown before installing.\n- Web version signs in through the shared PNSJY sign-in page.\n- Web version adds a responsive desktop layout and installable (PWA) support.\n\n### Bug fixes\n\n- Replaced the old update prompt and external file opener with a direct package installer.\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/taashclub/taash-club.apk",
-      "sizeBytes": 95653679
+      "sizeBytes": 95433707
     },
     "cards": {
       "version": "2.6.0",
