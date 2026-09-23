@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T11:19:29.329Z",
+  "generatedAt": "2026-09-23T11:23:42.102Z",
   "apps": {
     "reminder": {
       "version": "2.29.0",
@@ -42,12 +42,12 @@
       "sizeBytes": 124781231
     },
     "langkeeper": {
-      "version": "0.1.0-beta.4",
-      "versionCode": 4,
-      "notes": "# LangKeeper 0.1.0-beta.4 - Google Sign-In Credential Manager Alignment\n\n### Features\n\n- Credential Manager Flow Optimization: Removed scopeHint from initial authenticate() calls to ensure clean identity authentication across Android devices running Google Play Services Credential Manager.\n- Incremental Authorization Model: Hidden Google Drive appDataFolder authorization is cleanly requested on-demand when cloud backup or restore actions execute.\n\n### Bug fixes\n\n- Fixed Android Credential Manager reauthentication failure ([16] Account reauth failed) triggered when scopeHint conflicted with initial user sign-in.\n- Maintained detailed error handling and one-tap signing certificate copy in AuthTroubleshootDialog for clear diagnostic feedback.\n",
+      "version": "0.1.0-beta.5",
+      "versionCode": 5,
+      "notes": "# LangKeeper 0.1.0-beta.5 - Unified non-blocking in-app updater\n\n### Features\n\n- Added automated in-app update checks powered by the PNSJY Store hub.\n- Built-in Router Warden styled update dialog with live download progress.\n- Backup & Sync settings screen now includes dedicated Check for Updates tile.\n\n### Bug fixes\n\n- Configured Android FileProvider and package installer MethodChannel for self-updating.\n",
       "publishedAt": "2026-09-18T13:49:32Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/langkeeper/langkeeper.apk",
-      "sizeBytes": 55031611
+      "sizeBytes": 55147383
     }
   }
 }
