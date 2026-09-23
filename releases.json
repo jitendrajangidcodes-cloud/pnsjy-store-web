@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T11:02:43.439Z",
+  "generatedAt": "2026-09-23T11:10:10.282Z",
   "apps": {
     "reminder": {
       "version": "2.29.0",
@@ -10,12 +10,12 @@
       "sizeBytes": 77218438
     },
     "mirrordrive": {
-      "version": "0.15.1",
-      "versionCode": 36,
-      "notes": "MirrorDrive 0.15.1 - Diagnostics finally have somewhere to go\n\nThe app has recorded technical failures for a long time and has never once been\nable to send them. They were posted to a Tailscale hostname, on a tailnet no\nphone was ever a member of, with no server behind it. Every incident queued on\nthe device to its hundred-item cap and was then dropped.\n\nNothing about the reporting changed here, because nothing about it was wrong.\nIt now has an address that exists.\n\n### Features\n\n- Diagnostics are sent to diagnostics.pnsjy.in, a real relay reached through\n  the same tunnel as everything else. Consent and content are unchanged:\n  allow-listed technical failures only, never file contents, paths or account\n  state.\n\n### Bug fixes\n\n- The relay address pointed at a tailnet host that resolves nowhere. Every\n  incident this app has ever recorded was queued and discarded.\n- Removed two unused constants naming a Google Sheet that incidents do not go\n  to. Nothing read them, and anyone reading the file would reasonably have\n  believed otherwise.\n\n### Notes\n\nDIAGNOSTICS_RELAY still overrides the address at build time, so a debug build\ncan point at a local instance.\n",
+      "version": "0.16.0",
+      "versionCode": 37,
+      "notes": "# MirrorDrive 0.16.0 - Unified non-blocking in-app updater\n\n### Features\n\n- Replaced modal UpdateGateScreen with unified Router Warden style non-blocking update dialog.\n- Live progress indicator with bytes downloaded and percentage.\n- Settings screen includes direct Check for Updates card with manual trigger.\n\n### Bug fixes\n\n- Prevented app launch blockage when updates are pending by making update check non-modal.\n",
       "publishedAt": "2026-07-17T11:09:43Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/mirrordrive/mirrordrive.apk",
-      "sizeBytes": 108165980
+      "sizeBytes": 108182540
     },
     "twinclean": {
       "version": "1.3.3",
