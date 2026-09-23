@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T10:50:42.826Z",
+  "generatedAt": "2026-09-23T11:02:43.439Z",
   "apps": {
     "reminder": {
       "version": "2.29.0",
@@ -34,12 +34,12 @@
       "sizeBytes": 95653679
     },
     "cards": {
-      "version": "2.5.3",
-      "versionCode": null,
-      "notes": "Cards 2.5.3 - Update checks move to the app store hub\n\n### Features\n\n- Update check ab app store hub se aata hai, wahi jagah jahan se baaki saari\n  apps aati hain. Aapko farak nahi dikhega.\n\n### Bug fixes\n\n- The update check pointed at this app's own public mirror, which existed only\n  to be readable without a token. It is no longer needed.\n\n### Notes\n\nEvery app publishes its APK to app-store-web under a fixed tag, and the store\nalready reads from there. Polling a per-app public repo as well meant each app\nneeded a public repository of its own purely to be readable - and one of those,\nfor another app, turned out to be a full public source mirror. One public\nrepository for the whole fleet is fewer places for that to happen.\n\nNothing about this app changed. Same scanning, same vault, same encryption, and\nstill no network code beyond the update check.\n\n",
+      "version": "2.6.0",
+      "versionCode": 33,
+      "notes": "# Cards 2.6.0 - Unified non-blocking in-app updater\n\n### Features\n\n- Integrated Router Warden style non-blocking in-app updater with live byte progress bar.\n- Update dialog displays detailed release notes and Later / Update Now options.\n- Settings screen features dedicated Check for Updates tile.\n\n### Bug fixes\n\n- Streamlined update download and installation via native package installer channel.\n",
       "publishedAt": "2026-07-04T09:29:52Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/cards/Cards-v2.5.3.apk",
-      "sizeBytes": 123601315
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/cards/Cards-v2.6.0.apk",
+      "sizeBytes": 124781231
     },
     "langkeeper": {
       "version": "0.1.0-beta.4",
