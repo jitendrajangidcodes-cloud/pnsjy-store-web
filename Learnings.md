@@ -1,4 +1,4 @@
-# app-store-web — Learnings
+# pnsjy-store-web — Learnings
 
 Mistakes / setup gotchas specific to THIS repo. Fleet-wide gotchas live in
 `~/.claude/Learnings.md` — reference them there, do not copy them here. The moment one of the

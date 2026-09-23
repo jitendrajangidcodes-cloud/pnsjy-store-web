@@ -1,7 +1,7 @@
-# app-store-web — Agent Operating Contract
+# pnsjy-store-web — Agent Operating Contract
 
 Repo-specific rules and overrides only. Architecture/tech-stack reference and the feature
-registry live in `CORE.md`, gotchas in `Learnings.md`, current task state in `progress.txt`.
+registry live in `CORE.md`, gotchas in `Learnings.md`, current task state in `progress.txt` (when present).
 Do not re-paste global rules from `~/.claude/CLAUDE.md` / `~/.claude/AGENTS.md` — reference them.
 
 This repo IS the public app-store hub described in `~/.claude/CORE.md` → "App Release
@@ -18,12 +18,12 @@ Distribution". Read that section before changing anything about how releases flo
   (writes this repo, reads source repos unauthenticated). The Turnstile SITE key and Worker URL in
   `feedback.js` are public by design; the secret half lives in the Cloudflare Worker only.
 - **Design tokens are defined once in `style.css` `:root`.** The Flutter store app (in
-  `app-store-android-private`) mirrors them in its `lib/theme/`. Keep the two in sync when either
+  `pnsjy-store-app-private`) mirrors them in its `lib/theme/`. Keep the two in sync when either
   changes.
 - **The BETA badge is driven by an explicit `"beta": true|false` field in `apps.json`**, decoupled
   from `category`. `index.html` and `app.html` read `app.beta`, not `category === "Beta"`.
-- The native store app source lives in separate repos (`app-store-android-private` /
-  `app-store-android-pub`); it is NOT in this repo. This repo is website + release hub only.
+- The native store app source lives in `pnsjy-store-app-private`; it is NOT in this repo. This
+  repo is website + release hub only.
 
 ## Build & Deploy
 
@@ -35,6 +35,6 @@ There is nothing to compile — this is a static GitHub Pages site served at `st
 - **Trigger the hub rebuild remotely:** `gh workflow run sync-releases.yml --repo
   jitendrajangidcodes-cloud/pnsjy-store-web`. An app's `scripts/release.sh` kicks this at the end of
   every release so the site/store pick up the new version without waiting for the 30-min cron.
-- **Publishing an app's release into the hub** is done from the app's own repo, not here — see
+- **Publishing an app's release into the hub** is done from the app's own repo (its
+  `scripts/release.sh`), not here — see
   `~/.claude/CORE.md` → "Canonical per-app release script".
-- The Flutter store app is built and verified in its own repo, not here.

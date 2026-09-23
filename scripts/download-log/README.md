@@ -29,13 +29,13 @@ User-Agent, screen size, timezone, language for the website -- browsers
 don't expose device model/manufacturer to JS).
 
 This is deliberately scoped to the app-store distribution surface (the
-website + the native Store app) only -- it does not touch AI Scanner, Cards,
-or Reminder, which each separately promise "no analytics" in their own UI.
+website + the native Store app) only -- it does not touch the catalog apps
+(Reminder, Cards, etc.), which each separately promise "no analytics" in their own UI.
 
 ## Where the URL is used
 
 - `script.js` (website): `DOWNLOAD_LOG_URL` constant.
-- `store-app/lib/services/log_service.dart`: `_endpoint` constant.
+- PNSJY Store app (`pnsjy-store-app-private`), `lib/services/log_service.dart`: `_endpoint` constant.
 
 Both are fire-and-forget POSTs (`no-cors` on the web side, since Apps
 Script's redirect-based response can't be read cross-origin anyway) -- a

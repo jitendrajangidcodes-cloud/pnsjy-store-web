@@ -1,4 +1,4 @@
-# app-store-web — Core
+# pnsjy-store-web — Core
 
 ## What this is
 
@@ -11,7 +11,7 @@ one repo:
    latest version + hub APK URL per app.
 3. The **release hub** itself — every app's APK is published here as a GitHub Release under a
    stable per-app tag (tag == the app's `id`). The website, the native PNSJY Store Flutter app
-   (source in `app-store-android-private`/`-pub`), and that app's self-update all read from this
+   (source in `pnsjy-store-app-private`), and that app's self-update all read from this
    one repo.
 
 Distribution is centralized here so the site and the store app always reflect the latest shipped
@@ -30,7 +30,7 @@ Full fleet-level mechanics: `~/.claude/CORE.md` → "App Release Distribution".
 - **Hosting:** GitHub Pages (custom domain `store.pnsjy.in` via `CNAME`, `.nojekyll`).
 - **Feedback backend:** external Cloudflare Worker (`app-store-feedback.jitendrajangid-codes.workers.dev`)
   that files GitHub issues; spam-guarded by Cloudflare Turnstile + honeypot + KV rate-limit.
-  Worker source is backed up in a separate private repo — not in this repo.
+  Worker source lives in a separate repo (`pnsjy-store-feedback-worker`), not here.
 
 ## Project Files
 
@@ -44,12 +44,13 @@ Full fleet-level mechanics: `~/.claude/CORE.md` → "App Release Distribution".
 | `style.css` | All styling + design tokens in `:root` (mirrored by the Flutter app's `lib/theme/`). |
 | `feedback.js` | In-site feedback modal → posts to the Worker → files a GitHub issue. Turnstile + honeypot. |
 | `manifest.json`, `sw.js` | PWA install support. |
-| `scripts/sync-releases.sh` | Mirrors each app's latest source-repo APK into this hub under the app-id tag. Idempotent. |
+| `scripts/sync-releases.sh` | Mirrors an app's latest source-repo APK into this hub under the app-id tag; skips direct-to-hub apps (currently all of them). Idempotent. |
 | `scripts/build-manifest.mjs` | Rebuilds `releases.json` from THIS repo's hub Releases (version from release name). |
 | `scripts/download-log/` | Apps Script + Sheet download logger (Code.gs + README) — no credential in the repo. |
 | `.github/workflows/sync-releases.yml` | Runs mirror + manifest rebuild + commits `releases.json`. |
-| `assets/icons/` | 512px per-app icons + PWA icons. `assets/brand/pnsjy-mark.png` is the company mark. |
-| `assets/screenshots/` | Per-app screenshots the site + store app render live (currently reminder only). |
+| `assets/icons/` | 512px per-app icons + PWA icons. |
+| `assets/brand/pnsjy-mark.png` | The company mark. |
+| `assets/screenshots/` | Per-app screenshots the site + store app render live (currently reminder + taashclub). |
 | `CNAME`, `.nojekyll` | GitHub Pages custom domain + Jekyll-off. |
 | `RELEASE.md` | Changelog of the HUB REPO ITSELF (website/scripts) — not any app's APK releases. |
 
@@ -64,7 +65,7 @@ Full fleet-level mechanics: `~/.claude/CORE.md` → "App Release Distribution".
 | `color` | Accent hex for the card/detail. |
 | `requiresAccount` | Boolean — whether the app needs a sign-in. |
 | `icon` | Path to the app icon under `assets/icons/`. |
-| `repo` | The app's SOURCE/release repo. If it equals this hub repo, the app publishes direct-to-hub (no mirror). Otherwise it is a mirrored `-pub` repo. |
+| `repo` | Where the app's release lives. Equal to this hub repo = direct-to-hub (no mirror); every listed app is now direct-to-hub. Any other value would make `sync-releases.sh` mirror that repo's `releases/latest`. |
 | `packageId` | Android application id (used by the store app for installed-version checks). |
 | `about`, `requirements` | Long description + install prerequisites shown on the detail page. |
 | `screenshots` | Array of `{ src, alt }` (may be empty). |
@@ -90,8 +91,9 @@ file; a `*/30 * * * *` cron; or manual `workflow_dispatch`. One job, `contents: 
    `releases.json` (version parsed from the release NAME `<ver>[+<code>]`).
 3. Commits `releases.json` only if it changed.
 
-Because APKs and the manifest live in the same repo, a mirror + rebuild happen in the same run, so
-a new source release propagates within one tick. The in-app update-checker reads the GitHub
+Step 1 is a no-op today: every listed app publishes direct-to-hub (the per-app `-pub` mirror repos
+were retired). Because APKs and the manifest live in the same repo, a release shows on the site/store
+at the next run. The in-app update-checker reads the GitHub
 release directly and is NOT gated on this; the website/store manifest IS.
 
 ## Architecture — Critical Rules
@@ -146,9 +148,9 @@ read from this one repo; no cross-repo token; app build repos untouched.
 ### F7 — Direct-to-hub publishing pattern
 An app whose `apps.json` `repo` equals this hub publishes its release straight into the hub's
 Releases (no separate `-pub` mirror repo); `sync-releases.sh` skips the mirror step for it.
-Reminder + Cards remain mirrored (they have their own `-pub` repos); ai-scanner, mirrordrive and
-twinclean are direct-to-hub. Local Sender's archived hub release remains available but is no
-longer listed in the catalog.
+Every listed app (reminder, cards, mirrordrive, twinclean, taashclub, langkeeper) is now
+direct-to-hub; the `-pub` mirror repos were retired. Local Sender, AI Scanner and Upkeep are no
+longer listed (Local Sender's archived hub release remains downloadable).
 *Status: BUILT-AWAITING-VERIFY*
 
 ### F8 — Direct in-site feedback → auto-filed GitHub issue

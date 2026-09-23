@@ -11,8 +11,8 @@ updates every listed app like an app store, and keeps itself up to date.
 This repository is the one public hub for distribution. Every APK — each listed app plus the
 store app itself — is published here as a GitHub Release under a stable tag (e.g. `reminder`,
 `cards`, `store`). The website, the store app, and the store's self-update all read from this
-one repo, and `releases.json` is regenerated here whenever a new build is mirrored in — so the
-site and the store always reflect the latest shipped version.
+one repo, and `releases.json` is regenerated here after every release — so the site and the store
+always reflect the latest shipped version.
 
 Distribution is centralized, but **security is not compromised**: CI only ever writes this repo
 using the built-in token, reads the source repos unauthenticated, and the signing keystore and
@@ -24,7 +24,7 @@ New apps are never added automatically — an app is only listed when explicitly
 
 ## Download reliability & security (fleet-wide)
 
-Every app in the family — the PNSJY Store itself, Reminder, Cards, AI Scanner, TwinClean —
+Every app in the family — the PNSJY Store itself, Reminder, Cards, TwinClean —
 downloads its own updates through Android's `DownloadManager` rather than an in-app HTTP stream,
 with a persisted download id so a transfer interrupted by the app being backgrounded or killed is
 resumed/re-attached instead of re-downloaded from zero, and an already-fully-downloaded matching
