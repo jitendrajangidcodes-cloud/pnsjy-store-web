@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-09-23T07:33:11.815Z",
+  "generatedAt": "2026-09-23T10:50:42.826Z",
   "apps": {
     "reminder": {
-      "version": "2.28.0",
-      "versionCode": 147,
-      "notes": "# Reminder 2.28.0\n\n### Features\n\n- Redesigned 3D glowing bell app icon with unified theme-adaptive squircle background and safe-zone alignment across Android devices and the app store website.\n- Advanced reminder pausing: pause any reminder for hours, days, custom times, or indefinitely with seamless cloud sync (Drift schema v9), single-tap resume pill badges, and multi-select bulk pause.\n- Full-screen alerts in all cases: eliminated heads-up banner degradation by enforcing Android 14+ background activity launch privileges (MODE_BACKGROUND_ACTIVITY_START_ALLOWED) and keyguard dismissal.\n- Overhauled Upcoming screen for long lists: instant in-screen search bar, single streamlined filter row with category bottom sheet selector, and collapsible chronological section groups with item counts and expand/collapse all controls.\n\n### Bug fixes\n\n- Fixed Android 14+ background activity launch restrictions causing full-screen alarm screens to silently degrade to heads-up notification banners.\n- Excluded paused reminders from overdue upcoming counts and filters.\n",
+      "version": "2.29.0",
+      "versionCode": 148,
+      "notes": "# Reminder 2.29.0 - Unified non-blocking in-app updater\n\n### Features\n\n- Unified Router Warden style non-blocking in-app updater with Later and Update Now actions.\n- Live byte and progress tracking during updates with release notes preview.\n- Settings screen includes dedicated Check for Updates tile with live status.\n\n### Bug fixes\n\n- Replaced blocking update gate screen and legacy DownloadManager with direct package installer.\n",
       "publishedAt": "2026-07-04T09:27:07Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/reminder/reminder-app-v2.28.0.apk",
-      "sizeBytes": 77202054
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/reminder/reminder-app-v2.29.0.apk",
+      "sizeBytes": 77218438
     },
     "mirrordrive": {
       "version": "0.15.1",
