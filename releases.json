@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T12:11:38.443Z",
+  "generatedAt": "2026-09-24T13:04:51.189Z",
   "apps": {
     "reminder": {
       "version": "2.29.0",
@@ -48,6 +48,22 @@
       "publishedAt": "2026-09-18T13:49:32Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/langkeeper/langkeeper.apk",
       "sizeBytes": 55147383
+    },
+    "routerwarden": {
+      "version": "Router Warden 1.0.10",
+      "versionCode": null,
+      "notes": "Airtel & TP-Link router monitor, bandwidth tracking, device blocking.",
+      "publishedAt": "2026-09-24T07:35:09Z",
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/routerwarden/router-warden.apk",
+      "sizeBytes": 55585861
+    },
+    "sshclient": {
+      "version": "1.0.5",
+      "versionCode": 6,
+      "notes": "# SSH Client 1.0.5 - Release bump and store hub manifest integration\n\n### Features\n\n- Hub release tag naming now properly formats version identifier for automatic store manifest tracking.\n- Verified end-to-end soft keyboard interaction with dedicated top and bottom keyboard toggles.\n- Added comprehensive connection stage diagnostics and timeout protection.\n\n### Bug fixes\n\n- Ensured PNSJY Store manifest sync recognizes version and versionCode for seamless in-app updating.\n- Maintained OpenSSH direct route compatibility across device restarts.\n",
+      "publishedAt": "2026-09-24T07:34:32Z",
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/sshclient/ssh-client.apk",
+      "sizeBytes": 60848620
     }
   }
 }

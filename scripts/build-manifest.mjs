@@ -45,13 +45,15 @@ async function fetchHubTag(tag) {
 const apps = JSON.parse(await readFile(join(root, "apps.json"), "utf8"));
 const out = { generatedAt: new Date().toISOString(), apps: {} };
 
-for (const app of apps) {
+const allTags = [...apps.map((a) => a.id), "routerwarden", "sshclient"];
+
+for (const tag of allTags) {
   try {
-    const rel = await fetchHubTag(app.id);
-    if (rel && rel.apkUrl) out.apps[app.id] = rel;
-    else console.warn(`no hub release for ${app.id} (tag ${app.id})`);
+    const rel = await fetchHubTag(tag);
+    if (rel && rel.apkUrl) out.apps[tag] = rel;
+    else console.warn(`no hub release for ${tag} (tag ${tag})`);
   } catch (e) {
-    console.warn(`failed ${app.id}: ${e.message}`);
+    console.warn(`failed ${tag}: ${e.message}`);
   }
 }
 
