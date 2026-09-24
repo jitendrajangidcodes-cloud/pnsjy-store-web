@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T13:05:14.045Z",
+  "generatedAt": "2026-09-24T13:23:09.607Z",
   "apps": {
     "reminder": {
       "version": "2.29.0",
@@ -58,12 +58,12 @@
       "sizeBytes": 55585861
     },
     "sshclient": {
-      "version": "1.0.5",
-      "versionCode": 6,
-      "notes": "# SSH Client 1.0.5 - Release bump and store hub manifest integration\n\n### Features\n\n- Hub release tag naming now properly formats version identifier for automatic store manifest tracking.\n- Verified end-to-end soft keyboard interaction with dedicated top and bottom keyboard toggles.\n- Added comprehensive connection stage diagnostics and timeout protection.\n\n### Bug fixes\n\n- Ensured PNSJY Store manifest sync recognizes version and versionCode for seamless in-app updating.\n- Maintained OpenSSH direct route compatibility across device restarts.\n",
+      "version": "1.0.6",
+      "versionCode": 7,
+      "notes": "# SSH Client 1.0.6 - Unified in-app updater and package installer\n\n### Features\n\n- Added unified in-app update service querying hub releases on cold start.\n- Added live download progress dialog with byte/percentage metrics.\n- Added \"Check for Updates\" tile in Settings screen.\n- Integrated Android package installer MethodChannel and FileProvider.\n\n### Bug fixes\n\n- Enabled self-updating without depending on external store app.\n- Configured REQUEST_INSTALL_PACKAGES permission for in-app updates.\n",
       "publishedAt": "2026-09-24T07:34:32Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/sshclient/ssh-client.apk",
-      "sizeBytes": 60848620
+      "sizeBytes": 61111596
     }
   }
 }
