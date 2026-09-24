@@ -45,7 +45,7 @@ async function fetchHubTag(tag) {
 const apps = JSON.parse(await readFile(join(root, "apps.json"), "utf8"));
 const out = { generatedAt: new Date().toISOString(), apps: {} };
 
-const allTags = [...apps.map((a) => a.id), "routerwarden", "sshclient"];
+const allTags = [...apps.map((a) => a.id), "routerwarden"];
 
 for (const tag of allTags) {
   try {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T13:23:09.607Z",
+  "generatedAt": "2026-09-24T13:30:17.410Z",
   "apps": {
     "reminder": {
       "version": "2.29.0",
@@ -56,14 +56,6 @@
       "publishedAt": "2026-09-24T07:35:09Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/routerwarden/router-warden.apk",
       "sizeBytes": 55585861
-    },
-    "sshclient": {
-      "version": "1.0.6",
-      "versionCode": 7,
-      "notes": "# SSH Client 1.0.6 - Unified in-app updater and package installer\n\n### Features\n\n- Added unified in-app update service querying hub releases on cold start.\n- Added live download progress dialog with byte/percentage metrics.\n- Added \"Check for Updates\" tile in Settings screen.\n- Integrated Android package installer MethodChannel and FileProvider.\n\n### Bug fixes\n\n- Enabled self-updating without depending on external store app.\n- Configured REQUEST_INSTALL_PACKAGES permission for in-app updates.\n",
-      "publishedAt": "2026-09-24T07:34:32Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/sshclient/ssh-client.apk",
-      "sizeBytes": 61111596
     }
   }
 }
