@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T15:00:12.871Z",
+  "generatedAt": "2026-09-24T17:03:24.606Z",
   "apps": {
     "reminder": {
       "version": "2.29.0",
@@ -10,10 +10,10 @@
       "sizeBytes": 77218438
     },
     "mirrordrive": {
-      "version": "0.17.1",
-      "versionCode": 39,
-      "notes": "Mirror 0.17.1 - Reverted full Google Drive scope back to drive.file\n\n### Security & Privacy\n- Reverted full Google Drive scope back to restricted drive.file scope (only files this app creates or you explicitly pick — never your whole Drive).\n\n### Stability\n- Preserved SQLite WAL mode and busy_timeout configuration to prevent database locks.\n",
-      "publishedAt": "2026-09-24T15:25:00Z",
+      "version": "Mirror 0.17.1",
+      "versionCode": null,
+      "notes": "### Security & Privacy\n- Reverted full Google Drive scope back to restricted drive.file scope (only files this app creates or you explicitly pick — never your whole Drive).\n\n### Stability\n- Preserved SQLite WAL mode and busy_timeout configuration to prevent database locks.",
+      "publishedAt": "2026-07-17T11:09:43Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/mirrordrive/mirrordrive.apk",
       "sizeBytes": 108182544
     },
