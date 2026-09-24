@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T14:20:13.912Z",
+  "generatedAt": "2026-09-24T14:51:40.871Z",
   "apps": {
     "reminder": {
       "version": "2.29.0",
@@ -10,12 +10,12 @@
       "sizeBytes": 77218438
     },
     "mirrordrive": {
-      "version": "0.16.0",
-      "versionCode": 37,
-      "notes": "# MirrorDrive 0.16.0 - Unified non-blocking in-app updater\n\n### Features\n\n- Replaced modal UpdateGateScreen with unified Router Warden style non-blocking update dialog.\n- Live progress indicator with bytes downloaded and percentage.\n- Settings screen includes direct Check for Updates card with manual trigger.\n\n### Bug fixes\n\n- Prevented app launch blockage when updates are pending by making update check non-modal.\n",
+      "version": "0.17.0",
+      "versionCode": 38,
+      "notes": "Mirror 0.17.0 - Full Drive folder selection and SQLite lock fix\n\n### Features\n\n- Full Google Drive scope (https://www.googleapis.com/auth/drive): enables picking and syncing any pre-existing Drive folder, allowing multi-device synchronization to the same directory (F61).\n- Drive folder picker now browses and selects any top-level or nested folder in My Drive.\n\n### Bug fixes\n\n- SQLite startup lock (SqliteException 5): configured WAL mode (PRAGMA journal_mode = WAL) and 8000ms busy timeout (PRAGMA busy_timeout = 8000) so background WorkManager sync operations do not block the UI engine on startup.\n",
       "publishedAt": "2026-07-17T11:09:43Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/mirrordrive/mirrordrive.apk",
-      "sizeBytes": 108182540
+      "sizeBytes": 108182544
     },
     "twinclean": {
       "version": "1.4.0",
