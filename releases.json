@@ -10,10 +10,10 @@
       "sizeBytes": 77218438
     },
     "mirrordrive": {
-      "version": "0.17.0",
-      "versionCode": 38,
-      "notes": "Mirror 0.17.0 - Full Drive folder selection and SQLite lock fix\n\n### Features\n\n- Full Google Drive scope (https://www.googleapis.com/auth/drive): enables picking and syncing any pre-existing Drive folder, allowing multi-device synchronization to the same directory (F61).\n- Drive folder picker now browses and selects any top-level or nested folder in My Drive.\n\n### Bug fixes\n\n- SQLite startup lock (SqliteException 5): configured WAL mode (PRAGMA journal_mode = WAL) and 8000ms busy timeout (PRAGMA busy_timeout = 8000) so background WorkManager sync operations do not block the UI engine on startup.\n",
-      "publishedAt": "2026-07-17T11:09:43Z",
+      "version": "0.17.1",
+      "versionCode": 39,
+      "notes": "Mirror 0.17.1 - Reverted full Google Drive scope back to drive.file\n\n### Security & Privacy\n- Reverted full Google Drive scope back to restricted drive.file scope (only files this app creates or you explicitly pick — never your whole Drive).\n\n### Stability\n- Preserved SQLite WAL mode and busy_timeout configuration to prevent database locks.\n",
+      "publishedAt": "2026-09-24T15:25:00Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/mirrordrive/mirrordrive.apk",
       "sizeBytes": 108182544
     },
