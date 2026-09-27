@@ -115,14 +115,14 @@
     "name": "LangKeeper",
     "tagline": "Save, organize, and navigate to your locations with Google Drive cloud backup.",
     "category": "Utilities",
-    "beta": true,
+    "beta": false,
     "platform": "Android",
     "color": "#1E88E5",
     "requiresAccount": false,
     "icon": "assets/icons/langkeeper.png",
     "repo": "jitendrajangidcodes-cloud/pnsjy-store-web",
     "packageId": "com.pnsjy.langkeeper",
-    "about": "LangKeeper is your personal location manager. Instantly save your current GPS coordinates with reverse-geocoded address details, fine-tune pins on an interactive map, and launch one-tap turn-by-turn navigation in Google Maps. Sign in with Google to back up and restore your location database seamlessly via Google Drive AppData.",
+    "about": "LangKeeper is your personal location manager. Instantly save your current GPS coordinates with reverse-geocoded address details, fine-tune pins on an interactive map, and launch one-tap turn-by-turn navigation in Google Maps. Sign in with your PNSJY account and back up or restore your locations privately in Google Drive AppData.",
     "requirements": "Android 8.0 (Oreo) or newer. Distributed outside the Play Store -- Android will ask permission to install from this source the first time.",
     "screenshots": []
   }
