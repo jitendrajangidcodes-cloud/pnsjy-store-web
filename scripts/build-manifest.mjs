@@ -45,7 +45,10 @@ async function fetchHubTag(tag) {
 const apps = JSON.parse(await readFile(join(root, "apps.json"), "utf8"));
 const out = { generatedAt: new Date().toISOString(), apps: {} };
 
-const allTags = [...apps.map((a) => a.id), "routerwarden"];
+// Admin-only apps are not in apps.json (so the public site never lists them),
+// but the store app still needs their release info once an admin signs in.
+const ADMIN_ONLY_TAGS = ["routerwarden", "tributary"];
+const allTags = [...apps.map((a) => a.id), ...ADMIN_ONLY_TAGS];
 
 for (const tag of allTags) {
   try {
