@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T06:57:07.428Z",
+  "generatedAt": "2026-09-27T10:20:32.629Z",
   "apps": {
     "reminder": {
       "version": "2.29.0",
@@ -42,12 +42,12 @@
       "sizeBytes": 124781231
     },
     "langkeeper": {
-      "version": "0.1.0-beta.5",
-      "versionCode": 5,
-      "notes": "# LangKeeper 0.1.0-beta.5 - Unified non-blocking in-app updater\n\n### Features\n\n- Added automated in-app update checks powered by the PNSJY Store hub.\n- Built-in Router Warden styled update dialog with live download progress.\n- Backup & Sync settings screen now includes dedicated Check for Updates tile.\n\n### Bug fixes\n\n- Configured Android FileProvider and package installer MethodChannel for self-updating.\n",
+      "version": "1.0.0",
+      "versionCode": 6,
+      "notes": "# LangKeeper 1.0.0 - First stable release\n\nLangKeeper leaves beta. Sign-in now uses your PNSJY account, Google Drive backup asks for permission only when needed, and problems can be diagnosed from the app.\n\n### Features\n- Sign in with your PNSJY account in the browser (pnsjy-auth). The session is kept in secure storage and renews itself.\n- Google Drive permission is requested only when you back up or restore.\n- Diagnostics log on the Backup & Settings screen with one-tap copy.\n- Optional \"Send error reports\" switch (off by default). It sends only cleaned-up error messages, never places, addresses, notes or account details.\n\n### Bug fixes\n- Fixed Google sign-in failing with \"[16] Account reauth failed\": the app's Android OAuth client is now registered.\n- A refused Drive permission now shows the package and SHA-1 details instead of failing silently.\n",
       "publishedAt": "2026-09-18T13:49:32Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/langkeeper/langkeeper.apk",
-      "sizeBytes": 55147383
+      "sizeBytes": 56030315
     },
     "routerwarden": {
       "version": "Router Warden 1.0.10",
