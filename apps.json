@@ -63,7 +63,7 @@
   {
     "id": "taashclub",
     "name": "Taash Club",
-    "tagline": "Classic Indian card games -- Teen Patti, 13-Card Rummy, and Teen Do Paanch, solo or multiplayer.",
+    "tagline": "Classic Indian card games -- Teen Do Paanch (3-2-5), Kali Begum and Gochi, solo or multiplayer.",
     "category": "Games",
     "beta": false,
     "platform": "Android",
@@ -72,7 +72,7 @@
     "icon": "assets/icons/taashclub.png",
     "repo": "jitendrajangidcodes-cloud/pnsjy-store-web",
     "packageId": "com.pnsjy.taash_club",
-    "about": "Taash Club brings three iconic Indian card games to mobile: Teen Patti (with Classic, Muflis, AK47, and Cut Joker variants), 13-Card Indian Rummy (with strict pure sequence validation and score tracking), and Teen Do Paanch (3-2-5 trick taking with trump bidding). Play solo against intelligent offline bots or create private tables to play multiplayer games with friends remotely using 6-character room codes. Features provably fair SHA-256 seed verification, customizable player avatars, chip bonuses, and table chat.",
+    "about": "Taash Club brings classic Indian trick-taking card games to mobile: Teen Do Paanch (3-2-5 with trump bidding), Kali Begum (Hearts) and Gochi (4-player bidding). Play solo against offline bots, pass-and-play on one phone, or create private tables with friends using 6-character room codes, with optional table voice chat.",
     "requirements": "Android 8.0 (Oreo) or newer. Distributed outside the Play Store -- Android will ask permission to install from this source the first time.",
     "screenshots": [
       {
