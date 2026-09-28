@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T08:05:34.350Z",
+  "generatedAt": "2026-09-28T08:12:26.703Z",
   "apps": {
     "reminder": {
       "version": "2.30.0",
@@ -26,12 +26,12 @@
       "sizeBytes": 61567615
     },
     "taashclub": {
-      "version": "1.20.0",
-      "versionCode": 51,
-      "notes": "# Taash Club 1.20.0 - Unified non-blocking in-app updater\n\n### Features\n\n- New in-app updater: a non-blocking prompt with Later and Update Now, live download progress, and release notes shown before installing.\n- Web version signs in through the shared PNSJY sign-in page.\n- Web version adds a responsive desktop layout and installable (PWA) support.\n\n### Bug fixes\n\n- Replaced the old update prompt and external file opener with a direct package installer.\n",
+      "version": "1.21.0",
+      "versionCode": 52,
+      "notes": "# Taash Club 1.21.0 - Smoother in-app updates\n\n### Features\n- Update downloads can now be paused, resumed from where they stopped (even after closing the app), stopped, and retried after a network drop.\n- Old update files are deleted automatically after an update installs.\n\n### Bug fixes\n- Check for updates is shown only on Android, where it applies.\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/taashclub/taash-club.apk",
-      "sizeBytes": 95433707
+      "sizeBytes": 95515907
     },
     "cards": {
       "version": "2.7.0",
