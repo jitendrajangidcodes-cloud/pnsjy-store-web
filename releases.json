@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T07:52:49.833Z",
+  "generatedAt": "2026-09-28T07:58:42.781Z",
   "apps": {
     "reminder": {
       "version": "2.30.0",
@@ -34,12 +34,12 @@
       "sizeBytes": 95433707
     },
     "cards": {
-      "version": "2.6.0",
-      "versionCode": 33,
-      "notes": "# Cards 2.6.0 - Unified non-blocking in-app updater\n\n### Features\n\n- Integrated Router Warden style non-blocking in-app updater with live byte progress bar.\n- Update dialog displays detailed release notes and Later / Update Now options.\n- Settings screen features dedicated Check for Updates tile.\n\n### Bug fixes\n\n- Streamlined update download and installation via native package installer channel.\n",
+      "version": "2.7.0",
+      "versionCode": 34,
+      "notes": "# Cards 2.7.0 - Diagnostics log and smoother updates\n\n### Features\n- Update downloads can now be paused, resumed from where they stopped (even after closing the app), stopped, and retried after a network drop.\n- Old update files are deleted automatically after an update installs.\n- Settings > About > View diagnostics log shows a step-by-step record of app activity that you can copy into a bug report. It never includes card details, PINs or keys.\n\n### Bug fixes\n- Background update notifications now work (the version was read from the wrong field).\n",
       "publishedAt": "2026-07-04T09:29:52Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/cards/Cards-v2.6.0.apk",
-      "sizeBytes": 124781231
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/cards/Cards-v2.7.0.apk",
+      "sizeBytes": 124994923
     },
     "langkeeper": {
       "version": "1.0.0",
