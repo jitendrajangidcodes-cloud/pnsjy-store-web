@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T08:12:26.703Z",
+  "generatedAt": "2026-09-28T08:14:56.977Z",
   "apps": {
     "reminder": {
       "version": "2.30.0",
@@ -42,12 +42,12 @@
       "sizeBytes": 124994923
     },
     "langkeeper": {
-      "version": "1.0.0",
-      "versionCode": 6,
-      "notes": "# LangKeeper 1.0.0 - First stable release\n\nLangKeeper leaves beta. Sign-in now uses your PNSJY account, Google Drive backup asks for permission only when needed, and problems can be diagnosed from the app.\n\n### Features\n- Sign in with your PNSJY account in the browser (pnsjy-auth). The session is kept in secure storage and renews itself.\n- Google Drive permission is requested only when you back up or restore.\n- Diagnostics log on the Backup & Settings screen with one-tap copy.\n- Optional \"Send error reports\" switch (off by default). It sends only cleaned-up error messages, never places, addresses, notes or account details.\n\n### Bug fixes\n- Fixed Google sign-in failing with \"[16] Account reauth failed\": the app's Android OAuth client is now registered.\n- A refused Drive permission now shows the package and SHA-1 details instead of failing silently.\n",
+      "version": "1.1.0",
+      "versionCode": 7,
+      "notes": "# LangKeeper 1.1.0 - Smoother in-app updates\n\n### Features\n- Update downloads can now be paused, resumed from where they stopped (even after closing the app), stopped, and retried after a network drop.\n- Old update files are deleted automatically after an update installs.\n\n### Bug fixes\nNo user-facing bug fixes in this release.\n",
       "publishedAt": "2026-09-18T13:49:32Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/langkeeper/langkeeper.apk",
-      "sizeBytes": 56030315
+      "sizeBytes": 56194463
     },
     "routerwarden": {
       "version": "1.1.0",
