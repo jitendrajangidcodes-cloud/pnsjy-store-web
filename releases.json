@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T08:02:35.534Z",
+  "generatedAt": "2026-09-28T08:05:34.350Z",
   "apps": {
     "reminder": {
       "version": "2.30.0",
@@ -18,12 +18,12 @@
       "sizeBytes": 108264648
     },
     "twinclean": {
-      "version": "1.4.0",
-      "versionCode": 8,
-      "notes": "# TwinClean 1.4.0 - Unified non-blocking in-app updater\n\n### Features\n\n- Modernized update dialog with Router Warden design tokens, progress bar, and Later / Update Now actions.\n- Settings screen now displays manual Check for Updates tile.\n\n### Bug fixes\n\n- Replaced blocking UpdateGateScreen splash interceptor with non-blocking background check.\n",
+      "version": "1.5.0",
+      "versionCode": 9,
+      "notes": "# TwinClean 1.5.0 - Stable, diagnostics log and smoother updates\n\n### Features\n- TwinClean leaves beta: the BETA badge is gone.\n- Update downloads can now be paused, resumed from where they stopped (even after closing the app), stopped, and retried after a network drop.\n- Old update files are deleted automatically after an update installs.\n- Settings > View diagnostics log records scans, trash actions and updates, with one-tap copy. It never includes file names or paths.\n\n### Bug fixes\n- A background scheduler failure no longer crashes the app at launch.\n- A crashed scan worker now stops the scan instead of hanging.\n",
       "publishedAt": "2026-07-07T10:01:03Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/twinclean/twinclean.apk",
-      "sizeBytes": 61436099
+      "sizeBytes": 61567615
     },
     "taashclub": {
       "version": "1.20.0",
