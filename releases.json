@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T07:40:37.783Z",
+  "generatedAt": "2026-09-28T07:47:51.275Z",
   "apps": {
     "reminder": {
       "version": "2.29.0",
@@ -50,12 +50,12 @@
       "sizeBytes": 56030315
     },
     "routerwarden": {
-      "version": "1.0.10",
-      "versionCode": 11,
-      "notes": "Airtel & TP-Link router monitor, bandwidth tracking, device blocking.",
+      "version": "1.1.0",
+      "versionCode": 12,
+      "notes": "Router Warden 1.1.0 - Smoother updates\n\n### Features\n- Update downloads can be paused, resumed from where they stopped, stopped, and retried after a network drop.\n- Old update files are deleted automatically after an update installs.\n\n### Bug fixes\n- The release signing key is pinned in the repo, so updates built on any machine install over this version.\n",
       "publishedAt": "2026-09-24T07:35:09Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/routerwarden/router-warden.apk",
-      "sizeBytes": 55585861
+      "sizeBytes": 56340303
     },
     "tributary": {
       "version": "0.1.0",
