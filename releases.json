@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-09-28T07:47:51.275Z",
+  "generatedAt": "2026-09-28T07:52:49.833Z",
   "apps": {
     "reminder": {
-      "version": "2.29.0",
-      "versionCode": 148,
-      "notes": "# Reminder 2.29.0 - Unified non-blocking in-app updater\n\n### Features\n\n- Unified Router Warden style non-blocking in-app updater with Later and Update Now actions.\n- Live byte and progress tracking during updates with release notes preview.\n- Settings screen includes dedicated Check for Updates tile with live status.\n\n### Bug fixes\n\n- Replaced blocking update gate screen and legacy DownloadManager with direct package installer.\n",
+      "version": "2.30.0",
+      "versionCode": 149,
+      "notes": "# Reminder 2.30.0 - Smoother in-app updates\n\n### Features\n- Update downloads can now be paused, resumed from where they stopped (even after closing the app), stopped, and retried after a network drop.\n- Old update files are deleted automatically after an update installs.\n\n### Bug fixes\n- The same error with a different number is now grouped as one issue in error reports.\n",
       "publishedAt": "2026-07-04T09:27:07Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/reminder/reminder-app-v2.29.0.apk",
-      "sizeBytes": 77218438
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/reminder/reminder-app-v2.30.0.apk",
+      "sizeBytes": 77234822
     },
     "mirrordrive": {
       "version": "0.17.2",
