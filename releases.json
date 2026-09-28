@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T07:58:42.781Z",
+  "generatedAt": "2026-09-28T08:02:35.534Z",
   "apps": {
     "reminder": {
       "version": "2.30.0",
@@ -10,12 +10,12 @@
       "sizeBytes": 77234822
     },
     "mirrordrive": {
-      "version": "0.17.2",
-      "versionCode": 40,
-      "notes": "### Security & Privacy\n- Restricted to folders created by Mirror: only files and folders this app creates or you explicitly pick are accessed (drive.file scope) — never your whole Drive.\n\n### UX & Transparency\n- Scoped Drive picker to 'Mirror Folders' with clear privacy guidance and empty state explaining app-folder isolation.",
+      "version": "1.0.0",
+      "versionCode": 41,
+      "notes": "# Mirror 1.0.0 - First stable release\n\n### Features\n- Mirror leaves beta.\n- Update downloads can now be paused, resumed from where they stopped (even after closing the app), stopped, and retried after a network drop.\n- Old update files are deleted automatically after an update installs.\n\n### Bug fixes\n- The same error with a different number is now grouped as one issue in error reports.\n",
       "publishedAt": "2026-07-17T11:09:43Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/mirrordrive/mirrordrive.apk",
-      "sizeBytes": 108182612
+      "sizeBytes": 108264648
     },
     "twinclean": {
       "version": "1.4.0",
