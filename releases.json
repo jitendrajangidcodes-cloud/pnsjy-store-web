@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T12:29:51.395Z",
+  "generatedAt": "2026-09-29T16:59:10.998Z",
   "apps": {
     "reminder": {
       "version": "2.30.0",
@@ -56,14 +56,6 @@
       "publishedAt": "2026-09-24T07:35:09Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/routerwarden/router-warden.apk",
       "sizeBytes": 56340303
-    },
-    "tributary": {
-      "version": "0.1.0",
-      "versionCode": 1,
-      "notes": "Tributary 0.1.0\n\n### Features\n- Link all your Gmail accounts once and stay signed in.\n- Fold every account into one primary inbox, each under its own label, with no duplicates and all details kept.\n- Per-account copy switches (off by default), old-mail copy with progress, and one-tap \"fold everything\".\n- Stats per account: mail per day, unread, top senders, and a ready-to-retire hint.\n- Read-only forwarding view with a shortcut to Gmail's forwarding settings.\n- Full mail client: unified inbox, labels, search, read, reply, forward, archive, star, trash.\n- 3D accounts hub, aurora background, 3D stats, dark and light themes.\n- Diagnostics log and opt-in error reporting in Settings.\n\n### Bug fixes\nNo user-facing bug fixes in this release.\n",
-      "publishedAt": "2026-09-27T10:26:13Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/tributary/tributary.apk",
-      "sizeBytes": 60295293
     }
   }
 }
