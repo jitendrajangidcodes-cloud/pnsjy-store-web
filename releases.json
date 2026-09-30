@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T18:36:46.114Z",
+  "generatedAt": "2026-09-30T18:38:54.060Z",
   "apps": {
     "reminder": {
       "version": "2.30.2",
@@ -18,12 +18,12 @@
       "sizeBytes": 108280704
     },
     "twinclean": {
-      "version": "1.5.1",
-      "versionCode": 10,
-      "notes": "# TwinClean 1.5.1 - Android 13-17 Themed Icon Support\n\n### Features\n- Added adaptive monochrome icon supporting Android 13, 14, 15, 16, and 17 Material You wallpaper dynamic color palettes and dark mode launcher tinting.\n\n### Bug fixes\n- Launcher icon now adheres cleanly to system-level color schemes and launcher themes on newer Android versions.\n",
+      "version": "1.5.2",
+      "versionCode": 11,
+      "notes": "# TwinClean 1.5.2 - Themed Icon & Round Launcher Support\n\n### Features\n- Added explicit round icon declaration (`android:roundIcon`) and synced monochrome adaptive icon layer for Android 13-17 launchers.\n\n### Bug fixes\n- Fixed launcher icon not updating on circular launcher environments.\n",
       "publishedAt": "2026-07-07T10:01:03Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/twinclean/twinclean.apk",
-      "sizeBytes": 61567647
+      "sizeBytes": 61568139
     },
     "taashclub": {
       "version": "1.21.2",
