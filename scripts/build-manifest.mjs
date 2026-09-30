@@ -47,7 +47,7 @@ const out = { generatedAt: new Date().toISOString(), apps: {} };
 
 // Admin-only apps are not in apps.json (so the public site never lists them),
 // but the store app still needs their release info once an admin signs in.
-const ADMIN_ONLY_TAGS = ["routerwarden", "tributary"];
+const ADMIN_ONLY_TAGS = ["routerwarden"];
 const allTags = [...apps.map((a) => a.id), ...ADMIN_ONLY_TAGS];
 
 for (const tag of allTags) {
