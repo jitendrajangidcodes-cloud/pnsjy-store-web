@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T13:50:15.516Z",
+  "generatedAt": "2026-09-30T14:23:26.091Z",
   "apps": {
     "reminder": {
       "version": "2.30.0",
@@ -50,9 +50,9 @@
       "sizeBytes": 56194463
     },
     "mailkeep": {
-      "version": "0.3.3",
-      "versionCode": 8,
-      "notes": "# Mailkeep 0.3.3\n\n### Features\n- Reliable modal lifecycle handling: the scanning progress modal now binds directly to its own dialog context, ensuring clean dismissal upon scan completion.\n- Drawer-to-scanner transition: drawer stays mounted while the scan dialog is active, preventing premature context destruction.\n\n### Bug fixes\n- Fixed empty label scan freeze: resolved an issue where premature drawer dismissal unmounted the BuildContext, causing the scanning progress dialog to freeze on the last label (e.g. 9 of 9).\n- Added 10-second network timeouts to Gmail label stats and message listing checks in isLabelEmpty to avoid indefinite hangs on slow connections.\n",
+      "version": "0.3.4",
+      "versionCode": 9,
+      "notes": "# Mailkeep 0.3.4\n\n#### Features\n- **Full Action Menu for System Folders**: System folders (Inbox, Sent, Starred, Drafts, Trash, Spam, Important) now feature a uniform 3-dots action menu (`more_vert`) in the drawer providing:\n  - **Move all emails to...**: Batch move all messages from any system folder to any target folder or label.\n  - **Copy all emails to...**: Batch copy all messages to any destination folder or label.\n  - **Empty folder (trash all)**: Quick 1-tap trashing/emptying of all messages in that folder.\n  - **Rules & Custom Filters**: Open and configure automated filtering rules for the folder.\n  - **Rename / Delete guidance**: Clear dialogs explaining Gmail API system folder invariants and offering 1-tap folder emptying where appropriate.\n- **Scroll Position Retention in Label Drawer**: Added `PageStorageKey` to the drawer `ListView` so that scroll position is preserved without resetting across state updates.\n\n#### Bug fixes\n- **Fixed Drawer Auto-Scroll Jump to Top**: Decoupled the 1-second countdown ticker in `DelayedLabelDeletionService` from the main label stream `notifyListeners()`, routing ticks exclusively through a local `countdownTicker` `ValueNotifier`. This prevents the drawer's label provider and `ListView` from rebuilding every second while a 10-minute delayed deletion countdown is running.\n- **Improved Empty Folder Confirmation Dialog**: Enhanced phrasing in `promptEmptyLabel` to dynamically distinguish folders from user labels.\n",
       "publishedAt": "2026-09-30T05:29:45Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/mailkeep/mailkeep.apk",
       "sizeBytes": 62126638
