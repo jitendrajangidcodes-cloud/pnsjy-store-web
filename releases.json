@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T16:09:24.218Z",
+  "generatedAt": "2026-09-30T16:15:28.847Z",
   "apps": {
     "reminder": {
       "version": "2.30.0",
@@ -50,9 +50,9 @@
       "sizeBytes": 56194463
     },
     "mailkeep": {
-      "version": "0.3.6",
-      "versionCode": 11,
-      "notes": "# Mailkeep 0.3.6\n\n#### Features\n- **Advanced Selection Options (Default, Range, All)**: Added a modal selection sheet in the folder header offering:\n  - **Default: Loaded emails (50)**: Instantly select all emails currently loaded on screen.\n  - **Custom Range / Quantity**: Specify the exact number of emails to select (with quick chips: 50, 100, 250, 500, or custom number entry).\n  - **All emails in folder**: Select every email in the folder across the entire Gmail server.\n- **Server-Wide Batch Move, Copy & Empty**: Upgraded `moveAllInLabel`, `copyAllInLabel`, and `emptyLabel` with Gmail API pagination (`listMessageIds` in 500-result chunks) and batch modification (`batchModify` in 1000-chunk limits), allowing thousands of emails on the server to be moved, copied, or trashed in a single operation without being limited to local cached messages.\n- **Seamless Multi-Account Background Auto-Login**: Removed the warning \"tap to reconnect\" orange banners and `sync_problem` icons from the accounts screen. Implemented transparent background session recovery (`ensureSession`) on app startup, account tap, and account switching, delivering a seamless multi-account experience just like the native Gmail Android app.\n- **Resilient APK Downloader**: Added an automatic 5-attempt retry loop with exponential backoff on connection interrupts / socket drops (e.g. when the phone locks during download). Resumes downloads seamlessly from the partial file using HTTP `Range: bytes=<have>-` headers.\n- **Clean Update Modal Layout**: Sanitized error messages to clean, user-friendly summaries without raw URLs or stack traces, and wrapped dialog content in a scrollable, constrained layout so update action buttons are never obscured.\n\n#### Bug fixes\n- **Fixed In-App Update Crash on Screen Lock**: Resolved an issue where locking the phone interrupted the HTTP connection with `ClientException: Connection closed while receiving data`, breaking download progress and overflowing the update modal with gigantic URLs.\n- **Fixed Move/Copy Selection Limit**: Resolved an issue where batch move/copy only operated on the first 50 cached emails instead of the entire folder on the server.\n- **Fixed Account Switcher Navigation**: Resolved an issue in the inbox header account switcher popup where selecting a different account updated the label state without transitioning to the selected account's inbox.\n\n",
+      "version": "0.3.7",
+      "versionCode": 12,
+      "notes": "# Mailkeep 0.3.7\n\n#### Features\n- **Canonical Asset Fallback**: In-app updater now includes a canonical fallback URL for release assets, ensuring downloads always resolve even during release asset uploads or GitHub API latency.\n- **URI Validation in Downloader**: Explicitly validates parsed URLs before initiating downloads to prevent unhandled malformed URI errors.\n\n#### Bug fixes\n- **Fixed \"No host specified in URI\" Download Error**: Resolved an issue where an empty download URL could be cached in memory if an update check occurred during release publishing, causing download attempts to fail with `No host specified in URI`.\n",
       "publishedAt": "2026-09-30T05:29:45Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/mailkeep/mailkeep.apk",
       "sizeBytes": 65961598
