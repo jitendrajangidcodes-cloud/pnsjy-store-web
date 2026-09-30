@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T14:23:26.091Z",
+  "generatedAt": "2026-09-30T15:39:43.659Z",
   "apps": {
     "reminder": {
       "version": "2.30.0",
@@ -50,12 +50,12 @@
       "sizeBytes": 56194463
     },
     "mailkeep": {
-      "version": "0.3.4",
-      "versionCode": 9,
-      "notes": "# Mailkeep 0.3.4\n\n#### Features\n- **Full Action Menu for System Folders**: System folders (Inbox, Sent, Starred, Drafts, Trash, Spam, Important) now feature a uniform 3-dots action menu (`more_vert`) in the drawer providing:\n  - **Move all emails to...**: Batch move all messages from any system folder to any target folder or label.\n  - **Copy all emails to...**: Batch copy all messages to any destination folder or label.\n  - **Empty folder (trash all)**: Quick 1-tap trashing/emptying of all messages in that folder.\n  - **Rules & Custom Filters**: Open and configure automated filtering rules for the folder.\n  - **Rename / Delete guidance**: Clear dialogs explaining Gmail API system folder invariants and offering 1-tap folder emptying where appropriate.\n- **Scroll Position Retention in Label Drawer**: Added `PageStorageKey` to the drawer `ListView` so that scroll position is preserved without resetting across state updates.\n\n#### Bug fixes\n- **Fixed Drawer Auto-Scroll Jump to Top**: Decoupled the 1-second countdown ticker in `DelayedLabelDeletionService` from the main label stream `notifyListeners()`, routing ticks exclusively through a local `countdownTicker` `ValueNotifier`. This prevents the drawer's label provider and `ListView` from rebuilding every second while a 10-minute delayed deletion countdown is running.\n- **Improved Empty Folder Confirmation Dialog**: Enhanced phrasing in `promptEmptyLabel` to dynamically distinguish folders from user labels.\n",
+      "version": "0.3.5",
+      "versionCode": 10,
+      "notes": "# Mailkeep 0.3.5\n\n#### Features\n- **Rich HTML Email Reader**: Integrated `flutter_widget_from_html_core` to render full, beautiful rich HTML emails (tables, styles, bold/italic, lists, blockquotes, links, formatted text) natively in Flutter without WebView overhead.\n- **HTML vs Plain-Text Switch**: Added an AppBar action toggle allowing users to instantly switch between formatted HTML view and clean plain-text view.\n- **Privacy Remote Image Shield**: External tracking pixels and remote images are blocked by default for privacy, with a 1-tap \"Load images\" / \"Hide images\" toggle banner.\n- **Complete vs Loaded Email Counts**: Active folder/label header now displays `${loaded} loaded of ${total} total` emails (e.g. `50 loaded of 542 total`), ensuring users know exactly how many emails are on Gmail's server versus what is currently cached locally.\n- **Complete Count & Move Before Delete**: The delete label/folder confirmation dialog now prominently displays the complete server count in an orange notice banner and provides a direct \"Move emails first...\" button to batch-relocate all messages to another folder before deleting.\n- **Full Folder Action Menu in Header**: Unified the 3-dots action menu in the active folder header for all folders (system and custom), providing Move all emails to..., Copy all emails to..., Empty folder (trash all), Rules & Custom Filters, Rename, and Delete with Gmail system folder invariants guidance.\n\n#### Bug fixes\n- **Fixed Drawer Scroll Auto-Refresh & Jump to Top**: Added persistent scroll offset tracking to `LabelDrawer` with `skipLoadingOnReload: true` and `skipLoadingOnRefresh: true` on the labels stream, completely preventing drawer list unmounting or scroll offset resets during delayed deletion countdowns and background refreshes.\n",
       "publishedAt": "2026-09-30T05:29:45Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/mailkeep/mailkeep.apk",
-      "sizeBytes": 62126638
+      "sizeBytes": 65797562
     },
     "routerwarden": {
       "version": "1.1.0",
