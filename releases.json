@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T12:07:53.900Z",
+  "generatedAt": "2026-09-30T12:42:34.806Z",
   "apps": {
     "reminder": {
       "version": "2.30.0",
@@ -50,12 +50,12 @@
       "sizeBytes": 56194463
     },
     "mailkeep": {
-      "version": "0.2.1",
-      "versionCode": 4,
-      "notes": "Mailkeep 0.2.1\n\n### Features\n- Two-step confirmation flow for deleting labels that contain emails: warns user of the exact email count and requires secondary confirmation before proceeding.\n- Added non-dismissible modal progress indicator during label message count check and deletion.\n- Added automatic selection reset to INBOX if the currently viewed label is deleted.\n\n### Bug fixes\n- Fixed silent label deletion failures by properly handling errors, updating Gmail API and local SQLite cache, cleaning up label IDs from cached messages, and displaying feedback SnackBars.\n",
+      "version": "0.3.0",
+      "versionCode": 5,
+      "notes": "Mailkeep 0.3.0\n\n### Features\n- Active folder and label header displaying folder icon, human-readable name, and total email count badge.\n- Contextual search bar placeholder displaying active folder name (\"Search in [Folder]...\").\n- Thunderbird message rules and custom filters: view, create, edit, update, toggle, delete, and batch-apply rules to existing emails.\n- Enhanced destination picker: allows moving or copying directly to Inbox and includes an instant search filter for accounts with many labels.\n- Quick \"Move to Inbox\" action button in selection mode when viewing any non-Inbox folder.\n- 1-tap \"Select all\" toggle button in active folder header for immediate bulk selection.\n- Safe account removal: replaced dangerous direct 'X' button on accounts page with a 3-dots menu and explicit confirmation dialog.\n\n### Bug fixes\n- Fixed inability to move or copy emails back to Inbox by adding Inbox and system folders to the destination picker.\n",
       "publishedAt": "2026-09-30T05:29:45Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/mailkeep/mailkeep.apk",
-      "sizeBytes": 61141874
+      "sizeBytes": 61617270
     },
     "routerwarden": {
       "version": "1.1.0",
