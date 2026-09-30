@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-30T18:29:50.941Z",
+  "generatedAt": "2026-09-30T18:34:22.993Z",
   "apps": {
     "reminder": {
-      "version": "2.30.1",
-      "versionCode": 150,
-      "notes": "# Reminder 2.30.1 - Android 13-17 Themed Icon Support\n\n### Features\n- Added adaptive monochrome icon supporting Android 13, 14, 15, 16, and 17 Material You wallpaper dynamic color palettes and dark mode launcher tinting.\n\n### Bug fixes\n- Launcher icon now adheres cleanly to system-level color schemes and launcher themes on newer Android versions.\n",
+      "version": "2.30.2",
+      "versionCode": 151,
+      "notes": "# Reminder 2.30.2 - Launcher Icon Monochrome & Dynamic Theme Support\n\n### Features\n- Added monochrome adaptive icon layer to `launcher_icon.xml` matching `android:roundIcon` and `android:icon`, ensuring seamless tinting with wallpaper dynamic palettes and dark mode on Android 13-17.\n\n### Bug fixes\n- Fixed reminder app keeping legacy icon on devices using circular launchers.\n",
       "publishedAt": "2026-07-04T09:27:07Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/reminder/reminder-app-v2.30.1.apk",
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/reminder/reminder-app-v2.30.2.apk",
       "sizeBytes": 77234822
     },
     "mirrordrive": {
