@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T18:34:22.993Z",
+  "generatedAt": "2026-09-30T18:36:46.114Z",
   "apps": {
     "reminder": {
       "version": "2.30.2",
@@ -26,12 +26,12 @@
       "sizeBytes": 61567647
     },
     "taashclub": {
-      "version": "1.21.1",
-      "versionCode": 53,
-      "notes": "# Taash Club 1.21.1 - Android 13-17 Themed Icon Support\n\n### Features\n- Added adaptive monochrome icon supporting Android 13, 14, 15, 16, and 17 Material You wallpaper dynamic color palettes and dark mode launcher tinting.\n\n### Bug fixes\n- Launcher icon now adheres cleanly to system-level color schemes and launcher themes on newer Android versions.\n",
+      "version": "1.21.2",
+      "versionCode": 54,
+      "notes": "# Taash Club 1.21.2 - Transparent Themed Icon Support\n\n### Features\n- Isolated playing card monochrome silhouette with transparent background for Android 13-17 Material You dynamic theme and dark mode.\n\n### Bug fixes\n- Fixed themed launcher icon rendering solid green table background.\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/taashclub/taash-club.apk",
-      "sizeBytes": 95515947
+      "sizeBytes": 95539512
     },
     "cards": {
       "version": "2.7.2",
