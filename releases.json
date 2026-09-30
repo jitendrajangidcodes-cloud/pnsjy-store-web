@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T13:07:39.799Z",
+  "generatedAt": "2026-09-30T13:21:20.849Z",
   "apps": {
     "reminder": {
       "version": "2.30.0",
@@ -50,12 +50,12 @@
       "sizeBytes": 56194463
     },
     "mailkeep": {
-      "version": "0.3.1",
-      "versionCode": 6,
-      "notes": "# Mailkeep 0.3.1\n\n### Features\n- In-app updater: automated cold-start update checks and manual \"Check for updates\" option in Settings.\n- Resumable APK downloads with real-time byte and percentage progress bar, pause/resume/cancel controls.\n- Direct package installer launch on Android via FileProvider and native MethodChannel.\n- Startup APK cache cleanup to remove stale downloaded updates.\n\n### Bug fixes\n- None (feature update adding unified fleet in-app updater support).\n",
+      "version": "0.3.2",
+      "versionCode": 7,
+      "notes": "# Mailkeep 0.3.2\n\n### Features\n- Empty label scanner: scans custom labels for a given Gmail account to 100% verify 0 emails across live Gmail API stats, Gmail message listing, and local database cache.\n- Scanning modal dialog displaying real-time progress and count of verified empty labels.\n- Empty label deletion confirmation review dialog listing verified empty labels.\n- Immediate app UI removal: empty labels are hidden in real time from drawer, pickers, and folder views upon confirmation.\n- 10-minute delayed server deletion: deletion on Gmail server is delayed by 10 minutes, giving the user a persistent safety buffer to revert.\n- Persistent countdown banner in Inbox displaying remaining time with a 1-tap \"Revert\" button.\n- Revert / Undo action instantly cancels server deletion and restores labels in the app UI.\n- SharedPreferences persistence: delayed deletion timers survive app restarts, continuing countdown or executing if expired.\n\n### Bug fixes\n- None (feature update adding 100% empty label scanner with safe 10-minute delayed deletion and revert).\n",
       "publishedAt": "2026-09-30T05:29:45Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/mailkeep/mailkeep.apk",
-      "sizeBytes": 61782278
+      "sizeBytes": 62126638
     },
     "routerwarden": {
       "version": "1.1.0",
