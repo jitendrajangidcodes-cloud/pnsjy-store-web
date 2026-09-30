@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T17:24:42.075Z",
+  "generatedAt": "2026-09-30T17:27:11.148Z",
   "apps": {
     "reminder": {
       "version": "2.30.0",
@@ -10,12 +10,12 @@
       "sizeBytes": 77234822
     },
     "mirrordrive": {
-      "version": "1.1.0",
-      "versionCode": 42,
-      "notes": "# Mirror 1.1.0 — per-device name for settings backup\n\n### Features\n- Per-device name for settings backup. Go to Settings > Settings backup >\n  This device to give this phone a name (e.g. \"Pixel 8\", \"Samsung old\").\n  The name appears in the Drive restore picker so two phones signed into the\n  same Google account are easy to tell apart. The auto-generated fallback\n  (\"Android device · xxxx\") is used until a name is set.\n\n### Bug fixes\nNone — this is a feature-only release.\n",
+      "version": "1.1.1",
+      "versionCode": 43,
+      "notes": "# MirrorDrive 1.1.1 - Android 13-17 Themed Icon Support\n\n### Features\n- Added adaptive monochrome icon supporting Android 13, 14, 15, 16, and 17 Material You wallpaper dynamic color palettes and dark mode launcher tinting.\n\n### Bug fixes\n- Launcher icon now adheres cleanly to system-level color schemes and launcher themes on newer Android versions.\n",
       "publishedAt": "2026-07-17T11:09:43Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/mirrordrive/mirrordrive.apk",
-      "sizeBytes": 108281028
+      "sizeBytes": 108281056
     },
     "twinclean": {
       "version": "1.5.0",
