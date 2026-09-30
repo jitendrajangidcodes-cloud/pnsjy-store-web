@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T11:28:02.050Z",
+  "generatedAt": "2026-09-30T12:07:53.900Z",
   "apps": {
     "reminder": {
       "version": "2.30.0",
@@ -50,12 +50,12 @@
       "sizeBytes": 56194463
     },
     "mailkeep": {
-      "version": "0.2.0",
-      "versionCode": 3,
-      "notes": "Mailkeep 0.2.0\n\n### Features\n- 10x faster concurrent mail loading with progressive SQLite database streaming.\n- Native pull-to-refresh on inbox and folder views.\n- Direct label-to-label batch transfer (Move all emails to, Copy all emails to, Empty label).\n- Multi-select power action bar with Select All, Move, Copy, Trash, Archive, Mark Read/Unread, Star, and Report Spam.\n- Thunderbird 5-color message tags (Important, Work, Personal, To Do, Later) with badge indicators and menu filtering.\n- One-tap quick filter bar (All, Unread, Starred, Attachments, Tagged) and flexible sorting options.\n- Interactive search filter chips (has:attachment, is:unread, is:starred, newer_than:7d, from:me, label:INBOX).\n- Modern UI redesign: floating search header with fast account switcher modal, color-hashed avatars, smart dates, and swipe actions.\n- Categorized drawer (All Inboxes, Folders, Tags, Labels with unread counts, + Create Label dialog).\n- Message reader quick reply bar, privacy remote image shield, and attachment manager.\n- Compose attachments, draft auto-saving, and 5-second Undo Send grace period toast.\n\n### Bug fixes\n- Fixed slow serial message fetching by implementing 10-worker parallel batch requests.\n",
+      "version": "0.2.1",
+      "versionCode": 4,
+      "notes": "Mailkeep 0.2.1\n\n### Features\n- Two-step confirmation flow for deleting labels that contain emails: warns user of the exact email count and requires secondary confirmation before proceeding.\n- Added non-dismissible modal progress indicator during label message count check and deletion.\n- Added automatic selection reset to INBOX if the currently viewed label is deleted.\n\n### Bug fixes\n- Fixed silent label deletion failures by properly handling errors, updating Gmail API and local SQLite cache, cleaning up label IDs from cached messages, and displaying feedback SnackBars.\n",
       "publishedAt": "2026-09-30T05:29:45Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/mailkeep/mailkeep.apk",
-      "sizeBytes": 61109106
+      "sizeBytes": 61141874
     },
     "routerwarden": {
       "version": "1.1.0",
