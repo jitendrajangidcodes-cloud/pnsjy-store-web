@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T06:25:59.278Z",
+  "generatedAt": "2026-09-30T10:39:14.301Z",
   "apps": {
     "reminder": {
       "version": "2.30.0",
@@ -50,12 +50,12 @@
       "sizeBytes": 56194463
     },
     "mailkeep": {
-      "version": "0.1.0",
-      "versionCode": 1,
-      "notes": "Mailkeep 0.1.0\n\n### Features\n- Multi-account Gmail sign-in, on-device (gmail.modify scope).\n- Label tree (system + user labels, nested via Gmail's own \"/\" naming) and inbox view.\n- Multi-select move, copy, and archive across labels/folders.\n- Message reader: full body (text/plain preferred, tag-stripped text/html fallback), attachment listing.\n- Compose, reply (correctly threaded via the message's real RFC Message-Id/References), and forward.\n- Search using Gmail's own search syntax.\n- Settings: per-account sync toggle, opt-in diagnostics reporting, diagnostics log.\n- Responsive layout: permanent label panel on wide windows, drawer on narrow ones.\n\n### Bug fixes\nNone — first release.\n",
+      "version": "0.1.1",
+      "versionCode": 2,
+      "notes": "Mailkeep 0.1.1\n\n### Features\n- Configured Google OAuth Web Client ID (`serverClientId`) and `google-services.json` for Android sign-in.\n\n### Bug fixes\n- Fixed Android sign-in crash (`clientConfigurationError: serverClientId must be provided on Android`) by initializing `GoogleSignIn` with `serverClientId`.\n",
       "publishedAt": "2026-09-30T05:29:45Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/mailkeep/mailkeep.apk",
-      "sizeBytes": 60287718
+      "sizeBytes": 60287722
     },
     "routerwarden": {
       "version": "1.1.0",
