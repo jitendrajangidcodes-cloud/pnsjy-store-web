@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T17:36:43.233Z",
+  "generatedAt": "2026-09-30T17:38:50.579Z",
   "apps": {
     "reminder": {
       "version": "2.30.1",
@@ -18,12 +18,12 @@
       "sizeBytes": 108281056
     },
     "twinclean": {
-      "version": "1.5.0",
-      "versionCode": 9,
-      "notes": "# TwinClean 1.5.0 - Stable, diagnostics log and smoother updates\n\n### Features\n- TwinClean leaves beta: the BETA badge is gone.\n- Update downloads can now be paused, resumed from where they stopped (even after closing the app), stopped, and retried after a network drop.\n- Old update files are deleted automatically after an update installs.\n- Settings > View diagnostics log records scans, trash actions and updates, with one-tap copy. It never includes file names or paths.\n\n### Bug fixes\n- A background scheduler failure no longer crashes the app at launch.\n- A crashed scan worker now stops the scan instead of hanging.\n",
+      "version": "1.5.1",
+      "versionCode": 10,
+      "notes": "# TwinClean 1.5.1 - Android 13-17 Themed Icon Support\n\n### Features\n- Added adaptive monochrome icon supporting Android 13, 14, 15, 16, and 17 Material You wallpaper dynamic color palettes and dark mode launcher tinting.\n\n### Bug fixes\n- Launcher icon now adheres cleanly to system-level color schemes and launcher themes on newer Android versions.\n",
       "publishedAt": "2026-07-07T10:01:03Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/twinclean/twinclean.apk",
-      "sizeBytes": 61567615
+      "sizeBytes": 61567647
     },
     "taashclub": {
       "version": "1.21.1",
