@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T18:41:03.764Z",
+  "generatedAt": "2026-09-30T18:43:08.449Z",
   "apps": {
     "reminder": {
       "version": "2.30.2",
@@ -50,12 +50,12 @@
       "sizeBytes": 56201692
     },
     "mailkeep": {
-      "version": "0.3.8",
-      "versionCode": 13,
-      "notes": "# Mailkeep 0.3.8 Release Notes\n\nMailkeep 0.3.8 introduces live batch progress tracking for large email moves, copies, and trash operations across folders and labels.\n\n#### Features\n- **Live Batch Progress Tracking in Folders & Labels**: When moving, copying, or emptying large volumes of emails (e.g. 5,000 emails selected across a folder), opening either the source or destination folder displays real-time progress:\n  - Exact count and percentage: e.g. `2,000 of 5,000 processed (40%)`.\n  - Contextual operation titles: displays \"Moving emails to [Target]\" when viewing the source folder, and \"Receiving emails from [Source]\" when viewing the destination folder.\n  - Linear progress bar showing real-time incremental completion.\n  - Smooth completion state (\"Completed: Moved 5,000 emails to [Target]\") with automatic dismissal after 4 seconds.\n  - Manual dismiss button (`X`) to hide the progress banner at any time.\n- **Incremental Chunk Reporting**: Integrated incremental progress callbacks into `GmailApiService.batchModify`, reporting updates to the central progress tracker as each 1,000-message chunk finishes on the Gmail server.\n- **Immediate Multi-Select Dismissal**: Initiating a batch move, copy, or trash operation immediately dismisses the selection mode AppBar and notifies the user with feedback, allowing continued navigation while the batch processes in the background.\n\n- **Empty Folders Cleanup & Safe 10-Minute Revert**: Added an empty cleaner icon to the Folders section header in the drawer. Checks all folders for the active account to verify zero messages across local storage and Gmail servers, highlights confirmed empty folders, and allows safe 10-minute delayed deletion with 1-tap revert.\n- **Android 13–17 Material You Themed Icons**: Added adaptive `<monochrome>` icon support, ensuring the app launcher icon seamlessly adapts to system wallpaper dynamic color palettes and dark mode on Android 13, 14, 15, 16, and 17.\n\n#### Bug fixes\n- **Fixed Silent Long-Running Moves**: Users no longer have to guess whether a large batch operation (e.g. 5k emails) is still running or finished. The live progress banner provides continuous visibility across folder navigation.\n",
+      "version": "0.3.9",
+      "versionCode": 14,
+      "notes": "# Mailkeep 0.3.9 - Round Launcher & Full Folder Selection\n\n### Features\n- Added explicit round icon declaration (`android:roundIcon`) and synced monochrome adaptive icon layer for Android 13-17 launchers.\n- Added full folder selection dialog and banner allowing one-tap selection of all emails in a label or folder across Gmail server.\n\n### Bug fixes\n- Fixed launcher icon not updating on circular launcher environments.\n- Fixed partial move issue where selecting all only selected visible 50 cached emails, leaving the remaining server emails behind.\n",
       "publishedAt": "2026-09-30T05:29:45Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/mailkeep/mailkeep.apk",
-      "sizeBytes": 66125522
+      "sizeBytes": 66158782
     },
     "routerwarden": {
       "version": "1.1.0",
