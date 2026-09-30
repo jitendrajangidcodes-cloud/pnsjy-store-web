@@ -124,5 +124,21 @@
     "about": "LangKeeper is your personal location manager. Instantly save your current GPS coordinates with reverse-geocoded address details, fine-tune pins on an interactive map, and launch one-tap turn-by-turn navigation in Google Maps. Sign in with your PNSJY account and back up or restore your locations privately in Google Drive AppData.",
     "requirements": "Android 8.0 (Oreo) or newer. Distributed outside the Play Store -- Android will ask permission to install from this source the first time.",
     "screenshots": []
+  },
+  {
+    "id": "mailkeep",
+    "name": "Mailkeep",
+    "tagline": "A fast Gmail client with robust label and folder move/copy.",
+    "category": "Productivity",
+    "beta": true,
+    "platform": "Android",
+    "color": "#3F51B5",
+    "requiresAccount": true,
+    "icon": "assets/icons/mailkeep.png",
+    "repo": "jitendrajangidcodes-cloud/pnsjy-store-web",
+    "packageId": "com.pnsjy.mailkeep",
+    "about": "Mailkeep is a Gmail client built around fast, accurate label and folder management. Sign in with one or more Gmail accounts, browse your label tree, and multi-select messages to move, copy, or archive across labels in a single action. Read, compose, reply, and forward, with search using Gmail's own search syntax. Fully local -- there is no Mailkeep server, every request talks to Gmail directly from the device.",
+    "requirements": "Android 8.0 (Oreo) or newer. Distributed outside the Play Store -- Android will ask permission to install from this source the first time.",
+    "screenshots": []
   }
 ]
