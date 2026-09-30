@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T18:38:54.060Z",
+  "generatedAt": "2026-09-30T18:41:03.764Z",
   "apps": {
     "reminder": {
       "version": "2.30.2",
@@ -42,12 +42,12 @@
       "sizeBytes": 125020475
     },
     "langkeeper": {
-      "version": "1.1.1",
-      "versionCode": 8,
-      "notes": "# LangKeeper 1.1.1 - Android 13-17 Themed Icon Support\n\n### Features\n- Added adaptive monochrome icon supporting Android 13, 14, 15, 16, and 17 Material You wallpaper dynamic color palettes and dark mode launcher tinting.\n\n### Bug fixes\n- Launcher icon now adheres cleanly to system-level color schemes and launcher themes on newer Android versions.\n",
+      "version": "1.1.2",
+      "versionCode": 9,
+      "notes": "# LangKeeper 1.1.2 - Themed Icon & Round Launcher Support\n\n### Features\n- Added explicit round icon declaration (`android:roundIcon`) and synced monochrome adaptive icon layer for Android 13-17 launchers.\n\n### Bug fixes\n- Fixed launcher icon not updating on circular launcher environments.\n",
       "publishedAt": "2026-09-18T13:49:32Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/langkeeper/langkeeper.apk",
-      "sizeBytes": 56201208
+      "sizeBytes": 56201692
     },
     "mailkeep": {
       "version": "0.3.8",
