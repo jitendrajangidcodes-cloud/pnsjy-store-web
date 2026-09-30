@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T16:48:35.778Z",
+  "generatedAt": "2026-09-30T17:24:42.075Z",
   "apps": {
     "reminder": {
       "version": "2.30.0",
@@ -34,12 +34,12 @@
       "sizeBytes": 95515907
     },
     "cards": {
-      "version": "2.7.0",
-      "versionCode": 34,
-      "notes": "# Cards 2.7.0 - Diagnostics log and smoother updates\n\n### Features\n- Update downloads can now be paused, resumed from where they stopped (even after closing the app), stopped, and retried after a network drop.\n- Old update files are deleted automatically after an update installs.\n- Settings > About > View diagnostics log shows a step-by-step record of app activity that you can copy into a bug report. It never includes card details, PINs or keys.\n\n### Bug fixes\n- Background update notifications now work (the version was read from the wrong field).\n",
+      "version": "2.7.1",
+      "versionCode": 35,
+      "notes": "# Cards 2.7.1 - Android 13-17 Themed Icon Support\n\n### Features\n- Added adaptive monochrome icon supporting Android 13, 14, 15, 16, and 17 Material You wallpaper dynamic color palettes and dark mode launcher tinting.\n\n### Bug fixes\n- Launcher icon now adheres cleanly to system-level color schemes and launcher themes on newer Android versions.\n",
       "publishedAt": "2026-07-04T09:29:52Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/cards/Cards-v2.7.0.apk",
-      "sizeBytes": 124994923
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/cards/Cards-v2.7.1.apk",
+      "sizeBytes": 124994955
     },
     "langkeeper": {
       "version": "1.1.0",
