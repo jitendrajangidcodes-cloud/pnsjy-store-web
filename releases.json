@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T18:19:04.611Z",
+  "generatedAt": "2026-09-30T18:25:47.610Z",
   "apps": {
     "reminder": {
       "version": "2.30.1",
@@ -34,12 +34,12 @@
       "sizeBytes": 95515947
     },
     "cards": {
-      "version": "2.7.1",
-      "versionCode": 35,
-      "notes": "# Cards 2.7.1 - Android 13-17 Themed Icon Support\n\n### Features\n- Added adaptive monochrome icon supporting Android 13, 14, 15, 16, and 17 Material You wallpaper dynamic color palettes and dark mode launcher tinting.\n\n### Bug fixes\n- Launcher icon now adheres cleanly to system-level color schemes and launcher themes on newer Android versions.\n",
+      "version": "2.7.2",
+      "versionCode": 36,
+      "notes": "# Cards 2.7.2 - Transparent Themed Icon & Round Launcher Support\n\n### Features\n- Added pure transparent monochrome adaptive icon layer, ensuring the card emblem renders cleanly on Android 13-17 Material You wallpaper themes and dark mode without solid background fill.\n- Added explicit round icon support (`android:roundIcon`) for circular launcher environments.\n\n### Bug fixes\n- Fixed launcher icon rendering solid square on themed home screens.\n",
       "publishedAt": "2026-07-04T09:29:52Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/cards/Cards-v2.7.1.apk",
-      "sizeBytes": 124994955
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/cards/Cards-v2.7.2.apk",
+      "sizeBytes": 125020475
     },
     "langkeeper": {
       "version": "1.1.1",
