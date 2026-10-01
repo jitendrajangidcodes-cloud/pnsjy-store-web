@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T04:26:29.700Z",
+  "generatedAt": "2026-10-01T05:15:27.009Z",
   "apps": {
     "reminder": {
       "version": "2.30.2",
@@ -50,12 +50,12 @@
       "sizeBytes": 56201692
     },
     "mailkeep": {
-      "version": "0.3.9",
-      "versionCode": 14,
-      "notes": "# Mailkeep 0.3.9 - Round Launcher & Full Folder Selection\n\n### Features\n- Added explicit round icon declaration (`android:roundIcon`) and synced monochrome adaptive icon layer for Android 13-17 launchers.\n- Added full folder selection dialog and banner allowing one-tap selection of all emails in a label or folder across Gmail server.\n\n### Bug fixes\n- Fixed launcher icon not updating on circular launcher environments.\n- Fixed partial move issue where selecting all only selected visible 50 cached emails, leaving the remaining server emails behind.\n",
+      "version": "0.3.10",
+      "versionCode": 15,
+      "notes": "# Mailkeep 0.3.10 - Categories, Collapsible Side Nav & Smart Filters\n\n### Features\n- Dedicated Gmail Categories Section: Grouped server-assigned Gmail category labels (Personal, Social, Promotions, Updates, Forums) into their own collapsible Categories section with clean icons and human-friendly display names.\n- Collapsible Side Menu: Added expand and collapse toggles for Folders, Categories, Tags, and Labels in the side navigation drawer, including nested label hierarchy collapsing with persistent state.\n- Accurate Total and Unread Counts: Side navigation drawer now displays unread count badges alongside total email counts for every folder, category, and label, kept up-to-date with parallel background refreshes.\n- All Inboxes Multi-Account Sync & Pagination: All Inboxes now coordinates syncing across all signed-in accounts, calculates aggregate server counts, and provides a Load More emails button for paginating large folders.\n- Advanced Filter Creation Directly from Email: Added Filter emails like this action to the message reader with prefilled sender domain and subject, inline new label creation, retroactive execution on existing emails, and zero-cost on-device AI Smart Suggestions.\n\n### Bug fixes\n- Fixed All Inboxes showing only 5 cached messages when thousands existed across inboxes.\n- Hid empty legacy CHAT system folder to prevent confusing immutable system folder warnings.\n- Fixed side drawer scroll position jumping to the top when labels updated or deletions occurred.\n",
       "publishedAt": "2026-09-30T05:29:45Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/mailkeep/mailkeep.apk",
-      "sizeBytes": 66158782
+      "sizeBytes": 66716594
     },
     "routerwarden": {
       "version": "1.1.0",
