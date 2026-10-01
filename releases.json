@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T04:23:42.831Z",
+  "generatedAt": "2026-10-01T04:26:29.700Z",
   "apps": {
     "reminder": {
       "version": "2.30.2",
@@ -26,12 +26,12 @@
       "sizeBytes": 61568139
     },
     "taashclub": {
-      "version": "1.21.2",
-      "versionCode": 54,
-      "notes": "# Taash Club 1.21.2 - Transparent Themed Icon Support\n\n### Features\n- Isolated playing card monochrome silhouette with transparent background for Android 13-17 Material You dynamic theme and dark mode.\n\n### Bug fixes\n- Fixed themed launcher icon rendering solid green table background.\n",
+      "version": "1.21.3",
+      "versionCode": 55,
+      "notes": "# Taash Club 1.21.3 - Redesigned Cards & Table Icon\n\n### Features\n- Redesigned playing card emblem with fanned trio of cards and prominent Ace of Spades.\n- Added deep casino green poker felt table background with subtle rim vignette.\n- Added razor-sharp monochrome stencil layer for Android 13-17 Material You themed icons.\n\n### Bug fixes\n- Fixed deformed monochrome silhouette and jagged table shadow in adaptive launcher icons.\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/taashclub/taash-club.apk",
-      "sizeBytes": 95539512
+      "sizeBytes": 95111488
     },
     "cards": {
       "version": "2.7.2",
