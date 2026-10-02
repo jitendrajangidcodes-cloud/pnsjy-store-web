@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T05:36:59.323Z",
+  "generatedAt": "2026-10-02T05:44:32.537Z",
   "apps": {
     "reminder": {
       "version": "2.30.2",
@@ -50,12 +50,12 @@
       "sizeBytes": 56201692
     },
     "mailkeep": {
-      "version": "0.3.11",
-      "versionCode": 16,
-      "notes": "# Mailkeep 0.3.11 - Step-by-Step Onboarding & Demonstration Mode\n\n### Features\n- Step-by-Step First-Time Onboarding: Added a mandatory 3-step setup wizard guiding users through Mailkeep capabilities, explicit permission requirements, and account connection before entering the app.\n- Permissions & Security Transparency: Clear explanation of why Gmail API modification, local SQLite caching, and notifications are needed, confirming that no third-party servers ever touch email content.\n- Built-In Demonstration Mode: Added a 1-tap Demonstration Account with realistic sample emails, folders, categories, and smart rules for immediate evaluation and demonstration without requiring Google OAuth sign-in.\n- Setup Guide in Settings: Users can re-open the setup guide and review permissions from Settings at any time.\n\n### Bug fixes\n- Fixed blank first-time launch screen by providing an interactive setup wizard.\n- Fixed inability to demonstrate app when Google OAuth restricted scopes are pending verification or restricted to designated test users.\n",
+      "version": "0.3.12",
+      "versionCode": 17,
+      "notes": "# Mailkeep 0.3.12 - New App Logo & Complete Multi-Platform Icon Suite\n\n### Features\n- Modern Multi-Layer App Logo: Designed a sleek, distinctive brand logo combining an origami envelope with layered organization tabs and an emerald keeper badge.\n- Full Android Shape & Density Support: Generated adaptive icons (square, squircle, rounded rectangle, teardrop), dedicated round icons (`ic_launcher_round.png`) across all densities (mdpi, hdpi, xhdpi, xxhdpi, xxxhdpi), and `<monochrome>` themed icons for Android 13-17 wallpaper color palettes.\n- Multi-Platform Desktop & Web Icons: Created multi-resolution Windows `app_icon.ico` (16 to 256px), full macOS `AppIcon.appiconset` (16 to 1024px), and updated the PNSJY Store hub icon.\n- Google Play Store High-Res Graphics: Updated the 512x512 Play Store icon, 1024x500 feature graphic, and all 8 showcase screenshots.\n\n### Bug fixes\n- Fixed missing `ic_launcher_round.png` across legacy Android density folders to prevent launcher fallback clipping.\n- Ensured adaptive foreground layers stay strictly within the 66% safe-zone radius to eliminate any circular mask clipping.\n",
       "publishedAt": "2026-09-30T05:29:45Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/mailkeep/mailkeep.apk",
-      "sizeBytes": 66766458
+      "sizeBytes": 66856450
     },
     "routerwarden": {
       "version": "1.1.0",
