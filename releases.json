@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T04:44:40.011Z",
+  "generatedAt": "2026-10-02T05:36:59.323Z",
   "apps": {
     "reminder": {
       "version": "2.30.2",
@@ -50,12 +50,12 @@
       "sizeBytes": 56201692
     },
     "mailkeep": {
-      "version": "0.3.10",
-      "versionCode": 15,
-      "notes": "# Mailkeep 0.3.10 - Categories, Collapsible Side Nav & Smart Filters\n\n### Features\n- Dedicated Gmail Categories Section: Grouped server-assigned Gmail category labels (Personal, Social, Promotions, Updates, Forums) into their own collapsible Categories section with clean icons and human-friendly display names.\n- Collapsible Side Menu: Added expand and collapse toggles for Folders, Categories, Tags, and Labels in the side navigation drawer, including nested label hierarchy collapsing with persistent state.\n- Accurate Total and Unread Counts: Side navigation drawer now displays unread count badges alongside total email counts for every folder, category, and label, kept up-to-date with parallel background refreshes.\n- All Inboxes Multi-Account Sync & Pagination: All Inboxes now coordinates syncing across all signed-in accounts, calculates aggregate server counts, and provides a Load More emails button for paginating large folders.\n- Advanced Filter Creation Directly from Email: Added Filter emails like this action to the message reader with prefilled sender domain and subject, inline new label creation, retroactive execution on existing emails, and zero-cost on-device AI Smart Suggestions.\n\n### Bug fixes\n- Fixed All Inboxes showing only 5 cached messages when thousands existed across inboxes.\n- Hid empty legacy CHAT system folder to prevent confusing immutable system folder warnings.\n- Fixed side drawer scroll position jumping to the top when labels updated or deletions occurred.\n",
+      "version": "0.3.11",
+      "versionCode": 16,
+      "notes": "# Mailkeep 0.3.11 - Step-by-Step Onboarding & Demonstration Mode\n\n### Features\n- Step-by-Step First-Time Onboarding: Added a mandatory 3-step setup wizard guiding users through Mailkeep capabilities, explicit permission requirements, and account connection before entering the app.\n- Permissions & Security Transparency: Clear explanation of why Gmail API modification, local SQLite caching, and notifications are needed, confirming that no third-party servers ever touch email content.\n- Built-In Demonstration Mode: Added a 1-tap Demonstration Account with realistic sample emails, folders, categories, and smart rules for immediate evaluation and demonstration without requiring Google OAuth sign-in.\n- Setup Guide in Settings: Users can re-open the setup guide and review permissions from Settings at any time.\n\n### Bug fixes\n- Fixed blank first-time launch screen by providing an interactive setup wizard.\n- Fixed inability to demonstrate app when Google OAuth restricted scopes are pending verification or restricted to designated test users.\n",
       "publishedAt": "2026-09-30T05:29:45Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/mailkeep/mailkeep.apk",
-      "sizeBytes": 66716594
+      "sizeBytes": 66766458
     },
     "routerwarden": {
       "version": "1.1.0",
