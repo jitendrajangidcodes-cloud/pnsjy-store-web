@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T13:09:55.293Z",
+  "generatedAt": "2026-10-03T13:23:59.541Z",
   "apps": {
     "reminder": {
       "version": "2.30.2",
@@ -50,9 +50,9 @@
       "sizeBytes": 56201692
     },
     "mailkeep": {
-      "version": "0.4.0",
-      "versionCode": 18,
-      "notes": "# Mailkeep 0.4.0 - Auto-organize old emails\n\n### Features\n- Auto-organize rules: move emails older than N days from one folder to another, for example Inbox to Archive after 30 days. Quick presets (7 days, 30 days, 90 days, 180 days, 1 year) or a custom number of days.\n- Safety switches: keep starred emails in place (on by default), keep unread emails in place, optionally mark as read when moved.\n- Optional sender and subject filters so a rule only touches matching emails.\n- Live preview shows how many emails a rule would move before you save it.\n- Rules run over the whole mailbox on the server (not just loaded emails), automatically when you open Mailkeep (at most every 6 hours per account), or on demand with Run all rules now.\n- Found under Settings, Auto-organize, per account.\n\n### Bug fixes\n- Age rules are kept separate from per-folder filter rules so they are never applied without their age condition.\n",
+      "version": "0.4.1",
+      "versionCode": 19,
+      "notes": "# Mailkeep 0.4.1 - Fix Google sign-in on 0.4.0\n\n### Features\n- No new features. Same Auto-organize rules as 0.4.0.\n\n### Bug fixes\n- Fixed Google sign-in failing (\"Account reauth failed\") on 0.4.0: that build was signed with the wrong key. This build uses the production release key. Uninstall 0.4.0 first, then install this version.\n",
       "publishedAt": "2026-09-30T05:29:45Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/mailkeep/mailkeep.apk",
       "sizeBytes": 67070183
