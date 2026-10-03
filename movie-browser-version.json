@@ -1,0 +1,6 @@
+{
+  "version": "1.0.11",
+  "buildNumber": 12,
+  "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/moviebrowser/movie-browser-release.apk",
+  "changelog": "1. TV green screen fix: Restored Skia engine to fix video texture on all resolutions (360p, 480p, 720p, 1080p)\n2. Full-screen aspect ratio scaling mode (Fit / Zoom / Full Stretch) with remote toggle\n3. Advanced Theater Cam audio DSP with -12dB hall echo scoop and +12dB speech boost"
+}
