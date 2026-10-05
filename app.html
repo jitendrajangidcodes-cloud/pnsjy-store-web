@@ -3,22 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://challenges.cloudflare.com; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://updates.pnsjy.in; connect-src 'self' https://updates.pnsjy.in https://app-store-feedback.jitendrajangid-codes.workers.dev; frame-src https://challenges.cloudflare.com; object-src 'none'; base-uri 'self'; form-action 'self'">
 <title>App — PNSJY</title>
 <link rel="icon" type="image/png" href="assets/brand/pnsjy-mark.png">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
 <meta name="theme-color" content="#0a0e1a">
-<script>
-(function () {
-  var stored = localStorage.getItem("theme");
-  var theme = stored || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
-  document.documentElement.setAttribute("data-theme", theme);
-})();
-</script>
+<script src="theme-init.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Baloo+2:wght@700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
 </head>
 <body>
@@ -48,150 +43,9 @@
   </div>
 </div>
 
-<script src="script.js?v=8"></script>
+<script src="catalog.js"></script>
+<script src="script.js?v=9"></script>
+<script src="detail.js"></script>
 <script src="feedback.js?v=1"></script>
-<script>
-(async function () {
-  document.getElementById("nav-mark").innerHTML = pnsjyLogoHTML(30);
-
-  const root = document.getElementById("detail-root");
-  const id = new URLSearchParams(location.search).get("id");
-  const apps = await loadApps();
-  const app = apps.find((a) => a.id === id);
-
-  if (!app) {
-    root.innerHTML = `
-      <a class="back-link" href="index.html">&larr; All apps</a>
-      <div class="empty-state">App not found.</div>
-    `;
-    return;
-  }
-
-  document.title = `${app.name} — PNSJY`;
-
-  root.innerHTML = `
-    <a class="back-link" href="index.html">&larr; All apps</a>
-
-    <section class="detail-head">
-      ${appIconHTML(app, 96)}
-      <div class="titles">
-        <h1>${app.name} ${
-          app.preRelease
-            ? `<span class="beta-badge prerelease">PRE-RELEASE</span>`
-            : app.beta
-              ? `<span class="beta-badge">BETA</span>`
-              : ""
-        }</h1>
-        <p class="tagline">${app.tagline}</p>
-        <div class="detail-chips">
-          <span class="chip-static accent" data-stat="version">…</span>
-          <span class="chip-static plain" data-stat="size">…</span>
-          <span class="chip-static plain">${app.platform}</span>
-          <span class="chip-static plain">${app.category}</span>
-          <span class="chip-static ${app.requiresAccount ? "plain" : "accent"}">${app.requiresAccount ? "Requires Google sign-in" : "No account needed"}</span>
-        </div>
-      </div>
-      <button class="download-btn" aria-disabled="true" data-download-btn>Checking latest release…</button>
-    </section>
-
-    ${
-      app.screenshots && app.screenshots.length
-        ? `<section class="screenshot-section">
-            <h2>Screenshots</h2>
-            <div class="screenshot-row">${app.screenshots
-              .map((s) => `<img src="${s.src}" alt="${s.alt}" loading="lazy">`)
-              .join("")}</div>
-          </section>`
-        : ""
-    }
-
-    <section class="about-card">
-      <h2>About</h2>
-      <p>${app.about}</p>
-      <p class="requirements">${app.requirements}</p>
-    </section>
-
-    <section class="two-col">
-      <div class="notes-card">
-        <h2>Release notes</h2>
-        <div id="release-history">
-          <div class="release-entry"><p>Loading release notes…</p></div>
-        </div>
-      </div>
-
-      <div class="install-card">
-        <h2>Install in 3 steps</h2>
-        <div class="install-steps">
-          <div class="install-step"><span class="num">1</span><span class="txt">Tap <strong>Download APK</strong> above</span></div>
-          <div class="install-step"><span class="num">2</span><span class="txt">Allow <strong>install from unknown sources</strong> if prompted</span></div>
-          <div class="install-step"><span class="num">3</span><span class="txt">Open the file and tap <strong>Install</strong></span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="about-card feedback-card">
-      <h2>Feedback on ${app.name}</h2>
-      <p>Have an idea, hit a bug, or just want to say something? It goes straight to the developer — no GitHub account needed.</p>
-      <button class="feedback-open-btn" type="button" data-feedback-open data-app-id="${app.id}" data-app-name="${app.name}">Send feedback</button>
-    </section>
-
-    <footer class="site-footer">
-      <span>PNSJY — built and maintained by Jitendra.</span>
-      <span class="mono">github.io/app-store</span>
-    </footer>
-  `;
-
-  const versionEl = root.querySelector('[data-stat="version"]');
-  const sizeEl = root.querySelector('[data-stat="size"]');
-  const downloadBtn = root.querySelector("[data-download-btn]");
-  const historyEl = root.querySelector("#release-history");
-
-  // Latest/download prefer the generated manifest (no rate limit); the multi-
-  // version notes list stays live but degrades to the manifest's single entry.
-  const manifestLatest = await getRelease(app);
-  // fetchReleaseHistory queries /releases (repo-wide, no tag filter) -- fine
-  // for apps with their own dedicated repo, but for apps published directly
-  // to this hub (app.repo === HUB_REPO), that repo holds every hub app's
-  // releases mixed together (reminder, cards, ai-scanner, plus asset-only
-  // releases like ai-scanner-models), sorted with no name/tag filtering, and
-  // it takes assets[0] with no .apk check. That combination could return a
-  // completely different app's release, or a non-APK asset (e.g. a .tflite
-  // model file) as the "download". getRelease already resolves the correct
-  // tag-scoped release for these, so skip the untrustworthy path entirely.
-  const history = app.repo === HUB_REPO ? [] : await fetchReleaseHistory(app.repo, 3);
-  const latest = history[0] || manifestLatest;
-
-  if (latest && latest.downloadUrl) {
-    versionEl.textContent = `v${latest.version}`;
-    sizeEl.textContent = formatSize(latest.sizeBytes);
-
-    const a = document.createElement("a");
-    a.className = "download-btn";
-    a.href = latest.downloadUrl;
-    a.textContent = `⬇ Download APK · v${latest.version}`;
-    a.addEventListener("click", (e) => gateDownload(e, app.id, latest.downloadUrl));
-    downloadBtn.replaceWith(a);
-
-    const historyList = history.length ? history : [manifestLatest];
-    historyEl.innerHTML = historyList
-      .map(
-        (rel, i) => `
-        <div class="release-entry ${i === 0 ? "" : "old"}">
-          <div class="row">
-            <span class="chip-static accent">v${rel.version}</span>
-            <span class="chip-static plain" style="border:none;padding:0;">${i === 0 ? "latest" : formatDate(rel.publishedAt)}</span>
-          </div>
-          <p>${rel.notes || "No release notes for this version."}</p>
-        </div>`
-      )
-      .join("");
-  } else {
-    versionEl.textContent = "unavailable";
-    sizeEl.textContent = "--";
-    downloadBtn.textContent = "Download unavailable";
-    historyEl.innerHTML = `<div class="release-entry"><p>Could not reach GitHub Releases right now — try again shortly.</p></div>`;
-  }
-})();
-</script>
 </body>
 </html>

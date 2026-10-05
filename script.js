@@ -1,99 +1,55 @@
 const THEME_KEY = "theme";
 const THEME_EXPLICIT_KEY = "theme-explicit";
+const CATALOG_URL = `${Catalog.SERVICE}/v1/catalog`;
+const FETCH_TIMEOUT_MS = 12000;
+const UNREACHABLE_TEXT = "Could not reach the update server, try again";
 
-// This hub repo -- apps published directly here (apps.json `repo` field
-// equals this) need tag-specific release lookups, never "latest". See
-// getRelease() below.
-const HUB_REPO = "jitendrajangidcodes-cloud/pnsjy-store-web";
-
-// ── Download info-gate + logging ─────────────────────────────────────────
-// Scoped to this site's download buttons only -- the apps themselves (AI
-// Scanner, Cards, Reminder) each separately promise "no analytics" and are
-// untouched. See scripts/download-log/ for the Apps Script + setup this
-// posts to; a failed/unconfigured log never blocks the actual download.
-const DOWNLOAD_LOG_URL = "https://script.google.com/macros/s/AKfycbz6kXmKQZmDlJmqvmbyEnnX27BVTUhtUewPyUicVH8dfglagOOf8H2Pd7kjakwUv6BD/exec";
-const DL_NAME_KEY = "dl_name";
-const DL_EMAIL_KEY = "dl_email";
-
-function hasSubmittedInfo() {
-  return !!localStorage.getItem(DL_NAME_KEY);
+function h(tag, props, children) {
+  const node = document.createElement(tag);
+  for (const [key, value] of Object.entries(props || {})) {
+    if (value === null || value === undefined || value === false) continue;
+    if (key === "text") node.textContent = value;
+    else if (key === "class") node.className = value;
+    else if (key === "style") Object.assign(node.style, value);
+    else if (key === "data") Object.assign(node.dataset, value);
+    else node.setAttribute(key, value === true ? "" : value);
+  }
+  for (const child of children || []) if (child) node.append(child);
+  return node;
 }
 
-function saveInfo(name, email) {
-  localStorage.setItem(DL_NAME_KEY, name);
-  if (email) localStorage.setItem(DL_EMAIL_KEY, email);
-}
-
-function logDownload(appId) {
-  if (DOWNLOAD_LOG_URL.startsWith("REPLACE_WITH")) return;
+async function loadCatalog() {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), FETCH_TIMEOUT_MS);
   try {
-    const body = JSON.stringify({
-      app: appId,
-      platform: "web",
-      name: localStorage.getItem(DL_NAME_KEY) || "",
-      email: localStorage.getItem(DL_EMAIL_KEY) || "",
-      userAgent: navigator.userAgent,
-      screen: `${screen.width}x${screen.height}`,
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-      language: navigator.language,
-    });
-    // no-cors: Apps Script's response is a cross-origin redirect we can't
-    // read anyway -- this is fire-and-forget, we only need the row appended.
-    fetch(DOWNLOAD_LOG_URL, { method: "POST", mode: "no-cors", body });
-  } catch (e) {
-    // Best-effort -- never let logging failure affect the actual download.
+    const res = await fetch(CATALOG_URL, { cache: "no-store", signal: ctrl.signal, credentials: "omit" });
+    if (!res.ok) throw new Error(`catalog_${res.status}`);
+    return Catalog.mapCatalog(await res.json());
+  } finally {
+    clearTimeout(timer);
   }
 }
 
-// Shows the one-time info modal (name required, email optional). Resolves
-// true once submitted; the modal has no dismiss/skip affordance by design.
-function showInfoGate() {
-  return new Promise((resolve) => {
-    const backdrop = document.createElement("div");
-    backdrop.className = "info-gate-backdrop";
-    backdrop.innerHTML = `
-      <div class="info-gate-card">
-        <h3>Before you download</h3>
-        <p>We ask for your name (and optionally email) once, so we know who's
-           using these apps. Basic browser/device info is recorded alongside
-           it. This applies to downloads from this site only.</p>
-        <input type="text" id="info-gate-name" placeholder="Name" autocomplete="name" />
-        <input type="email" id="info-gate-email" placeholder="Email (optional)" autocomplete="email" />
-        <div class="info-gate-error" id="info-gate-error">Name is required</div>
-        <button id="info-gate-submit">Continue</button>
-      </div>
-    `;
-    document.body.appendChild(backdrop);
-
-    const nameInput = backdrop.querySelector("#info-gate-name");
-    const emailInput = backdrop.querySelector("#info-gate-email");
-    const errorEl = backdrop.querySelector("#info-gate-error");
-    const submitBtn = backdrop.querySelector("#info-gate-submit");
-    nameInput.focus();
-
-    submitBtn.addEventListener("click", () => {
-      const name = nameInput.value.trim();
-      if (!name) {
-        errorEl.style.display = "block";
-        return;
-      }
-      saveInfo(name, emailInput.value.trim());
-      backdrop.remove();
-      resolve(true);
-    });
-  });
+function errorBlock(onRetry) {
+  const retry = h("button", { class: "download-btn", type: "button", text: "Try again" });
+  retry.addEventListener("click", onRetry);
+  return h("div", { class: "empty-state", role: "alert" }, [h("p", { text: UNREACHABLE_TEXT }), retry]);
 }
 
-// Intercepts a download link's click: gates on first use, then navigates to
-// [url] and logs the download. Attach with:
-//   el.addEventListener("click", (e) => gateDownload(e, appId, url));
-async function gateDownload(event, appId, url) {
-  event.preventDefault();
-  if (!hasSubmittedInfo()) {
-    await showInfoGate();
-  }
-  logDownload(appId);
-  window.location.href = url;
+function externalLink(href, text, className) {
+  return h("a", { href, class: className, rel: "noopener noreferrer", text });
+}
+
+function downloadLink(appId, release, label) {
+  return externalLink(Catalog.downloadUrl(appId, "android"), label, "download-btn");
+}
+
+function shaLine(release) {
+  if (!release || !release.sha256) return null;
+  return h("span", { class: "sha-line mono", title: "SHA-256 of the APK" }, [
+    h("span", { text: "SHA-256 " }),
+    h("code", { text: release.sha256 }),
+  ]);
 }
 
 function currentTheme() {
@@ -106,13 +62,17 @@ function applyTheme(theme) {
 
 function toggleTheme() {
   const next = currentTheme() === "dark" ? "light" : "dark";
-  localStorage.setItem(THEME_KEY, next);
-  localStorage.setItem(THEME_EXPLICIT_KEY, "1");
+  try {
+    localStorage.setItem(THEME_KEY, next);
+    localStorage.setItem(THEME_EXPLICIT_KEY, "1");
+  } catch (e) {}
   applyTheme(next);
 }
 
 window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", (e) => {
-  if (localStorage.getItem(THEME_EXPLICIT_KEY) === "1") return;
+  try {
+    if (localStorage.getItem(THEME_EXPLICIT_KEY) === "1") return;
+  } catch (err) {}
   applyTheme(e.matches ? "light" : "dark");
 });
 
@@ -152,141 +112,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-async function fetchLatestRelease(repo) {
-  try {
-    const res = await fetch(`https://api.github.com/repos/${repo}/releases/latest`, {
-      headers: { Accept: "application/vnd.github+json" },
-    });
-    if (!res.ok) return null;
-    const data = await res.json();
-    const asset = (data.assets || [])[0];
-    return {
-      version: (data.tag_name || "").replace(/^v/, ""),
-      notes: data.body || "",
-      publishedAt: data.published_at || null,
-      downloadUrl: asset ? asset.browser_download_url : null,
-      sizeBytes: asset ? asset.size : null,
-    };
-  } catch (e) {
-    return null;
-  }
-}
-
-// One release by exact tag. The hub keeps a stable tag per app/store, with the
-// human version in the release name, so latest-by-tag is deterministic even
-// though the hub holds several apps' releases.
-async function fetchReleaseByTag(repo, tag) {
-  try {
-    const res = await fetch(`https://api.github.com/repos/${repo}/releases/tags/${tag}`, {
-      headers: { Accept: "application/vnd.github+json" },
-    });
-    if (!res.ok) return null;
-    const data = await res.json();
-    const asset = (data.assets || []).find((a) => a.name.endsWith(".apk")) || (data.assets || [])[0];
-    return {
-      version: (data.name || data.tag_name || "").replace(/^v/, ""),
-      notes: data.body || "",
-      publishedAt: data.published_at || null,
-      downloadUrl: asset ? asset.browser_download_url : null,
-      sizeBytes: asset ? asset.size : null,
-    };
-  } catch (e) {
-    return null;
-  }
-}
-
-// Short release history for the detail page's "Release notes" card -- shows
-// the latest expanded plus a couple of previous versions collapsed, all real
-// data (no fabricated version history).
-async function fetchReleaseHistory(repo, count = 3) {
-  try {
-    const res = await fetch(`https://api.github.com/repos/${repo}/releases?per_page=${count}`, {
-      headers: { Accept: "application/vnd.github+json" },
-    });
-    if (!res.ok) return [];
-    const data = await res.json();
-    return data.map((rel) => {
-      const asset = (rel.assets || [])[0];
-      return {
-        version: (rel.tag_name || "").replace(/^v/, ""),
-        notes: rel.body || "",
-        publishedAt: rel.published_at || null,
-        downloadUrl: asset ? asset.browser_download_url : null,
-        sizeBytes: asset ? asset.size : null,
-      };
-    });
-  } catch (e) {
-    return [];
-  }
-}
-
-function formatSize(bytes) {
-  if (!bytes) return "--";
-  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
-}
-
-function formatDate(iso) {
-  if (!iso) return "--";
-  return new Date(iso).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
-}
-
-// Both files are served by GitHub Pages with `cache-control: max-age=600`,
-// behind two CDNs. Without a per-load cache-buster the store shows the previous
-// release for up to ten minutes after a publish -- exactly when someone opens
-// it looking for the update they were just told about. The query param varies
-// the URL so no cache can match.
-function loadApps() {
-  return fetch(`apps.json?t=${Date.now()}`, { cache: "no-store" }).then((r) =>
-    r.json(),
-  );
-}
-
-// releases.json is generated in CI from every app's Releases, so the listing
-// needs ONE fetch instead of one GitHub API call per app. Cached per page load.
-let _manifestPromise = null;
-function loadManifest() {
-  if (!_manifestPromise) {
-    _manifestPromise = fetch(`releases.json?t=${Date.now()}`, { cache: "no-store" })
-      .then((r) => (r.ok ? r.json() : null))
-      .catch(() => null);
-  }
-  return _manifestPromise;
-}
-
-// Prefer the manifest; fall back to the live API per app if it is missing or
-// stale. Returns the same shape as fetchLatestRelease (downloadUrl, not apkUrl).
-//
-// Apps published directly to this hub (apps.json `repo` === HUB_REPO, e.g.
-// ai-scanner) MUST fall back to a tag-specific lookup, never
-// fetchLatestRelease -- the hub holds multiple apps' releases under
-// different tags, so "latest" resolves to whichever app released most
-// recently, not this one. This mirrors the same fix already applied to
-// scripts/sync-releases.sh; missing it here left the site briefly showing
-// another app's version (or none) for any hub-direct app whenever
-// releases.json was momentarily stale/uncached.
-async function getRelease(app) {
-  const manifest = await loadManifest();
-  const m = manifest && manifest.apps ? manifest.apps[app.id] : null;
-  if (m && m.apkUrl) {
-    return {
-      version: m.version,
-      notes: m.notes || "",
-      publishedAt: m.publishedAt || null,
-      downloadUrl: m.apkUrl,
-      sizeBytes: m.sizeBytes || null,
-    };
-  }
-  if (app.repo === HUB_REPO) {
-    return fetchReleaseByTag(app.repo, app.id);
-  }
-  return fetchLatestRelease(app.repo);
-}
-
-// ── Buddy tile brand component ──────────────────────────────────────────
-// One colored rounded tile per PNSJY letter, or a single-letter app icon
-// tile. `size` in px; `fontSize`/`eyeSize`/`eyeGap`/`eyeTop` scale with it
-// by default but can be overridden for particularly small/large usages.
-
 const PNSJY_LETTERS = [
   { ch: "P", bg: "#e8632c", fg: "#ffffff" },
   { ch: "N", bg: "#f0a92c", fg: "#6b4400" },
@@ -295,59 +120,48 @@ const PNSJY_LETTERS = [
   { ch: "Y", bg: "#8a56d6", fg: "#ffffff" },
 ];
 
-function buddyTileHTML(ch, bg, fg, size) {
-  const radius = Math.round(size * 0.28);
-  const font = Math.round(size * 0.55);
+function buddyTile(ch, bg, fg, size) {
   const eye = Math.max(3, Math.round(size * 0.13));
-  const gap = Math.round(size * 0.19);
-  const top = Math.round(size * 0.19);
-  const pad = Math.round(size * 0.1);
-  return `
-    <div class="buddy-tile" style="width:${size}px;height:${size}px;border-radius:${radius}px;background:${bg};">
-      <div class="eyes" style="top:${top}px;gap:${gap}px;">
-        <span style="width:${eye}px;height:${eye}px;background:${fg};"></span>
-        <span style="width:${eye}px;height:${eye}px;background:${fg};"></span>
-      </div>
-      <span class="letter" style="font-size:${font}px;color:${fg};padding-bottom:${pad}px;">${ch}</span>
-    </div>
-  `;
+  const eyeStyle = { width: `${eye}px`, height: `${eye}px`, background: fg };
+  return h("div", {
+    class: "buddy-tile",
+    style: { width: `${size}px`, height: `${size}px`, borderRadius: `${Math.round(size * 0.28)}px`, background: bg },
+  }, [
+    h("div", { class: "eyes", style: { top: `${Math.round(size * 0.19)}px`, gap: `${Math.round(size * 0.19)}px` } }, [
+      h("span", { style: eyeStyle }),
+      h("span", { style: eyeStyle }),
+    ]),
+    h("span", {
+      class: "letter",
+      text: ch,
+      style: { fontSize: `${Math.round(size * 0.55)}px`, color: fg, paddingBottom: `${Math.round(size * 0.1)}px` },
+    }),
+  ]);
 }
 
-function pnsjyLogoHTML(size) {
-  return `<div class="buddy-row">${PNSJY_LETTERS.map((b) => buddyTileHTML(b.ch, b.bg, b.fg, size)).join("")}</div>`;
+function pnsjyLogo(size) {
+  return h("div", { class: "buddy-row" }, PNSJY_LETTERS.map((b) => buddyTile(b.ch, b.bg, b.fg, size)));
 }
 
-function appTileHTML(app, size) {
-  return buddyTileHTML(app.name.charAt(0).toUpperCase(), app.color || "#2f7ee3", "#ffffff", size);
+function appTile(app, size) {
+  return buddyTile(app.name.charAt(0).toUpperCase(), app.color || "#2f7ee3", "#ffffff", size);
 }
 
-// Real app icon (apps.json `icon`) with a colored first-letter tile behind it,
-// so a missing/failed image degrades to the branded letter instead of a gap.
-function appIconHTML(app, size) {
-  if (!app.icon) return appTileHTML(app, size);
-  const radius = Math.round(size * 0.24);
-  const font = Math.round(size * 0.5);
-  const bg = app.color || "#2f7ee3";
-  const letter = app.name.charAt(0).toUpperCase();
-  return `
-    <div class="app-icon" style="width:${size}px;height:${size}px;border-radius:${radius}px;background:${bg};">
-      <span class="fallback" style="font-size:${font}px;">${letter}</span>
-      <img src="${app.icon}" alt="${app.name} icon" loading="lazy" style="border-radius:${radius}px;" onerror="this.remove()">
-    </div>`;
+function appIcon(app, size) {
+  if (!app.iconUrl) return appTile(app, size);
+  const radius = `${Math.round(size * 0.24)}px`;
+  const img = h("img", { src: app.iconUrl, alt: `${app.name} icon`, loading: "lazy", style: { borderRadius: radius } });
+  img.addEventListener("error", () => img.remove());
+  return h("div", {
+    class: "app-icon",
+    style: { width: `${size}px`, height: `${size}px`, borderRadius: radius, background: app.color || "#2f7ee3" },
+  }, [
+    h("span", { class: "fallback", text: app.name.charAt(0).toUpperCase(), style: { fontSize: `${Math.round(size * 0.5)}px` } }),
+    img,
+  ]);
 }
 
-// ── Feedback (prefilled GitHub issue — fallback only) ────────────────────
-
-// The primary path is the in-page modal in feedback.js, which POSTs to the
-// feedback Worker so users never touch GitHub. feedbackUrl below stays as the
-// modal's fallback link when the Worker or Turnstile is unreachable.
 const FEEDBACK_REPO = "jitendrajangidcodes-cloud/pnsjy-store-web";
-
-// Every APK lives in this hub repo. The store app's own build sits under the
-// stable "store" tag; the "Get the Store app" banner pulls its live version/
-// size/download straight from that release.
-const STORE_REPO = "jitendrajangidcodes-cloud/pnsjy-store-web";
-const STORE_TAG = "store";
 
 function feedbackUrl(type, app) {
   const titles = { feedback: "Feedback", suggestion: "Suggestion", bug: "Bug report" };
@@ -365,8 +179,6 @@ function feedbackUrl(type, app) {
   });
   return `https://github.com/${FEEDBACK_REPO}/issues/new?${params.toString()}`;
 }
-
-// ── Card tilt-on-hover ───────────────────────────────────────────────────
 
 function attachTilt(el) {
   el.addEventListener("mousemove", (e) => {

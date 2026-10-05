@@ -1,0 +1,9 @@
+## Switch site to updates.pnsjy.in
+
+### T1 - catalog.js + node:test [BUILT-AWAITING-VERIFY]
+### T2 - script/home/detail/theme-init rewrite [BUILT-AWAITING-VERIFY]
+### T3 - CSP + HTML wiring [BUILT-AWAITING-VERIFY]
+### T4 - removed apps.json, releases.json, sync scripts, workflow, download-log [BUILT-AWAITING-VERIFY]
+### T5 - docs updated [BUILT-AWAITING-VERIFY]
+### T6 - local commit done; needs real-browser check once service CORS (and icon CORP) is deployed [BUILT-AWAITING-VERIFY]
+Not pushed. Old GitHub releases/tags untouched.

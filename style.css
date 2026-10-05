@@ -1529,3 +1529,8 @@ button:focus-visible {
   cursor: pointer;
 }
 .fb-send:disabled { opacity: 0.6; cursor: default; }
+
+.download-area { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; max-width: 100%; }
+.sha-line { font-size: 0.72rem; opacity: 0.75; word-break: break-all; }
+.sha-line code { font-family: inherit; }
+.empty-state .download-btn { margin-top: 12px; }
