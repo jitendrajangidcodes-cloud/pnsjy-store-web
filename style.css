@@ -1533,4 +1533,5 @@ button:focus-visible {
 .download-area { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; max-width: 100%; }
 .sha-line { font-size: 0.72rem; opacity: 0.75; word-break: break-all; }
 .sha-line code { font-family: inherit; }
+.store-gate-note { font-size: 0.8rem; color: var(--muted); max-width: 320px; line-height: 1.4; margin-top: 4px; }
 .empty-state .download-btn { margin-top: 12px; }

@@ -6,10 +6,11 @@
   function appCard(app) {
     const rel = app.release;
     const ribbon = app.beta ? h("span", { class: "beta-ribbon", text: "BETA" }) : null;
-    const accountChip = app.requiresAccount === null ? null : h("div", { class: "badge-row" }, [
+    const isStore = app.id === "store";
+    const accountChip = h("div", { class: "badge-row" }, [
       h("span", {
-        class: `chip-static ${app.requiresAccount ? "plain" : "accent"}`,
-        text: app.requiresAccount ? "Requires Google sign-in" : "No account needed",
+        class: "chip-static plain",
+        text: isStore ? "Fleet Installer" : "Requires Google sign-in",
       }),
     ]);
     const card = h("a", {
@@ -23,9 +24,11 @@
       h("div", { class: "badge-row" }, [
         h("span", {
           class: "pill-download",
-          text: rel ? `v${rel.version} · ${Catalog.formatSize(rel.sizeBytes)}` : "No download yet",
+          text: isStore
+            ? (rel ? `Download Store · v${rel.version}` : "Store APK")
+            : (rel ? `v${rel.version} · PNSJY Store` : "In PNSJY Store"),
         }),
-        h("span", { class: "meta", text: `${app.category} · Android` }),
+        h("span", { class: "meta", text: isStore ? "Installer · Android" : `${app.category} · Store only` }),
       ]),
       accountChip,
     ]);
@@ -42,19 +45,10 @@
   }
 
   function renderStats() {
-    const stat = Catalog.accountStat(apps);
     const big = $("stat-accounts");
     const sub = $("stat-accounts-sub");
-    if (!stat) {
-      big.textContent = "Direct APK";
-      sub.textContent = "download and install, done";
-    } else if (stat.free === stat.total) {
-      big.textContent = "0 accounts";
-      sub.textContent = "download and install, done";
-    } else {
-      big.textContent = `${stat.free}/${stat.total} apps`;
-      sub.textContent = "need zero account to use";
-    }
+    big.textContent = `${apps.length} apps`;
+    sub.textContent = "available via PNSJY Store";
   }
 
   function renderStoreCta() {
