@@ -21,7 +21,7 @@ test("maps a full catalog entry", () => {
 });
 
 test("tolerates a minimal entry with no metadata and no release", () => {
-  const [a] = C.mapCatalog({ apps: [{ appId: "cards", name: "Cards", icon: null, platforms: {} }] });
+  const [a] = C.mapCatalog({ apps: [{ appId: "twinclean", name: "TwinClean", icon: null, platforms: {} }] });
   assert.strictEqual(a.iconUrl, null);
   assert.strictEqual(a.release, null);
   assert.strictEqual(a.tagline, "");
