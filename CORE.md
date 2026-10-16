@@ -30,7 +30,6 @@ once, then the app updates itself.
 | `style.css` | Styling + design tokens in `:root` (mirrored by the Flutter store app). |
 | `test/catalog.test.js` | Unit tests for `catalog.js`. |
 | `assets/brand`, `assets/icons/icon-*.png`, `apple-touch-icon.png` | Brand mark + PWA icons. Per-app icons and screenshots now come from the service; the old per-app files under `assets/icons/` and `assets/screenshots/` are unused leftovers. |
-| `mailkeep-privacy.html` | Mailkeep privacy policy (own strict CSP). |
 
 ## Data contract used
 
