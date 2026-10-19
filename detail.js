@@ -14,11 +14,16 @@
   }
 
   function downloadArea(app) {
-    const rel = app.release;
+    const useAdmin = app.id === "store" && isAdminStoreEdition() && app.adminRelease;
+    const rel = useAdmin ? app.adminRelease : app.release;
     if (app.id === "store") {
       if (!rel) return h("button", { class: "download-btn", type: "button", "aria-disabled": "true", text: "No download yet" });
+      const appId = useAdmin ? "store-admin" : "store";
+      const label = useAdmin
+        ? `Download Admin Store APK · v${rel.version}`
+        : `Download Store APK · v${rel.version}`;
       return h("div", { class: "download-area" }, [
-        downloadLink("store", rel, `Download Store APK · v${rel.version}`),
+        downloadLink(appId, rel, label),
         shaLine(rel),
       ]);
     }

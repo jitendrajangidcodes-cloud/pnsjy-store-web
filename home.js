@@ -55,17 +55,23 @@
     const slot = $("store-download");
     const meta = $("store-meta");
     const store = apps.find((a) => a.id === "store");
-    if (!store || !store.release) {
+    const useAdmin = isAdminStoreEdition() && store && store.adminRelease;
+    const rel = useAdmin ? store.adminRelease : (store && store.release);
+    if (!store || !rel) {
       slot.textContent = "Store APK not published yet";
       meta.textContent = "Check back soon";
       return;
     }
-    const link = downloadLink("store", store.release, `Download Store APK · v${store.release.version}`);
+    const appId = useAdmin ? "store-admin" : "store";
+    const label = useAdmin
+      ? `Download Admin Store APK · v${rel.version}`
+      : `Download Store APK · v${rel.version}`;
+    const link = downloadLink(appId, rel, label);
     link.id = "store-download";
     slot.replaceWith(link);
     meta.replaceChildren(
-      document.createTextNode(`${Catalog.formatSize(store.release.sizeBytes)} · Android 8+ · direct APK`),
-      ...(store.release.sha256 ? [h("br"), shaLine(store.release)] : []),
+      document.createTextNode(`${Catalog.formatSize(rel.sizeBytes)} · Android 8+ · direct APK`),
+      ...(rel.sha256 ? [h("br"), shaLine(rel)] : []),
     );
   }
 

@@ -22,7 +22,7 @@
     return typeof v === "string" ? v : "";
   }
 
-  function mapRelease(r) {
+  function mapRelease(r, fallbackPlatform) {
     if (!r || typeof r !== "object") return null;
     const version = str(r.version);
     if (!version) return null;
@@ -33,12 +33,14 @@
       sizeBytes: Number.isFinite(r.sizeBytes) && r.sizeBytes > 0 ? r.sizeBytes : null,
       sha256: SHA_RE.test(str(r.sha256)) ? r.sha256.toLowerCase() : null,
       createdAt: Number.isFinite(r.createdAt) ? r.createdAt : null,
+      platform: str(r.platform) || fallbackPlatform || "android",
+      downloadUrl: serviceUrl(r.downloadPath),
     };
   }
 
   function pickRelease(platforms) {
     if (!platforms || typeof platforms !== "object") return null;
-    return mapRelease(platforms.android) || mapRelease(platforms["android-mobile"]);
+    return mapRelease(platforms.android, "android") || mapRelease(platforms["android-mobile"], "android-mobile");
   }
 
   function otherPlatforms(platforms) {
@@ -75,6 +77,7 @@
       requirements: str(raw.requirements),
       screenshots: mapScreenshots(raw.screenshots),
       release: pickRelease(raw.platforms),
+      adminRelease: pickRelease(raw.adminPlatforms),
       otherPlatforms: otherPlatforms(raw.platforms),
     };
   }

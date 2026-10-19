@@ -40,8 +40,20 @@ function externalLink(href, text, className) {
   return h("a", { href, class: className, rel: "noopener noreferrer", text });
 }
 
+function isAdminStoreEdition() {
+  try {
+    const q = new URLSearchParams(location.search).get("admin");
+    if (q === "1") localStorage.setItem("pnsjy-admin-edition", "1");
+    else if (q === "0") localStorage.removeItem("pnsjy-admin-edition");
+    return localStorage.getItem("pnsjy-admin-edition") === "1";
+  } catch (e) {
+    return false;
+  }
+}
+
 function downloadLink(appId, release, label) {
-  return externalLink(Catalog.downloadUrl(appId, "android"), label, "download-btn");
+  const url = (release && release.downloadUrl) || Catalog.downloadUrl(appId, (release && release.platform) || "android");
+  return h("a", { href: url, class: "download-btn", download: "", text: label });
 }
 
 function shaLine(release) {
