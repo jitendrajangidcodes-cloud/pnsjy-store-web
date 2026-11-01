@@ -25,6 +25,14 @@ async function loadCatalog() {
     const res = await fetch(CATALOG_URL, { cache: "no-store", signal: ctrl.signal, credentials: "omit" });
     if (!res.ok) throw new Error(`catalog_${res.status}`);
     return Catalog.mapCatalog(await res.json());
+  } catch (err) {
+    try {
+      const fallbackRes = await fetch("/catalog.json", { cache: "no-store", credentials: "omit" });
+      if (fallbackRes.ok) {
+        return Catalog.mapCatalog(await fallbackRes.json());
+      }
+    } catch (_) {}
+    throw err;
   } finally {
     clearTimeout(timer);
   }
