@@ -14,16 +14,12 @@
   }
 
   function downloadArea(app) {
-    const useAdmin = app.id === "store" && isAdminStoreEdition() && app.adminRelease;
-    const rel = useAdmin ? app.adminRelease : app.release;
+    const rel = app.release;
     if (app.id === "store") {
       if (!rel) return h("button", { class: "download-btn", type: "button", "aria-disabled": "true", text: "No download yet" });
-      const appId = useAdmin ? "store-admin" : "store";
-      const label = useAdmin
-        ? `Download Admin Store APK · v${rel.version}`
-        : `Download Store APK · v${rel.version}`;
+      const label = `Download Store APK · v${rel.version}`;
       return h("div", { class: "download-area" }, [
-        downloadLink(appId, rel, label),
+        downloadLink("store", rel, label),
         shaLine(rel),
       ]);
     }
@@ -112,8 +108,8 @@
       h("h2", { text: "How to install this app" }),
       h("div", { class: "install-steps" }, [
         step(1, "Install PNSJY Store", ["First, ", " from the homepage"]),
-        step(2, "Sign In with Google", ["Open PNSJY Store and ", " for admin approval"]),
-        step(3, "Install with one tap", ["Once approved, tap ", ` inside PNSJY Store to install ${app.name}`]),
+        step(2, "Sign In with Google", ["Open PNSJY Store and ", " connect your Google account"]),
+        step(3, "Install with one tap", ["Tap ", ` Install inside PNSJY Store to get ${app.name}`]),
       ]),
     ]);
   }

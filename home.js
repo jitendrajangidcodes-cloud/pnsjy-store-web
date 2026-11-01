@@ -55,18 +55,14 @@
     const slot = $("store-download");
     const meta = $("store-meta");
     const store = apps.find((a) => a.id === "store");
-    const useAdmin = isAdminStoreEdition() && store && store.adminRelease;
-    const rel = useAdmin ? store.adminRelease : (store && store.release);
+    const rel = store && store.release;
     if (!store || !rel) {
       slot.textContent = "Store APK not published yet";
       meta.textContent = "Check back soon";
       return;
     }
-    const appId = useAdmin ? "store-admin" : "store";
-    const label = useAdmin
-      ? `Download Admin Store APK · v${rel.version}`
-      : `Download Store APK · v${rel.version}`;
-    const link = downloadLink(appId, rel, label);
+    const label = `Download Store APK · v${rel.version}`;
+    const link = downloadLink("store", rel, label);
     link.id = "store-download";
     slot.replaceWith(link);
     meta.replaceChildren(
