@@ -7,8 +7,12 @@
   const COLOR_RE = /^#[0-9a-f]{6}$/i;
   const SHA_RE = /^[0-9a-f]{64}$/i;
 
+  const GITHUB_RELEASE_PREFIX = "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/";
+
   function serviceUrl(path) {
     if (typeof path !== "string") return null;
+    if (path.startsWith(GITHUB_RELEASE_PREFIX)) return path;
+    if (path.startsWith("/assets/icons/")) return path;
     if (path.startsWith("/") && !path.startsWith("//") && !path.includes("\\")) return SERVICE + path;
     if (path.startsWith(SERVICE + "/")) return path;
     return null;
