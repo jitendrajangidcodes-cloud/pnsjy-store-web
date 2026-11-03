@@ -79,7 +79,7 @@
           "sizeBytes": 115776944,
           "sha256": "a50956337557e616fd7baaa2d0a57a057a43bedb0c841126ca5c657fd656917d",
           "fileName": "tv.apk",
-          "createdAt": 1793723965505,
+          "createdAt": 1793723965500,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/moviebrowser/MovieBrowser.apk"
         },
         "android-mobile": {
@@ -91,7 +91,7 @@
           "sizeBytes": 115776944,
           "sha256": "a50956337557e616fd7baaa2d0a57a057a43bedb0c841126ca5c657fd656917d",
           "fileName": "mobile.apk",
-          "createdAt": 1793723965505,
+          "createdAt": 1793723965500,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/moviebrowser/MovieBrowser.apk"
         },
         "linux": {
@@ -236,7 +236,7 @@
           "sizeBytes": 58439772,
           "sha256": "05ceb1915bf5e521af997ad4eb5e3e7596fc5a4ec085bb54e240e511f11397d3",
           "fileName": "pnsjy-publish-trackall.apk",
-          "createdAt": 1793721709956,
+          "createdAt": 1793721709949,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/trackall/TrackAll.apk"
         }
       }
@@ -294,6 +294,34 @@
           "fileName": "wallpaper-publish.apk",
           "createdAt": 1793517783806,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/wallpaper/Wallpaper.apk"
+        }
+      }
+    },
+    {
+      "appId": "debloat",
+      "name": "Debloat",
+      "icon": "/assets/icons/debloat.png",
+      "tagline": "On-device and remote ADB debloating, package manager, and Android developer utilities driven by AGY CLI.",
+      "category": "Utilities",
+      "color": "#38bdf8",
+      "beta": false,
+      "requiresAccount": false,
+      "packageId": "com.pnsjy.debloat",
+      "about": "PNSJY Debloat allows Android users and developers to safely debloat OEM bloatware, carrier bloat, and vendor telemetry. It runs directly on the device using local shell execution, Shizuku, or wireless/OTG ADB debugging. It uses an AGY AI Agent conversational interface to formulate and execute safe debloat plans while strictly preventing any disabling or removal of critical operating system packages.",
+      "requirements": "Android 8.0 (Oreo) or newer. Distributed outside the Play Store -- Android will ask permission to install from this source the first time.",
+      "screenshots": [],
+      "platforms": {
+        "android": {
+          "appId": "debloat",
+          "platform": "android",
+          "version": "1.0.0",
+          "build": 1,
+          "notes": "Initial production release with AGY CLI agent pairing and safe debloat catalog",
+          "sizeBytes": 55117031,
+          "sha256": "4a46b28dd0b0c18ac35ecbc053b0f86ecf28393ca170f31cc7b7d4c4a9aca727",
+          "fileName": "Debloat.apk",
+          "createdAt": 1793519000000,
+          "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/debloat/Debloat.apk"
         }
       }
     }
