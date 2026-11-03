@@ -169,13 +169,13 @@
         "android": {
           "appId": "store",
           "platform": "android",
-          "version": "2.4.1",
-          "build": 76,
-          "notes": "Redesign app store icon with full adaptive shapes, monochrome Material You, and high-density mipmap support",
-          "sizeBytes": 63013335,
-          "sha256": "5b2a76129620c182c8f757eb5044337f069b0a9c0a3becdb1a19a9e4d694170a",
+          "version": "2.4.2",
+          "build": 77,
+          "notes": "Support serverless static catalog self-updates and dedicated Google Cloud auth with ethical device telemetry",
+          "sizeBytes": 63069415,
+          "sha256": "ee626cb5765faac44bbecdcb6bd25211a309cdef1867749c7fb2ae1525eb39cf",
           "fileName": "pnsjy-store-publish.apk",
-          "createdAt": 1793518441352,
+          "createdAt": 1793714839508,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/store/pnsjy-store.apk"
         }
       }
