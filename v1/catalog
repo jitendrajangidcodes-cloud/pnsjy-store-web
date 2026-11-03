@@ -73,25 +73,25 @@
         "android-tv": {
           "appId": "moviebrowser",
           "platform": "android-tv",
-          "version": "1.7.4",
-          "build": 1039,
-          "notes": "Migrate to server-free fleet control and dedicated GCP project",
-          "sizeBytes": 36013299,
-          "sha256": "6cecb078eb54b301714bba1f906ae8be3b9d56fc57f8b02cac8ee7fd247bfbd5",
+          "version": "1.7.5",
+          "build": 40,
+          "notes": "PNSJY design system alignment, adaptive icons with monochrome layer, 100% non-blocking offline/guest browsing, and optional account sync.",
+          "sizeBytes": 115776944,
+          "sha256": "ed65d3eb2bba7bfb844a1d90628f18c7f81d5cb583b380a9e1a50a705309e5f0",
           "fileName": "tv.apk",
-          "createdAt": 1793517628064,
+          "createdAt": 1793722004647,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/moviebrowser/MovieBrowser.apk"
         },
         "android-mobile": {
           "appId": "moviebrowser",
           "platform": "android-mobile",
-          "version": "1.7.4",
-          "build": 2039,
-          "notes": "Migrate to server-free fleet control and dedicated GCP project",
-          "sizeBytes": 40946301,
-          "sha256": "71df4a8f7342da5a819914e554c6d2ab644fcdfbaed251806e0ed22df782a069",
+          "version": "1.7.5",
+          "build": 40,
+          "notes": "PNSJY design system alignment, adaptive icons with monochrome layer, 100% non-blocking offline/guest browsing, and optional account sync.",
+          "sizeBytes": 115776944,
+          "sha256": "ed65d3eb2bba7bfb844a1d90628f18c7f81d5cb583b380a9e1a50a705309e5f0",
           "fileName": "mobile.apk",
-          "createdAt": 1793517628172,
+          "createdAt": 1793722004647,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/moviebrowser/MovieBrowser.apk"
         },
         "linux": {
@@ -230,13 +230,13 @@
         "android": {
           "appId": "trackall",
           "platform": "android",
-          "version": "1.4.3",
-          "build": 20,
-          "notes": "Server-free fleet control integration and Google sign-in presence sync",
-          "sizeBytes": 58396792,
-          "sha256": "1d5a296e2d02955de42a42a8b782675cc5d44839e24a52a922d679c54312d694",
+          "version": "1.4.4",
+          "build": 21,
+          "notes": "PNSJY design system alignment, adaptive icons with monochrome layer, improved offline tracking, and performance optimizations.",
+          "sizeBytes": 58439772,
+          "sha256": "05ceb1915bf5e521af997ad4eb5e3e7596fc5a4ec085bb54e240e511f11397d3",
           "fileName": "pnsjy-publish-trackall.apk",
-          "createdAt": 1793516173824,
+          "createdAt": 1793721709956,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/trackall/TrackAll.apk"
         }
       }
