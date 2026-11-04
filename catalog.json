@@ -299,29 +299,29 @@
     },
     {
       "appId": "debloat",
-      "name": "Debloat",
-      "icon": "/assets/icons/debloat.png",
-      "tagline": "On-device and remote ADB debloating, package manager, and Android developer utilities driven by AGY CLI.",
+      "name": "PNSJY DevTools",
+      "icon": "/assets/icons/devtools.png",
+      "tagline": "All-in-one Android developer suite: Debloat Studio, Package Inspector, ADB Terminal, and Diagnostics.",
       "category": "Utilities",
       "color": "#38bdf8",
       "beta": false,
       "requiresAccount": false,
       "packageId": "com.pnsjy.debloat",
-      "about": "PNSJY Debloat allows Android users and developers to safely debloat OEM bloatware, carrier bloat, and vendor telemetry. It runs directly on the device using local shell execution, Shizuku, or wireless/OTG ADB debugging. It uses an AGY AI Agent conversational interface to formulate and execute safe debloat plans while strictly preventing any disabling or removal of critical operating system packages.",
+      "about": "PNSJY DevTools is an all-in-one developer toolbox and on-device debloater driven by AGY CLI. Features child tools including Debloat Studio (safe AI debloating of OEM bloatware and telemetry), Package Inspector (manifest, permissions, and APK inspection), ADB Shell Terminal (interactive local console with presets), and Device Diagnostics (hardware, SoC, kernel, and battery health). Supports browser-based AGY authentication and token pairing.",
       "requirements": "Android 8.0 (Oreo) or newer. Distributed outside the Play Store -- Android will ask permission to install from this source the first time.",
       "screenshots": [],
       "platforms": {
         "android": {
           "appId": "debloat",
           "platform": "android",
-          "version": "1.0.0",
-          "build": 1,
-          "notes": "Initial production release with AGY CLI agent pairing and safe debloat catalog",
-          "sizeBytes": 55117031,
-          "sha256": "4a46b28dd0b0c18ac35ecbc053b0f86ecf28393ca170f31cc7b7d4c4a9aca727",
-          "fileName": "Debloat.apk",
-          "createdAt": 1793519000000,
-          "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/debloat/Debloat.apk"
+          "version": "1.1.0",
+          "build": 2,
+          "notes": "Renamed to PNSJY DevTools with child apps suite (Debloat Studio, Package Inspector, ADB Shell Terminal, Device Diagnostics), browser AGY sign-in, and custom vector icons",
+          "sizeBytes": 56131325,
+          "sha256": "5833a9715501cfdd8a8abc5b3b62f8ba895fbcd5cd27a2d697d9c71a5dc650dc",
+          "fileName": "DevTools.apk",
+          "createdAt": 1793761900000,
+          "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/debloat/DevTools.apk"
         }
       }
     }
