@@ -314,13 +314,13 @@
         "android": {
           "appId": "pocketllm",
           "platform": "android",
-          "version": "1.1.0",
-          "build": 2,
-          "notes": "Curated model catalog (Best & Good tiers), dynamic hardware power assessment recommendations, in-app model downloader, and premium new app icon.",
-          "sizeBytes": 96007558,
-          "sha256": "e75db163765dea2b29882601b323716fd2094ce030a94af99d4a53afc181421e",
+          "version": "1.1.1",
+          "build": 3,
+          "notes": "Simplified user-friendly AI assistant profiles, persistent foreground background model downloads surviving phone lock/screen off, and intuitive device power recommendations.",
+          "sizeBytes": 97415498,
+          "sha256": "7b85e47964b4a774a7c80ad12fd41b32c7f8b1d7e033d835d5a2ccba279cc52e",
           "fileName": "PocketLLM.apk",
-          "createdAt": 1793860000000,
+          "createdAt": 1793870000000,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/pocketllm/PocketLLM.apk"
         }
       }
