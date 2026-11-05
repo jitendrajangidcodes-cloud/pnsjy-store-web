@@ -296,6 +296,34 @@
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/wallpaper/Wallpaper.apk"
         }
       }
+    },
+    {
+      "appId": "pocketllm",
+      "name": "Pocket LLM",
+      "icon": "/assets/icons/pocketllm.png",
+      "tagline": "100% standalone offline local AI assistant with document analysis and OCR.",
+      "category": "Productivity",
+      "color": "#2563eb",
+      "beta": false,
+      "requiresAccount": false,
+      "packageId": "in.pnsjy.pocket_llm",
+      "about": "Pocket LLM is a 100% offline, standalone AI assistant running quantized GGUF models directly on your device via llama.cpp. It requires zero cloud APIs, accounts, or internet connectivity. Features full PDF text extraction, native deterministic CSV spreadsheet statistics, clean web article scraping, and on-device OCR document scanning.",
+      "requirements": "Android 8.0 (Oreo) or newer. Distributed outside the Play Store -- Android will ask permission to install from this source the first time.",
+      "screenshots": [],
+      "platforms": {
+        "android": {
+          "appId": "pocketllm",
+          "platform": "android",
+          "version": "1.0.0",
+          "build": 1,
+          "notes": "Initial release: 100% standalone offline LLM inference (GGUF), PDF/CSV/Web processing, OCR, and Android share target.",
+          "sizeBytes": 95686562,
+          "sha256": "eda46cdda6d0ca9adb3e9b44057034dcf439d9907aa6442857731b186a29a337",
+          "fileName": "PocketLLM.apk",
+          "createdAt": 1793600000000,
+          "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/pocketllm/PocketLLM.apk"
+        }
+      }
     }
   ]
 }
