@@ -314,13 +314,13 @@
         "android": {
           "appId": "pocketllm",
           "platform": "android",
-          "version": "1.0.0",
-          "build": 1,
-          "notes": "Initial release: 100% standalone offline LLM inference (GGUF), PDF/CSV/Web processing, OCR, and Android share target.",
-          "sizeBytes": 95686562,
-          "sha256": "eda46cdda6d0ca9adb3e9b44057034dcf439d9907aa6442857731b186a29a337",
+          "version": "1.1.0",
+          "build": 2,
+          "notes": "Curated model catalog (Best & Good tiers), dynamic hardware power assessment recommendations, in-app model downloader, and premium new app icon.",
+          "sizeBytes": 96007558,
+          "sha256": "e75db163765dea2b29882601b323716fd2094ce030a94af99d4a53afc181421e",
           "fileName": "PocketLLM.apk",
-          "createdAt": 1793600000000,
+          "createdAt": 1793860000000,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/pocketllm/PocketLLM.apk"
         }
       }
