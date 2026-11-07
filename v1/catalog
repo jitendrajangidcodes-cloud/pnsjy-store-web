@@ -314,13 +314,13 @@
         "android": {
           "appId": "pocketllm",
           "platform": "android",
-          "version": "1.1.3",
-          "build": 5,
-          "notes": "Native model chat template integration (Llama 3 / Qwen / SmolLM), streaming stop token filter (<|im_end|>, <|eot_id|>), and fixed repeating turns runaway loop.",
+          "version": "1.1.4",
+          "build": 6,
+          "notes": "Dynamic hardware RAM & SoC profiler, AI TOPS & NPU awareness (Snapdragon 8 Gen / Dimensity 9x00), Instant Speed Assistant (Qwen 2.5 0.5B), and optimized mobile thread limits.",
           "sizeBytes": 104395422,
-          "sha256": "1198ecb99502ec6e67882c1535e4b6c1104ebe23a7b707d4e936c08aaed81524",
+          "sha256": "1a9cc1b1ac00105cbd0df0f1252cdd608faa04768d2344eca1471c3954e4da88",
           "fileName": "PocketLLM.apk",
-          "createdAt": 1794029000000,
+          "createdAt": 1794038000000,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/pocketllm/PocketLLM.apk"
         }
       }
