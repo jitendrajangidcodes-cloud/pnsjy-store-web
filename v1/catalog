@@ -314,13 +314,13 @@
         "android": {
           "appId": "pocketllm",
           "platform": "android",
-          "version": "1.1.2",
-          "build": 4,
-          "notes": "Bundled official prebuilt llama.cpp binaries for Android, migrated to non-blocking LlamaEngine, added active model persistence and real-time load state verification.",
-          "sizeBytes": 104362654,
-          "sha256": "d2a58be16c4cfcbad3f72f93f71403c45b8c257f24afe851efa3510f132717af",
+          "version": "1.1.3",
+          "build": 5,
+          "notes": "Native model chat template integration (Llama 3 / Qwen / SmolLM), streaming stop token filter (<|im_end|>, <|eot_id|>), and fixed repeating turns runaway loop.",
+          "sizeBytes": 104395422,
+          "sha256": "1198ecb99502ec6e67882c1535e4b6c1104ebe23a7b707d4e936c08aaed81524",
           "fileName": "PocketLLM.apk",
-          "createdAt": 1794025000000,
+          "createdAt": 1794029000000,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/pocketllm/PocketLLM.apk"
         }
       }
