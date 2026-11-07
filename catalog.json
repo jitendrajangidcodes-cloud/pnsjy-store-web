@@ -141,13 +141,13 @@
         "android": {
           "appId": "reminder",
           "platform": "android",
-          "version": "2.41.4",
-          "build": 173,
-          "notes": "Redesign reminder icon with radiant blue gradient, golden clapper, balanced sound waves, and full adaptive shape support",
-          "sizeBytes": 73832141,
-          "sha256": "a8a3a8bcc67493363d21c43881244a68d5d9f9d704e85e4b6a2669ec8bd2d6f8",
+          "version": "2.41.5",
+          "build": 174,
+          "notes": "Fix deleted reminders continuing to ring or auto-snooze; disarm OS alarms immediately on delete and sweep native AlarmStore on every reconcile.",
+          "sizeBytes": 73881293,
+          "sha256": "793a990a6500887ffc1fab6497613c3de987bdcba066d811ae51a6084eba2a02",
           "fileName": "reminder-publish.apk",
-          "createdAt": 1793518583585,
+          "createdAt": 1794025260883,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/reminder/Reminder.apk"
         }
       }
