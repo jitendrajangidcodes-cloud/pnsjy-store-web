@@ -314,13 +314,13 @@
         "android": {
           "appId": "pocketllm",
           "platform": "android",
-          "version": "1.1.1",
-          "build": 3,
-          "notes": "Simplified user-friendly AI assistant profiles, persistent foreground background model downloads surviving phone lock/screen off, and intuitive device power recommendations.",
-          "sizeBytes": 97415498,
-          "sha256": "7b85e47964b4a774a7c80ad12fd41b32c7f8b1d7e033d835d5a2ccba279cc52e",
+          "version": "1.1.2",
+          "build": 4,
+          "notes": "Bundled official prebuilt llama.cpp binaries for Android, migrated to non-blocking LlamaEngine, added active model persistence and real-time load state verification.",
+          "sizeBytes": 104362654,
+          "sha256": "d2a58be16c4cfcbad3f72f93f71403c45b8c257f24afe851efa3510f132717af",
           "fileName": "PocketLLM.apk",
-          "createdAt": 1793870000000,
+          "createdAt": 1794025000000,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/pocketllm/PocketLLM.apk"
         }
       }
