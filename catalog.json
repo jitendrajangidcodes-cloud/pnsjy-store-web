@@ -314,13 +314,13 @@
         "android": {
           "appId": "pocketllm",
           "platform": "android",
-          "version": "1.2.1",
-          "build": 8,
-          "notes": "Fast-path instant tool execution, on-device PDF to image converter, mobile prompt context throttling to prevent latency stalls, and tool-supported Qwen 2.5 device recommendations.",
-          "sizeBytes": 109523538,
-          "sha256": "38b03fe0bdcd9c9ba493fbf749c2609fd8e31b80b99ae97a39906d646e339231",
+          "version": "1.2.2",
+          "build": 9,
+          "notes": "Direct tool image rendering in chat bubble, interactive image gallery with full-screen zoom, save to public Downloads folder, system share sheet, and tool execution badge cards.",
+          "sizeBytes": 110228046,
+          "sha256": "193d55d61ec7b9013e127d4ca449ba8b7a62cefc7c0e704130682771f58cd99e",
           "fileName": "PocketLLM.apk",
-          "createdAt": 1794132000000,
+          "createdAt": 1794114571889,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/pocketllm/PocketLLM.apk"
         }
       }
