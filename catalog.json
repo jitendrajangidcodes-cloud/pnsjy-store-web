@@ -314,13 +314,13 @@
         "android": {
           "appId": "pocketllm",
           "platform": "android",
-          "version": "1.2.0",
-          "build": 7,
-          "notes": "On-device tools & skills (Image converter & filter, advanced mathematics & calculus evaluator, unit converter), dedicated Tools screen, and streamlined single optimal model auto-download per device.",
-          "sizeBytes": 109408846,
-          "sha256": "340b4342bc98711455c52ecf3fbc66fb379af8c051668876d607960fc48a1778",
+          "version": "1.2.1",
+          "build": 8,
+          "notes": "Fast-path instant tool execution, on-device PDF to image converter, mobile prompt context throttling to prevent latency stalls, and tool-supported Qwen 2.5 device recommendations.",
+          "sizeBytes": 109523538,
+          "sha256": "38b03fe0bdcd9c9ba493fbf749c2609fd8e31b80b99ae97a39906d646e339231",
           "fileName": "PocketLLM.apk",
-          "createdAt": 1794124000000,
+          "createdAt": 1794132000000,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/pocketllm/PocketLLM.apk"
         }
       }
