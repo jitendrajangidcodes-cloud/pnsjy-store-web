@@ -314,13 +314,13 @@
         "android": {
           "appId": "pocketllm",
           "platform": "android",
-          "version": "1.1.4",
-          "build": 6,
-          "notes": "Dynamic hardware RAM & SoC profiler, AI TOPS & NPU awareness (Snapdragon 8 Gen / Dimensity 9x00), Instant Speed Assistant (Qwen 2.5 0.5B), and optimized mobile thread limits.",
-          "sizeBytes": 104395422,
-          "sha256": "1a9cc1b1ac00105cbd0df0f1252cdd608faa04768d2344eca1471c3954e4da88",
+          "version": "1.2.0",
+          "build": 7,
+          "notes": "On-device tools & skills (Image converter & filter, advanced mathematics & calculus evaluator, unit converter), dedicated Tools screen, and streamlined single optimal model auto-download per device.",
+          "sizeBytes": 109408846,
+          "sha256": "340b4342bc98711455c52ecf3fbc66fb379af8c051668876d607960fc48a1778",
           "fileName": "PocketLLM.apk",
-          "createdAt": 1794038000000,
+          "createdAt": 1794124000000,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/pocketllm/PocketLLM.apk"
         }
       }
