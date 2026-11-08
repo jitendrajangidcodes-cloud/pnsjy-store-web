@@ -141,13 +141,13 @@
         "android": {
           "appId": "reminder",
           "platform": "android",
-          "version": "2.41.5",
-          "build": 174,
-          "notes": "Fix deleted reminders continuing to ring or auto-snooze; disarm OS alarms immediately on delete and sweep native AlarmStore on every reconcile.",
+          "version": "2.41.6",
+          "build": 175,
+          "notes": "Fix store and in-app update installation failure by publishing Reminder.apk to store release tag and falling back to store.pnsjy.in/v1/catalog.",
           "sizeBytes": 73881293,
-          "sha256": "793a990a6500887ffc1fab6497613c3de987bdcba066d811ae51a6084eba2a02",
+          "sha256": "12d1b58d70b6b65c832818c63b5ed40294690daa6ba1f4dfb5dc79626a3bc76d",
           "fileName": "reminder-publish.apk",
-          "createdAt": 1794025260883,
+          "createdAt": 1794191590000,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/reminder/Reminder.apk"
         }
       }
