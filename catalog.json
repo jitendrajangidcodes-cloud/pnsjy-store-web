@@ -126,12 +126,12 @@
       "icon": "/assets/icons/reminder.png",
       "tagline": "Fires exact-time alarms that ring and vibrate even from a locked screen.",
       "category": "Productivity",
-      "color": "#2f7ee3",
+      "color": "#4f46e5",
       "beta": false,
-      "requiresAccount": true,
+      "requiresAccount": false,
       "packageId": "com.pnsjy.reminder_app",
-      "about": "Reminder behaves like an alarm clock, not a gentle notification nudge -- built for things you can't afford to miss. It rings and vibrates on a full-screen lock-screen alarm, offers Complete, Dismiss, and Snooze actions right from that screen, and supports daily, weekly, monthly, and yearly repeat rules with category organization. Sign in with Google to sync reminders and attached photos across devices via Drive.",
-      "requirements": "Android 8.0 (Oreo) or newer. Distributed outside the Play Store -- Android will ask permission to install from this source the first time.",
+      "about": "Reminder behaves like an alarm clock, not a gentle notification nudge -- built for things you can't afford to miss. 100% private and offline with no sign-in required. Rings and vibrates on a full-screen lock-screen alarm, offers Complete, Dismiss, and Snooze actions right from that screen, supports daily, weekly, monthly, and yearly repeat rules, place-based triggers, and instant device-to-device QR Code transfer or JSON/CSV backup across 5\" phones to 14\" tablets.",
+      "requirements": "Android 8.0 (Oreo) or newer.",
       "screenshots": [
         "/v1/apps/reminder/screenshots/1",
         "/v1/apps/reminder/screenshots/2",
@@ -141,13 +141,13 @@
         "android": {
           "appId": "reminder",
           "platform": "android",
-          "version": "2.41.6",
-          "build": 175,
-          "notes": "Fix store and in-app update installation failure by publishing Reminder.apk to store release tag and falling back to store.pnsjy.in/v1/catalog.",
-          "sizeBytes": 73881293,
-          "sha256": "12d1b58d70b6b65c832818c63b5ed40294690daa6ba1f4dfb5dc79626a3bc76d",
+          "version": "3.0.0",
+          "build": 176,
+          "notes": "Google Play Store Edition v3.0.0: 100% offline architecture, QR device-to-device transfer, JSON/CSV backup, and 5-inch to 14-inch phone/tablet responsive UI.",
+          "sizeBytes": 88582501,
+          "sha256": "78266eec165f6d3a7e613d8578a072cc24c676f7537561708e2e8d1d35bd38c4",
           "fileName": "reminder-publish.apk",
-          "createdAt": 1794191590000,
+          "createdAt": 1794720820000,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/reminder/Reminder.apk"
         }
       }

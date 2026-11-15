@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Reminder (com.pnsjy.reminder_app)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --accent: #4f46e5;
+      --border: #e2e8f0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b0f19;
+        --card: #111827;
+        --text: #f1f5f9;
+        --muted: #94a3b8;
+        --accent: #818cf8;
+        --border: #1e293b;
+      }
+    }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      padding: 32px 16px;
+    }
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+    }
+    h1 { margin-top: 0; font-size: 1.85rem; }
+    h2 { margin-top: 1.75rem; font-size: 1.2rem; color: var(--accent); }
+    p, li { color: var(--text); }
+    .meta { color: var(--muted); font-size: 0.92rem; margin-bottom: 24px; }
+    code { background: rgba(99, 102, 241, 0.12); padding: 2px 6px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Privacy Policy — Reminder</h1>
+    <p class="meta">
+      Application ID: <code>com.pnsjy.reminder_app</code> &bull; Effective Date: November 15, 2026 &bull; Developer: PNSJY / Jitendra K Jangid
+    </p>
+
+    <p>
+      <strong>Reminder</strong> is a 100% offline-first alarm and reminder application for Android phones, foldables, and tablets.
+      It requires <strong>no user account, no sign-in, and no cloud subscription</strong>.
+    </p>
+
+    <h2>1. Data Stored Locally on Your Device</h2>
+    <p>
+      All data you create in Reminder is stored exclusively inside your device's private application database (SQLite):
+    </p>
+    <ul>
+      <li>Reminder titles, notes, schedules, recurrence rules, and priority levels</li>
+      <li>Categories, custom colors, and icons</li>
+      <li>Optional photo attachments and web links added to a reminder</li>
+      <li>Optional map coordinates and radius for location-based reminders</li>
+      <li>Completion history and app preferences</li>
+    </ul>
+    <p>
+      None of your reminders, notes, categories, photos, or location coordinates are uploaded to any server or shared with third parties.
+    </p>
+
+    <h2>2. Permissions &amp; How They Are Used</h2>
+    <ul>
+      <li>
+        <strong>Exact Alarms &amp; Full-Screen Intent (<code>USE_EXACT_ALARM</code>, <code>SCHEDULE_EXACT_ALARM</code>, <code>USE_FULL_SCREEN_INTENT</code>):</strong>
+        Required for the core functionality of waking your device and ringing your scheduled alarms at the exact minute you choose, including over the lock screen.
+      </li>
+      <li>
+        <strong>Location &amp; Background Location (<code>ACCESS_FINE_LOCATION</code>, <code>ACCESS_COARSE_LOCATION</code>, <code>ACCESS_BACKGROUND_LOCATION</code>):</strong>
+        Requested <em>only</em> if you create a location-based reminder (triggering an alarm when you arrive at or leave a chosen place).
+        Location data is evaluated entirely on your device to detect geofence entry/exit even when the app is closed or not in use, and is never transmitted off your device.
+      </li>
+      <li>
+        <strong>Camera (<code>CAMERA</code>):</strong>
+        Requested <em>only</em> when you open <em>Settings &rarr; Receive via QR scan</em> to scan a reminder transfer QR code from another phone or tablet. Camera frames are processed in real time on your device and are never saved or transmitted.
+      </li>
+      <li>
+        <strong>Calendar (<code>READ_CALENDAR</code>, <code>WRITE_CALENDAR</code> — Optional):</strong>
+        Requested only if you enable the optional local calendar mirror in Settings.
+      </li>
+    </ul>
+
+    <h2>3. Data Portability (QR Transfer &amp; File Backup)</h2>
+    <p>
+      You can transfer or back up your reminders at any time using:
+    </p>
+    <ul>
+      <li><strong>QR Device Transfer:</strong> Encodes your reminders into an offline GZip-compressed QR code displayed on your screen for another device to scan directly.</li>
+      <li><strong>File Export &amp; Import:</strong> Exports a <code>.json</code> full backup or <code>.csv</code> spreadsheet to a folder you choose via the Android system file picker.</li>
+    </ul>
+
+    <h2>4. Optional Technical Diagnostics</h2>
+    <p>
+      Reminder includes an optional, opt-in toggle in Settings (<em>Send anonymous crash &amp; delivery diagnostics</em>, disabled unless enabled by you) that sends sanitized technical error codes to help diagnose alarm delivery issues. It never includes reminder titles, notes, photos, or location coordinates.
+    </p>
+
+    <h2>5. Data Deletion</h2>
+    <p>
+      Because all data is stored locally on your device, deleting a reminder in the app, clearing the app's storage in Android Settings, or uninstalling Reminder permanently deletes all your data immediately.
+    </p>
+
+    <h2>6. Contact</h2>
+    <p>
+      If you have questions about this Privacy Policy, please contact the developer via <a href="https://store.pnsjy.in">https://store.pnsjy.in</a>.
+    </p>
+  </main>
+</body>
+</html>
