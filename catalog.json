@@ -230,14 +230,14 @@
         "android": {
           "appId": "trackall",
           "platform": "android",
-          "version": "1.4.4",
-          "build": 21,
-          "notes": "PNSJY design system alignment, adaptive icons with monochrome layer, improved offline tracking, and performance optimizations.",
-          "sizeBytes": 58439772,
-          "sha256": "05ceb1915bf5e521af997ad4eb5e3e7596fc5a4ec085bb54e240e511f11397d3",
-          "fileName": "pnsjy-publish-trackall.apk",
-          "createdAt": 1793721709949,
-          "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/trackall/TrackAll.apk"
+          "version": "1.4.5",
+          "build": 22,
+          "notes": "Accurate selling price extraction on Amazon, full HTML entity title decoding, positive price safety guards to prevent false zero-price alerts, and auto-purge of corrupt alerts.",
+          "sizeBytes": 59008428,
+          "sha256": "6e6b34e530b46027cc9dd5eceeb5b7040277c3ad08fc1e37abcdc4e6de08c800",
+          "fileName": "TrackAll-v1.4.5.apk",
+          "createdAt": 1794825600000,
+          "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/trackall/TrackAll-v1.4.5.apk"
         }
       }
     },
