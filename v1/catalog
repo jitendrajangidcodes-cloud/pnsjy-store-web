@@ -169,13 +169,13 @@
         "android": {
           "appId": "store",
           "platform": "android",
-          "version": "2.4.2",
-          "build": 77,
-          "notes": "Support serverless static catalog self-updates and dedicated Google Cloud auth with ethical device telemetry",
-          "sizeBytes": 63069415,
-          "sha256": "ee626cb5765faac44bbecdcb6bd25211a309cdef1867749c7fb2ae1525eb39cf",
+          "version": "2.4.3",
+          "build": 78,
+          "notes": "Fix Google sign-in session caching and silent re-auth, add sign-in progress indicator and error feedback in ProfileCard, and add StockPulse to package visibility queries",
+          "sizeBytes": 63071126,
+          "sha256": "05e90c93ee0fa3619c30c7c6043d5bd646c2dd2878639394ec5def1b5672d903",
           "fileName": "pnsjy-store-publish.apk",
-          "createdAt": 1793714839508,
+          "createdAt": 1794809600000,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/store/pnsjy-store.apk"
         }
       }
