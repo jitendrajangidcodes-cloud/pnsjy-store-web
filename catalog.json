@@ -296,6 +296,34 @@
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/wallpaper/Wallpaper.apk"
         }
       }
+    },
+    {
+      "appId": "stockpulse",
+      "name": "StockPulse AI",
+      "icon": "/assets/icons/stockpulse.png",
+      "tagline": "Indian stock market Top 500 intelligence, daily Top 2 picks, and self-learning AI.",
+      "category": "Finance",
+      "color": "#10b981",
+      "beta": false,
+      "requiresAccount": false,
+      "packageId": "in.pnsjy.stockpulse",
+      "about": "StockPulse pulls the NSE Nifty 500 Indian stocks daily at 5:00 PM IST into MongoDB, analyzes morning GIFT Nifty, global sentiment and Indian market news at 7:00 AM IST to select the Top 2 stocks projected to rise 2-3%+, and verifies accuracy at 3:30 PM IST with an adaptive self-learning algorithm.",
+      "requirements": "Android 8.0 (Oreo) or newer.",
+      "screenshots": [],
+      "platforms": {
+        "android": {
+          "appId": "stockpulse",
+          "platform": "android",
+          "version": "1.0.0",
+          "build": 1,
+          "notes": "Initial release of StockPulse AI with Nifty 500 5PM ingestion, 7AM GIFT Nifty & News Top 2 Picker, and 3:30PM Self-Learning Engine",
+          "sizeBytes": 53238832,
+          "sha256": "8e8cc003f9f891579721be497c91b7c228b7c0bfaad6d1d333095b0159343441",
+          "fileName": "StockPulse.apk",
+          "createdAt": 1794808500000,
+          "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/stockpulse/StockPulse.apk"
+        }
+      }
     }
   ]
 }
