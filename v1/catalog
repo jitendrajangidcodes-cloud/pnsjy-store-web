@@ -141,13 +141,13 @@
         "android": {
           "appId": "reminder",
           "platform": "android",
-          "version": "3.0.0",
-          "build": 176,
-          "notes": "Google Play Store Edition v3.0.0: 100% offline architecture, QR device-to-device transfer, JSON/CSV backup, and 5-inch to 14-inch phone/tablet responsive UI.",
-          "sizeBytes": 88582501,
-          "sha256": "78266eec165f6d3a7e613d8578a072cc24c676f7537561708e2e8d1d35bd38c4",
+          "version": "3.1.0",
+          "build": 178,
+          "notes": "Reminder 3.1.0: Modern UI, flow & UX overhaul with soft lavender aesthetic, floating diamond action button, interactive 14-day calendar strip, daily focus hero progress card, and single-tap reminder completion.",
+          "sizeBytes": 88799589,
+          "sha256": "c628bc3f065dab7f1cfa6d154686cf9ec0db3dc47fa344b4520665abcdc8f5eb",
           "fileName": "reminder-publish.apk",
-          "createdAt": 1794720820000,
+          "createdAt": 1794828457412,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/reminder/Reminder.apk"
         }
       }
