@@ -169,13 +169,13 @@
         "android": {
           "appId": "store",
           "platform": "android",
-          "version": "2.4.3",
-          "build": 78,
-          "notes": "Fix Google sign-in session caching and silent re-auth, add sign-in progress indicator and error feedback in ProfileCard, and add StockPulse to package visibility queries",
+          "version": "2.4.4",
+          "build": 79,
+          "notes": "Improve Google sign-in error diagnostics, surface signature registration notices, and fix silent cancellation resets",
           "sizeBytes": 63071126,
-          "sha256": "05e90c93ee0fa3619c30c7c6043d5bd646c2dd2878639394ec5def1b5672d903",
+          "sha256": "2e8b4227f9b5409461e8223a48ddfc129ab257c510a0f99b8b9b1876fae84f46",
           "fileName": "pnsjy-store-publish.apk",
-          "createdAt": 1794809600000,
+          "createdAt": 1794813000000,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/store/pnsjy-store.apk"
         }
       }
