@@ -172,8 +172,8 @@
           "version": "2.4.5",
           "build": 80,
           "notes": "Centralized Google Cloud OAuth integration (pnsjy-central-auth) for unified fleet sign-in",
-          "sizeBytes": 63622562,
-          "sha256": "62ce84c862af8cb29e7e65f5c3da9e7d1ca916d7f419b7d412167c56de785258",
+          "sizeBytes": 63622534,
+          "sha256": "04a0b63c6b0dd54efeb04f40212eed5ab45c4c9380e037e40947edb49669909a",
           "fileName": "pnsjy-store-publish.apk",
           "createdAt": 1794821000000,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/store/pnsjy-store.apk"
