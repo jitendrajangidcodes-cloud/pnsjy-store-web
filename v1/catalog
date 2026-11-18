@@ -230,14 +230,14 @@
         "android": {
           "appId": "trackall",
           "platform": "android",
-          "version": "1.4.10",
-          "build": 27,
-          "notes": "One-tap Google sign-in with instant account connection, removal of technical server jargon, and synchronized adaptive launcher icons.",
-          "sizeBytes": 58630720,
-          "sha256": "5659a382f0bf3ceb4a0dfeec321738b7b9e9ced1a5597eb4a66f6d6f6cb428e4",
-          "fileName": "TrackAll-v1.4.10.apk",
-          "createdAt": 1795011600000,
-          "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/trackall/TrackAll-v1.4.10.apk"
+          "version": "1.4.11",
+          "build": 28,
+          "notes": "True Google account sign-in flow with native system account chooser dialog.",
+          "sizeBytes": 58614400,
+          "sha256": "9c1ce55933cbc155fcf0db4d52d8891200d923499558d464ab7b59737556286a",
+          "fileName": "TrackAll-v1.4.11.apk",
+          "createdAt": 1795012200000,
+          "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/trackall/TrackAll-v1.4.11.apk"
         }
       }
     },
