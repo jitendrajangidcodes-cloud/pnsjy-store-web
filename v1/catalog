@@ -45,13 +45,13 @@
         "android": {
           "appId": "mirrordrive",
           "platform": "android",
-          "version": "1.5.4",
-          "build": 55,
-          "notes": "Migrate to server-free fleet control and dedicated GCP project",
-          "sizeBytes": 108915818,
-          "sha256": "5f3e2c510f7c07c8ca79910d6e6573c8e63c97ee8cd26c1931fb9d5d14242620",
-          "fileName": "mirrordrive-publish.apk",
-          "createdAt": 1793517269845,
+          "version": "1.5.5",
+          "build": 56,
+          "notes": "Fix Google Sign-In and auto-sync with clean Settings UX",
+          "sizeBytes": 108932086,
+          "sha256": "aba68a2cbee51707aadb457bc67e8d49051fb75b1d72351246efd189654f13ac",
+          "fileName": "mirrordrive.apk",
+          "createdAt": 1795024573176,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/mirrordrive/mirrordrive.apk"
         }
       }
