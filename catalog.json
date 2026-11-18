@@ -230,14 +230,14 @@
         "android": {
           "appId": "trackall",
           "platform": "android",
-          "version": "1.4.11",
-          "build": 28,
-          "notes": "True Google account sign-in flow with native system account chooser dialog.",
-          "sizeBytes": 58614400,
-          "sha256": "9c1ce55933cbc155fcf0db4d52d8891200d923499558d464ab7b59737556286a",
-          "fileName": "TrackAll-v1.4.11.apk",
-          "createdAt": 1795012200000,
-          "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/trackall/TrackAll-v1.4.11.apk"
+          "version": "1.4.12",
+          "build": 29,
+          "notes": "Fix store domain detection for Amazon short links (amzn.in, amzn.to), Flipkart, and popular retail sites with automatic fallback.",
+          "sizeBytes": 58614396,
+          "sha256": "cb556e16e1e64ea6278e227a2e3ae1352862b721663c597255654afbaab7181c",
+          "fileName": "TrackAll-v1.4.12.apk",
+          "createdAt": 1795015050000,
+          "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/trackall/TrackAll-v1.4.12.apk"
         }
       }
     },
