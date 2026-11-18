@@ -230,14 +230,14 @@
         "android": {
           "appId": "trackall",
           "platform": "android",
-          "version": "1.4.8",
-          "build": 25,
-          "notes": "Compatible signature update (fixes upgrade uninstall prompt), user-based tracking via Google Account, dedicated Node.js backend integration on port 8360, and refreshed store icon matching the real adaptive launcher icon.",
-          "sizeBytes": 58614376,
-          "sha256": "2646cfe14714980b7b70d2c1945b3b5eeedd094c685019f5395e064ef713b265",
-          "fileName": "TrackAll-v1.4.8.apk",
-          "createdAt": 1795009350000,
-          "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/trackall/TrackAll-v1.4.8.apk"
+          "version": "1.4.9",
+          "build": 26,
+          "notes": "Added interactive AccountSheet with Google Sign-In, error diagnostics, and direct email connection for 24/7 Linux server background tracking.",
+          "sizeBytes": 58614540,
+          "sha256": "8221dcafa0faa19cdbc14f970bc559fb6efa024b4e166045aacb9068c0ab2a73",
+          "fileName": "TrackAll-v1.4.9.apk",
+          "createdAt": 1795010500000,
+          "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/trackall/TrackAll-v1.4.9.apk"
         }
       }
     },
