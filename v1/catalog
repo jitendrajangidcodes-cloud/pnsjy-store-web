@@ -230,14 +230,14 @@
         "android": {
           "appId": "trackall",
           "platform": "android",
-          "version": "1.4.6",
-          "build": 23,
-          "notes": "Foreground 5-minute periodic auto-checks, on-resume instant refresh, expanded 35s scraper timeout with automatic network retry, and 15m/5m background scheduler upgrade.",
-          "sizeBytes": 58433200,
-          "sha256": "461d6ca6cc2d7a8510afe100fded83435e9b53619686485980e9cdd10cbb084f",
-          "fileName": "TrackAll-v1.4.6.apk",
-          "createdAt": 1795004100000,
-          "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/trackall/TrackAll-v1.4.6.apk"
+          "version": "1.4.7",
+          "build": 24,
+          "notes": "Dedicated Linux backend support (port 8360) with MongoDB 5-min tracking, sub-50ms loading, instant trajectory charting, and offline SQLite fallback.",
+          "sizeBytes": 58580824,
+          "sha256": "4b4f0eec658e4ea1adad18fd016d289fc9622f7e2f809cb171d76f0c9cc56432",
+          "fileName": "TrackAll-v1.4.7.apk",
+          "createdAt": 1795007400000,
+          "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/trackall/TrackAll-v1.4.7.apk"
         }
       }
     },
