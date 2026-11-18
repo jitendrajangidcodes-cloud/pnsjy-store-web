@@ -3,7 +3,7 @@
     {
       "appId": "langkeeper",
       "name": "LangKeeper",
-      "icon": "/assets/icons/langkeeper.png",
+      "icon": "/assets/icons/langkeeper.png?v=2",
       "tagline": "Save, organize, and navigate to your locations with Google Drive cloud backup.",
       "category": "Utilities",
       "color": "#1e88e5",
@@ -31,7 +31,7 @@
     {
       "appId": "mirrordrive",
       "name": "MirrorDrive",
-      "icon": "/assets/icons/mirrordrive.png",
+      "icon": "/assets/icons/mirrordrive.png?v=2",
       "tagline": "Two-way folder sync between your phone and Google Drive, on your schedule.",
       "category": "Utilities",
       "color": "#5fe06a",
@@ -59,7 +59,7 @@
     {
       "appId": "moviebrowser",
       "name": "Movie Browser",
-      "icon": "/assets/icons/moviebrowser.png",
+      "icon": "/assets/icons/moviebrowser.png?v=2",
       "tagline": "Movies and TV shows for Android and Android TV",
       "category": "Entertainment",
       "color": "#b71c1c",
@@ -123,7 +123,7 @@
     {
       "appId": "reminder",
       "name": "Reminder",
-      "icon": "/assets/icons/reminder.png",
+      "icon": "/assets/icons/reminder.png?v=2",
       "tagline": "Fires exact-time alarms that ring and vibrate even from a locked screen.",
       "category": "Productivity",
       "color": "#4f46e5",
@@ -155,7 +155,7 @@
     {
       "appId": "store",
       "name": "PNSJY Store",
-      "icon": "/assets/icons/store.png",
+      "icon": "/assets/icons/store.png?v=2",
       "tagline": "The PNSJY app store: install and update every PNSJY app.",
       "category": "Utilities",
       "color": "#0d5c3a",
@@ -169,13 +169,13 @@
         "android": {
           "appId": "store",
           "platform": "android",
-          "version": "2.4.5",
-          "build": 80,
-          "notes": "Centralized Google Cloud OAuth integration (pnsjy-central-auth) for unified fleet sign-in",
-          "sizeBytes": 63622534,
-          "sha256": "04a0b63c6b0dd54efeb04f40212eed5ab45c4c9380e037e40947edb49669909a",
+          "version": "2.4.6",
+          "build": 81,
+          "notes": "Synchronize all fleet adaptive app icons with cache-busting and complete 9-app catalog registration.",
+          "sizeBytes": 62755730,
+          "sha256": "5de2891aea7e0cfbb52df1d667e650de9ac8c69be785c61b20b9c36af3cdb24f",
           "fileName": "pnsjy-store-publish.apk",
-          "createdAt": 1794821000000,
+          "createdAt": 1795011600000,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/store/pnsjy-store.apk"
         }
       }
@@ -183,7 +183,7 @@
     {
       "appId": "taashclub",
       "name": "Taash Club",
-      "icon": "/assets/icons/taashclub.png",
+      "icon": "/assets/icons/taashclub.png?v=2",
       "tagline": "Classic Indian card games -- Teen Do Paanch (3-2-5), Kali Begum and Gochi, solo or multiplayer.",
       "category": "Games",
       "color": "#0d5c3a",
@@ -216,7 +216,7 @@
     {
       "appId": "trackall",
       "name": "TrackAll",
-      "icon": "/assets/icons/trackall.png",
+      "icon": "/assets/icons/trackall.png?v=2",
       "tagline": "Track prices on Amazon, Flipkart, and Myntra with automated alerts.",
       "category": "Shopping",
       "color": "#047857",
@@ -230,21 +230,21 @@
         "android": {
           "appId": "trackall",
           "platform": "android",
-          "version": "1.4.9",
-          "build": 26,
-          "notes": "Added interactive AccountSheet with Google Sign-In, error diagnostics, and direct email connection for 24/7 Linux server background tracking.",
-          "sizeBytes": 58614540,
-          "sha256": "8221dcafa0faa19cdbc14f970bc559fb6efa024b4e166045aacb9068c0ab2a73",
-          "fileName": "TrackAll-v1.4.9.apk",
-          "createdAt": 1795010500000,
-          "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/trackall/TrackAll-v1.4.9.apk"
+          "version": "1.4.10",
+          "build": 27,
+          "notes": "One-tap Google sign-in with instant account connection, removal of technical server jargon, and synchronized adaptive launcher icons.",
+          "sizeBytes": 58630720,
+          "sha256": "5659a382f0bf3ceb4a0dfeec321738b7b9e9ced1a5597eb4a66f6d6f6cb428e4",
+          "fileName": "TrackAll-v1.4.10.apk",
+          "createdAt": 1795011600000,
+          "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/trackall/TrackAll-v1.4.10.apk"
         }
       }
     },
     {
       "appId": "twinclean",
       "name": "TwinClean",
-      "icon": "/assets/icons/twinclean.png",
+      "icon": "/assets/icons/twinclean.png?v=2",
       "tagline": "Finds exact duplicate files and lets you clean them safely.",
       "category": "Utilities",
       "color": "#ffc400",
@@ -272,7 +272,7 @@
     {
       "appId": "wallpaper",
       "name": "Wallpapers",
-      "icon": "/assets/icons/wallpaper.png",
+      "icon": "/assets/icons/wallpaper.png?v=2",
       "tagline": "Curated 4K, AMOLED, anime, nature and photography wallpapers.",
       "category": "Personalization",
       "color": "#8b5cf6",
