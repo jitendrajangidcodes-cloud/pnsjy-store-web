@@ -45,13 +45,13 @@
         "android": {
           "appId": "mirrordrive",
           "platform": "android",
-          "version": "1.5.5",
-          "build": 56,
-          "notes": "Fix Google Sign-In and auto-sync with clean Settings UX",
-          "sizeBytes": 108932086,
-          "sha256": "aba68a2cbee51707aadb457bc67e8d49051fb75b1d72351246efd189654f13ac",
+          "version": "1.5.6",
+          "build": 57,
+          "notes": "Direct Google Sign-In and auto-sync on launch",
+          "sizeBytes": 108702534,
+          "sha256": "9faa69c3ae1c3ea68faddefba9a778ba8c41a3023034e2f0a9af78046525db01",
           "fileName": "mirrordrive.apk",
-          "createdAt": 1795024573176,
+          "createdAt": 1795028547227,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/mirrordrive/mirrordrive.apk"
         }
       }
