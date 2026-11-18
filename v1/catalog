@@ -141,13 +141,13 @@
         "android": {
           "appId": "reminder",
           "platform": "android",
-          "version": "3.1.1",
-          "build": 179,
-          "notes": "Reminder 3.1.1: Streamlined minimal UI & decluttered modern flow with soft lavender aesthetic, floating diamond action button, 7-day capsule strip, and single-tap reminder completion.",
-          "sizeBytes": 88582501,
-          "sha256": "6c824a360794fec6be696cde8a0f1494f3deb5b8655842ddc27e18eebc8cce54",
+          "version": "3.2.0",
+          "build": 180,
+          "notes": "Reminder 3.2.0: Comprehensive UI/UX redesign, modern design system, Today-first view, Live Quick Add, redesigned Lists, and guided Alarm Health diagnostics.",
+          "sizeBytes": 89012581,
+          "sha256": "5eb52afeaac3568476aaacf920dea5ccafb7cda271c7a58095cad89ccc3d7292",
           "fileName": "reminder-publish.apk",
-          "createdAt": 1794828457412,
+          "createdAt": 1795006504309,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/reminder/Reminder.apk"
         }
       }
