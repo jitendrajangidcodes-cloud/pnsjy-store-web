@@ -230,14 +230,14 @@
         "android": {
           "appId": "trackall",
           "platform": "android",
-          "version": "1.4.5",
-          "build": 22,
-          "notes": "Accurate selling price extraction on Amazon, full HTML entity title decoding, positive price safety guards to prevent false zero-price alerts, and auto-purge of corrupt alerts.",
-          "sizeBytes": 59008428,
-          "sha256": "6e6b34e530b46027cc9dd5eceeb5b7040277c3ad08fc1e37abcdc4e6de08c800",
-          "fileName": "TrackAll-v1.4.5.apk",
-          "createdAt": 1794825600000,
-          "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/trackall/TrackAll-v1.4.5.apk"
+          "version": "1.4.6",
+          "build": 23,
+          "notes": "Foreground 5-minute periodic auto-checks, on-resume instant refresh, expanded 35s scraper timeout with automatic network retry, and 15m/5m background scheduler upgrade.",
+          "sizeBytes": 58433200,
+          "sha256": "461d6ca6cc2d7a8510afe100fded83435e9b53619686485980e9cdd10cbb084f",
+          "fileName": "TrackAll-v1.4.6.apk",
+          "createdAt": 1795004100000,
+          "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/trackall/TrackAll-v1.4.6.apk"
         }
       }
     },
