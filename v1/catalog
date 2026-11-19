@@ -45,13 +45,13 @@
         "android": {
           "appId": "mirrordrive",
           "platform": "android",
-          "version": "1.5.7",
-          "build": 58,
-          "notes": "Fix Google Sign-In Credential Manager and add native account picker fallback",
+          "version": "1.5.8",
+          "build": 59,
+          "notes": "Direct on-device Play Services Drive token minting",
           "sizeBytes": 108718918,
-          "sha256": "e1e40bef71493a2255ebedb4c6d79950134af00461263f1bab737acd01f09634",
+          "sha256": "5b8c1d1af0f0bbc9a5bc184c32339e9e93f05b5f0c8905045b9b42e4745ed268",
           "fileName": "mirrordrive.apk",
-          "createdAt": 1795080151403,
+          "createdAt": 1795080911896,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/mirrordrive/mirrordrive.apk"
         }
       }
