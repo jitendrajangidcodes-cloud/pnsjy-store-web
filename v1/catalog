@@ -230,14 +230,14 @@
         "android": {
           "appId": "trackall",
           "platform": "android",
-          "version": "1.4.12",
-          "build": 29,
-          "notes": "Fix store domain detection for Amazon short links (amzn.in, amzn.to), Flipkart, and popular retail sites with automatic fallback.",
-          "sizeBytes": 58614396,
-          "sha256": "cb556e16e1e64ea6278e227a2e3ae1352862b721663c597255654afbaab7181c",
-          "fileName": "TrackAll-v1.4.12.apk",
-          "createdAt": 1795015050000,
-          "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/trackall/TrackAll-v1.4.12.apk"
+          "version": "1.4.13",
+          "build": 30,
+          "notes": "Fix product detail loading, model serialization mismatch between camelCase server responses and SQLite, and Amazon scraper User-Agent.",
+          "sizeBytes": 58630780,
+          "sha256": "76ca21c022819f55314b2fe6c8b6184c2db62fee1b4cc4b1f1d097056ccadc30",
+          "fileName": "TrackAll-v1.4.13.apk",
+          "createdAt": 1795083160000,
+          "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/trackall/TrackAll-v1.4.13.apk"
         }
       }
     },
