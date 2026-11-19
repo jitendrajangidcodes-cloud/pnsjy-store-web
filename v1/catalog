@@ -45,13 +45,13 @@
         "android": {
           "appId": "mirrordrive",
           "platform": "android",
-          "version": "1.5.6",
-          "build": 57,
-          "notes": "Direct Google Sign-In and auto-sync on launch",
-          "sizeBytes": 108702534,
-          "sha256": "9faa69c3ae1c3ea68faddefba9a778ba8c41a3023034e2f0a9af78046525db01",
+          "version": "1.5.7",
+          "build": 58,
+          "notes": "Fix Google Sign-In Credential Manager and add native account picker fallback",
+          "sizeBytes": 108718918,
+          "sha256": "e1e40bef71493a2255ebedb4c6d79950134af00461263f1bab737acd01f09634",
           "fileName": "mirrordrive.apk",
-          "createdAt": 1795028547227,
+          "createdAt": 1795080151403,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/mirrordrive/mirrordrive.apk"
         }
       }
