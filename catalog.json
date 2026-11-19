@@ -45,13 +45,13 @@
         "android": {
           "appId": "mirrordrive",
           "platform": "android",
-          "version": "1.5.8",
-          "build": 59,
-          "notes": "Direct on-device Play Services Drive token minting",
-          "sizeBytes": 108718918,
-          "sha256": "5b8c1d1af0f0bbc9a5bc184c32339e9e93f05b5f0c8905045b9b42e4745ed268",
+          "version": "1.5.9",
+          "build": 60,
+          "notes": "Foreground Google Play Services token and consent recovery",
+          "sizeBytes": 108800850,
+          "sha256": "b10167f1720f64ca6555c06323f5cf4dbe02d4d73c668157e05f5dfd759c6729",
           "fileName": "mirrordrive.apk",
-          "createdAt": 1795080911896,
+          "createdAt": 1795086833053,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/mirrordrive/mirrordrive.apk"
         }
       }
