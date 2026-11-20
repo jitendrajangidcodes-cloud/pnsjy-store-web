@@ -45,13 +45,13 @@
         "android": {
           "appId": "mirrordrive",
           "platform": "android",
-          "version": "1.5.10",
-          "build": 61,
-          "notes": "Fleet central GCP project (pnsjy-apps-core) migration and Google Drive token authorization",
+          "version": "1.5.11",
+          "build": 62,
+          "notes": "Unified single Google login and eliminated sync login bottom-sheet loop",
           "sizeBytes": 108800918,
-          "sha256": "0ef332bb615f16bb3ba01a102be2db444439a44ba38225b56a2fc60854a8cc7d",
+          "sha256": "96be048ae124eff6eedbdbf391149a0d13476f5e05b003dcf2568291f93080e8",
           "fileName": "mirrordrive.apk",
-          "createdAt": 1795195000000,
+          "createdAt": 1795195279533,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/mirrordrive/mirrordrive.apk"
         }
       }
