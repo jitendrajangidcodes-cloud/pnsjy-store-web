@@ -45,13 +45,13 @@
         "android": {
           "appId": "mirrordrive",
           "platform": "android",
-          "version": "1.5.11",
-          "build": 62,
-          "notes": "Unified single Google login and eliminated sync login bottom-sheet loop",
-          "sizeBytes": 108800918,
-          "sha256": "96be048ae124eff6eedbdbf391149a0d13476f5e05b003dcf2568291f93080e8",
+          "version": "1.5.12",
+          "build": 63,
+          "notes": "Wall-clock self-rearming daily auto-sync scheduler, truthful background logs, and foreground dashboard refresh",
+          "sizeBytes": 108800914,
+          "sha256": "5f8d017f9c6b6319b60ff28b304fe6a20e234feedccd8eaae965509acbde7d67",
           "fileName": "mirrordrive.apk",
-          "createdAt": 1795195279533,
+          "createdAt": 1795412719533,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/mirrordrive/mirrordrive.apk"
         }
       }
