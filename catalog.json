@@ -17,13 +17,13 @@
         "android": {
           "appId": "langkeeper",
           "platform": "android",
-          "version": "1.6.0",
-          "build": 18,
-          "notes": "Google Sign-In integration and Google Cloud (Google Drive AppData) location backup/restore using central GCP project pnsjy-apps-core",
-          "sizeBytes": 56869918,
-          "sha256": "c12ae79a1b25aa528ff1c6995bc7ea3a49a8fe646908725be841d7838d4b4644",
+          "version": "1.6.1",
+          "build": 19,
+          "notes": "Dedicated native 1-tap Google Sign-In and Google Cloud (Google Drive AppData) location backup using central GCP project pnsjy-apps-core",
+          "sizeBytes": 56394230,
+          "sha256": "4c16679d36a0b765971c1e4541c10a0653e84893fb62cf282ca62ba2fc994c81",
           "fileName": "langkeeper.apk",
-          "createdAt": 1795495406450,
+          "createdAt": 1795524886000,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/langkeeper/langkeeper.apk"
         }
       }
