@@ -17,13 +17,13 @@
         "android": {
           "appId": "langkeeper",
           "platform": "android",
-          "version": "1.6.1",
-          "build": 19,
-          "notes": "Dedicated native 1-tap Google Sign-In and Google Cloud (Google Drive AppData) location backup using central GCP project pnsjy-apps-core",
-          "sizeBytes": 56394230,
-          "sha256": "4c16679d36a0b765971c1e4541c10a0653e84893fb62cf282ca62ba2fc994c81",
+          "version": "1.6.2",
+          "build": 20,
+          "notes": "Google Play Services auth recovery and native Google Drive AppData permission consent flow",
+          "sizeBytes": 56492530,
+          "sha256": "954e1d31f4873c5e4d03c8c2fad5314dbf4690bb094544fe581466431225b72d",
           "fileName": "langkeeper.apk",
-          "createdAt": 1795524886000,
+          "createdAt": 1795527180000,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/langkeeper/langkeeper.apk"
         }
       }
@@ -230,14 +230,14 @@
         "android": {
           "appId": "trackall",
           "platform": "android",
-          "version": "1.4.14",
-          "build": 31,
-          "notes": "Migrate Google Sign-In and Google Drive AppData sync to fleet central GCP project pnsjy-apps-core",
-          "sizeBytes": 59138968,
-          "sha256": "e691260a0b742855347cc3fe6644439e087a915f2dc584ca0fa63e2a67860e84",
-          "fileName": "TrackAll-v1.4.14.apk",
-          "createdAt": 1795495406450,
-          "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/trackall/TrackAll-v1.4.14.apk"
+          "version": "1.4.15",
+          "build": 32,
+          "notes": "Google Play Services auth recovery and native Google Drive AppData permission consent flow",
+          "sizeBytes": 59204508,
+          "sha256": "795f646e24c89fc275fcbbcbcf3f3b548a4f0902300a9262c644e25f137e0a44",
+          "fileName": "TrackAll-v1.4.15.apk",
+          "createdAt": 1795527180000,
+          "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/trackall/TrackAll-v1.4.15.apk"
         }
       }
     },
