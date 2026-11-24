@@ -17,13 +17,13 @@
         "android": {
           "appId": "langkeeper",
           "platform": "android",
-          "version": "1.5.2",
-          "build": 17,
-          "notes": "Migrate to server-free fleet control and dedicated GCP project",
-          "sizeBytes": 56448680,
-          "sha256": "1599e5c8066a7b4f64542240ff883a9263dc85dcaca53efc38d5529cd0ef2782",
-          "fileName": "langkeeper-publish.apk",
-          "createdAt": 1793517511402,
+          "version": "1.6.0",
+          "build": 18,
+          "notes": "Google Sign-In integration and Google Cloud (Google Drive AppData) location backup/restore using central GCP project pnsjy-apps-core",
+          "sizeBytes": 56869918,
+          "sha256": "c12ae79a1b25aa528ff1c6995bc7ea3a49a8fe646908725be841d7838d4b4644",
+          "fileName": "langkeeper.apk",
+          "createdAt": 1795495406450,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/langkeeper/langkeeper.apk"
         }
       }
@@ -169,13 +169,13 @@
         "android": {
           "appId": "store",
           "platform": "android",
-          "version": "2.4.6",
-          "build": 81,
-          "notes": "Synchronize all fleet adaptive app icons with cache-busting and complete 9-app catalog registration.",
+          "version": "2.4.7",
+          "build": 82,
+          "notes": "Migrate Google Sign-In to fleet central GCP project pnsjy-apps-core",
           "sizeBytes": 62755730,
-          "sha256": "5de2891aea7e0cfbb52df1d667e650de9ac8c69be785c61b20b9c36af3cdb24f",
-          "fileName": "pnsjy-store-publish.apk",
-          "createdAt": 1795011600000,
+          "sha256": "4c8fffcb022eefc8605ecd729de5ea67aa34d0d667e70c4288a1ea87a7aecb52",
+          "fileName": "pnsjy-store.apk",
+          "createdAt": 1795495406450,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/store/pnsjy-store.apk"
         }
       }
@@ -230,14 +230,14 @@
         "android": {
           "appId": "trackall",
           "platform": "android",
-          "version": "1.4.13",
-          "build": 30,
-          "notes": "Fix product detail loading, model serialization mismatch between camelCase server responses and SQLite, and Amazon scraper User-Agent.",
-          "sizeBytes": 58630780,
-          "sha256": "76ca21c022819f55314b2fe6c8b6184c2db62fee1b4cc4b1f1d097056ccadc30",
-          "fileName": "TrackAll-v1.4.13.apk",
-          "createdAt": 1795083160000,
-          "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/trackall/TrackAll-v1.4.13.apk"
+          "version": "1.4.14",
+          "build": 31,
+          "notes": "Migrate Google Sign-In and Google Drive AppData sync to fleet central GCP project pnsjy-apps-core",
+          "sizeBytes": 59138968,
+          "sha256": "e691260a0b742855347cc3fe6644439e087a915f2dc584ca0fa63e2a67860e84",
+          "fileName": "TrackAll-v1.4.14.apk",
+          "createdAt": 1795495406450,
+          "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/trackall/TrackAll-v1.4.14.apk"
         }
       }
     },
