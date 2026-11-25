@@ -44,7 +44,11 @@
 
   function pickRelease(platforms) {
     if (!platforms || typeof platforms !== "object") return null;
-    return mapRelease(platforms.android, "android") || mapRelease(platforms["android-mobile"], "android-mobile");
+    return (
+      mapRelease(platforms.android, "android") ||
+      mapRelease(platforms["android-mobile"], "android-mobile") ||
+      mapRelease(platforms.web, "web")
+    );
   }
 
   function otherPlatforms(platforms) {

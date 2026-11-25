@@ -7,10 +7,15 @@
     const rel = app.release;
     const ribbon = app.beta ? h("span", { class: "beta-ribbon", text: "BETA" }) : null;
     const isStore = app.id === "store";
+    const isCardVault = app.id === "cardvault";
     const accountChip = h("div", { class: "badge-row" }, [
       h("span", {
         class: "chip-static plain",
-        text: isStore ? "Fleet Installer" : "Requires Google sign-in",
+        text: isStore
+          ? "Fleet Installer"
+          : isCardVault
+          ? "Restricted to jitujangid204@gmail.com"
+          : "Requires Google sign-in",
       }),
     ]);
     const card = h("a", {
@@ -26,9 +31,18 @@
           class: "pill-download",
           text: isStore
             ? (rel ? `Download Store · v${rel.version}` : "Store APK")
+            : isCardVault
+            ? (rel ? `v${rel.version} · Web PWA` : "Web PWA")
             : (rel ? `v${rel.version} · PNSJY Store` : "In PNSJY Store"),
         }),
-        h("span", { class: "meta", text: isStore ? "Installer · Android" : `${app.category} · Store only` }),
+        h("span", {
+          class: "meta",
+          text: isStore
+            ? "Installer · Android"
+            : isCardVault
+            ? "Finance · Zero-Trust Enclave"
+            : `${app.category} · Store only`,
+        }),
       ]),
       accountChip,
     ]);

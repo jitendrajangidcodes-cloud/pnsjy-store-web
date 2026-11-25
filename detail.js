@@ -23,6 +23,21 @@
         shaLine(rel),
       ]);
     }
+    if (app.id === "cardvault") {
+      return h("div", { class: "download-area" }, [
+        h("a", {
+          class: "download-btn",
+          href: "https://cardvault.pnsjy.in/",
+          target: "_blank",
+          rel: "noopener noreferrer",
+          text: "Launch CardVault PWA →",
+        }),
+        h("span", {
+          class: "store-gate-note",
+          text: "Zero-Trust Financial Enclave · Install PWA directly on Desktop & Mobile",
+        }),
+      ]);
+    }
     return h("div", { class: "download-area store-only-area" }, [
       h("a", {
         class: "download-btn btn-store-gate",
@@ -39,13 +54,14 @@
   function head(app) {
     const rel = app.release;
     const isStore = app.id === "store";
+    const isCardVault = app.id === "cardvault";
     const title = h("h1", { text: app.name }, app.beta ? [document.createTextNode(" "), h("span", { class: "beta-badge", text: "BETA" })] : []);
     const chips = [
       rel ? chip(`v${Catalog.formatVersion(rel)}`, true) : chip("unreleased", false),
       isStore && rel ? chip(Catalog.formatSize(rel.sizeBytes)) : null,
-      chip("Android"),
+      chip(isCardVault ? "Web / PWA" : "Android"),
       chip(app.category),
-      chip(isStore ? "Fleet Installer" : "Requires Google sign-in", false),
+      chip(isStore ? "Fleet Installer" : isCardVault ? "Restricted: jitujangid204@gmail.com" : "Requires Google sign-in", false),
       ...app.otherPlatforms.map((p) => chip(`${p} build`)),
     ];
     return h("section", { class: "detail-head" }, [
@@ -100,6 +116,17 @@
           step(1, "Download Store APK", ["Tap ", " above"]),
           step(2, "allow unknown sources", ["Allow ", " if prompted by Android"]),
           step(3, "Sign In & Request Access", ["Open PNSJY Store and ", " with your Google account"]),
+        ]),
+      ]);
+    }
+
+    if (app.id === "cardvault") {
+      return h("div", { class: "install-card" }, [
+        h("h2", { text: "Install CardVault PWA in 3 steps" }),
+        h("div", { class: "install-steps" }, [
+          step(1, "Open CardVault", ["Click ", " Launch CardVault PWA above"]),
+          step(2, "Sign In with Google", ["Authenticate with ", " jitujangid204@gmail.com"]),
+          step(3, "Tap Install App", ["Click ", " Install App in the header or browser menu"]),
         ]),
       ]);
     }
