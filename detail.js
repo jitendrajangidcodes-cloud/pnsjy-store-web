@@ -30,7 +30,7 @@
           href: "https://cardvault.pnsjy.in/",
           target: "_blank",
           rel: "noopener noreferrer",
-          text: "Launch CardVault PWA →",
+          text: "Launch Card Utilization →",
         }),
         h("span", {
           class: "store-gate-note",
@@ -122,9 +122,9 @@
 
     if (app.id === "cardvault") {
       return h("div", { class: "install-card" }, [
-        h("h2", { text: "Install CardVault PWA in 3 steps" }),
+        h("h2", { text: "Install Card Utilization PWA in 3 steps" }),
         h("div", { class: "install-steps" }, [
-          step(1, "Open CardVault", ["Click ", " Launch CardVault PWA above"]),
+          step(1, "Open Card Utilization", ["Click ", " Launch Card Utilization above"]),
           step(2, "Sign In with Google", ["Authenticate with ", " jitujangid204@gmail.com"]),
           step(3, "Tap Install App", ["Click ", " Install App in the header or browser menu"]),
         ]),
