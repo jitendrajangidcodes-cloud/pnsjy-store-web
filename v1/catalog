@@ -17,13 +17,13 @@
         "android": {
           "appId": "langkeeper",
           "platform": "android",
-          "version": "1.6.2",
-          "build": 20,
-          "notes": "Google Play Services auth recovery and native Google Drive AppData permission consent flow",
-          "sizeBytes": 56492530,
-          "sha256": "954e1d31f4873c5e4d03c8c2fad5314dbf4690bb094544fe581466431225b72d",
+          "version": "1.7.0",
+          "build": 21,
+          "notes": "Offline device-to-device QR data transfer between phones without cloud or account requirement",
+          "sizeBytes": 72754040,
+          "sha256": "3a52cec716acfa18c447d422e96b1d1cc01fabff4a63f51e346ff40d9edafd69",
           "fileName": "langkeeper.apk",
-          "createdAt": 1795527180000,
+          "createdAt": 1795597375000,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/langkeeper/langkeeper.apk"
         }
       }
