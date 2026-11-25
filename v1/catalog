@@ -17,13 +17,13 @@
         "android": {
           "appId": "langkeeper",
           "platform": "android",
-          "version": "1.7.1",
-          "build": 22,
-          "notes": "Camera permission prompt & scanner error handling",
-          "sizeBytes": 72787508,
-          "sha256": "e4b2aba7f71e093ebe1ebb6da27793e5932952d57ce669fcaa65c0fb5d84b057",
+          "version": "1.7.2",
+          "build": 23,
+          "notes": "Fix ML Kit camera scanner in release builds",
+          "sizeBytes": 73636662,
+          "sha256": "79d067e5cdbbab4e92aca58bbd06ef2118c83b3bf12dfe091d74858797de5481",
           "fileName": "langkeeper.apk",
-          "createdAt": 1795601608000,
+          "createdAt": 1795603271000,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/langkeeper/langkeeper.apk"
         }
       }
