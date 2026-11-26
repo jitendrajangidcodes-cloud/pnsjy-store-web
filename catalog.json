@@ -153,39 +153,6 @@
       }
     },
     {
-      "appId": "taashclub",
-      "name": "Taash Club",
-      "icon": "/assets/icons/taashclub.png?v=4fd2bd52",
-      "tagline": "Classic Indian card games -- Teen Do Paanch (3-2-5), Kali Begum and Gochi, solo or multiplayer.",
-      "category": "Games",
-      "color": "#0d5c3a",
-      "beta": false,
-      "requiresAccount": false,
-      "packageId": "com.pnsjy.taash_club",
-      "about": "Taash Club brings classic Indian trick-taking card games to mobile: Teen Do Paanch (3-2-5 with trump bidding), Kali Begum (Hearts) and Gochi (4-player bidding). Play solo against offline bots, pass-and-play on one phone, or create private tables with friends using 6-character room codes, with optional table voice chat.",
-      "requirements": "Android 8.0 (Oreo) or newer. Distributed outside the Play Store -- Android will ask permission to install from this source the first time.",
-      "screenshots": [
-        "/v1/apps/taashclub/screenshots/1",
-        "/v1/apps/taashclub/screenshots/2",
-        "/v1/apps/taashclub/screenshots/3",
-        "/v1/apps/taashclub/screenshots/4"
-      ],
-      "platforms": {
-        "android": {
-          "appId": "taashclub",
-          "platform": "android",
-          "version": "1.27.2",
-          "build": 66,
-          "notes": "Migrate to server-free fleet control and dedicated GCP project",
-          "sizeBytes": 95525184,
-          "sha256": "a7d7cfbe50a5e8d109e106054c0c730ce0764669e402ccf69b69c988329340e3",
-          "fileName": "taashclub-publish.apk",
-          "createdAt": 1793517755136,
-          "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/taashclub/TaashClub.apk"
-        }
-      }
-    },
-    {
       "appId": "twinclean",
       "name": "TwinClean",
       "icon": "/assets/icons/twinclean.png?v=c43ec3df",
