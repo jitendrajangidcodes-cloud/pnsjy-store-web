@@ -3,7 +3,7 @@
     {
       "appId": "mirrordrive",
       "name": "MirrorDrive",
-      "icon": "/assets/icons/mirrordrive.png?v=2",
+      "icon": "/assets/icons/mirrordrive.png?v=8e98724b",
       "tagline": "Two-way folder sync between your phone and Google Drive, on your schedule.",
       "category": "Utilities",
       "color": "#5fe06a",
@@ -31,7 +31,7 @@
     {
       "appId": "moviebrowser",
       "name": "Movie Browser",
-      "icon": "/assets/icons/moviebrowser.png?v=2",
+      "icon": "/assets/icons/moviebrowser.png?v=a436b2b5",
       "tagline": "Movies and TV shows for Android and Android TV",
       "category": "Entertainment",
       "color": "#b71c1c",
@@ -95,7 +95,7 @@
     {
       "appId": "reminder",
       "name": "Reminder",
-      "icon": "/assets/icons/reminder.png?v=2",
+      "icon": "/assets/icons/reminder.png?v=daf33f38",
       "tagline": "Fires exact-time alarms that ring and vibrate even from a locked screen.",
       "category": "Productivity",
       "color": "#4f46e5",
@@ -127,7 +127,7 @@
     {
       "appId": "store",
       "name": "PNSJY Store",
-      "icon": "/assets/icons/store.png?v=2",
+      "icon": "/assets/icons/store.png?v=e509254a",
       "tagline": "The PNSJY app store: install and update every PNSJY app.",
       "category": "Utilities",
       "color": "#0d5c3a",
@@ -141,13 +141,13 @@
         "android": {
           "appId": "store",
           "platform": "android",
-          "version": "2.4.7",
-          "build": 82,
-          "notes": "Migrate Google Sign-In to fleet central GCP project pnsjy-apps-core",
-          "sizeBytes": 62755730,
-          "sha256": "4c8fffcb022eefc8605ecd729de5ea67aa34d0d667e70c4288a1ea87a7aecb52",
+          "version": "2.4.8",
+          "build": 83,
+          "notes": "Add Share PNSJY Store option (native share sheet + copy link) and fix stale icon flash on load",
+          "sizeBytes": 62709029,
+          "sha256": "090f11d6ffc9d32aa050cf14b0573d68d49fdfcaa06d21f8b105cde2755187dc",
           "fileName": "pnsjy-store.apk",
-          "createdAt": 1795495406450,
+          "createdAt": 1795686422196,
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/store/pnsjy-store.apk"
         }
       }
@@ -155,7 +155,7 @@
     {
       "appId": "taashclub",
       "name": "Taash Club",
-      "icon": "/assets/icons/taashclub.png?v=2",
+      "icon": "/assets/icons/taashclub.png?v=4fd2bd52",
       "tagline": "Classic Indian card games -- Teen Do Paanch (3-2-5), Kali Begum and Gochi, solo or multiplayer.",
       "category": "Games",
       "color": "#0d5c3a",
@@ -188,7 +188,7 @@
     {
       "appId": "trackall",
       "name": "TrackAll",
-      "icon": "/assets/icons/trackall.png?v=2",
+      "icon": "/assets/icons/trackall.png?v=637acb29",
       "tagline": "Track prices on Amazon, Flipkart, and Myntra with automated alerts.",
       "category": "Shopping",
       "color": "#047857",
@@ -216,7 +216,7 @@
     {
       "appId": "twinclean",
       "name": "TwinClean",
-      "icon": "/assets/icons/twinclean.png?v=2",
+      "icon": "/assets/icons/twinclean.png?v=c43ec3df",
       "tagline": "Finds exact duplicate files and lets you clean them safely.",
       "category": "Utilities",
       "color": "#ffc400",
@@ -244,7 +244,7 @@
     {
       "appId": "wallpaper",
       "name": "Wallpapers",
-      "icon": "/assets/icons/wallpaper.png?v=2",
+      "icon": "/assets/icons/wallpaper.png?v=714ceede",
       "tagline": "Curated 4K, AMOLED, anime, nature and photography wallpapers.",
       "category": "Personalization",
       "color": "#8b5cf6",
@@ -272,7 +272,7 @@
     {
       "appId": "cardvault",
       "name": "Card Utilization",
-      "icon": "/assets/icons/cardvault.png",
+      "icon": "/assets/icons/cardvault.png?v=df246fa1",
       "tagline": "Private credit card statement visualizer, dues tracker & credit utilization enclave.",
       "category": "Finance",
       "color": "#2563eb",

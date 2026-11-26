@@ -2,100 +2,44 @@
 
 ## What this is
 
-The public static website for the PNSJY app catalog (`store.pnsjy.in`, GitHub Pages). It is a
-SITE ONLY: it no longer hosts APKs, a catalog file, or any release data. Everything shown comes
-from the update service `https://updates.pnsjy.in` (repo `pnsjy-updates-private`, contract in its
-`CLIENT.md`). The native PNSJY Store app also reads from that service; users get the Store APK here
-once, then the app updates itself.
+The headless static catalog, icon CDN, and GitHub Releases APK hub for the PNSJY Store ecosystem (`https://store.pnsjy.in`, GitHub Pages).
 
-## Tech Stack
-
-- Vanilla HTML/CSS/JS, no framework, no build step.
-- `catalog.js` is a pure, DOM-free module (browser global `Catalog` + `module.exports`), covered by
-  `node:test` in `test/`. Run: `node --test test/catalog.test.js`.
-- PWA: `manifest.json` + `sw.js` (network passthrough, installability only).
-- Hosting: GitHub Pages (`CNAME`, `.nojekyll`). Push to `main` deploys.
-- Feedback: external Cloudflare Worker (`pnsjy-store-feedback-worker`), Turnstile + honeypot.
+The public web storefront UI (`app.html`, `home.js`, `detail.js`, `feedback.js`) has been **retired**.
+`index.html` now serves only a minimal, direct **Download PNSJY Store APK** landing page used when users share `https://store.pnsjy.in` from inside the Android Store app.
 
 ## Project Files
 
 | File | Purpose |
 |------|---------|
-| `index.html`, `app.html` | Catalog page and per-app page. Each carries the CSP meta tag. |
-| `catalog.js` | Pure mapping/validation of `GET /v1/catalog`, URL building, formatting, filters. |
-| `script.js` | Shared UI: DOM helper `h()`, catalog fetch (12s timeout), icon/tiles, theme, PWA prompt. |
-| `home.js`, `detail.js` | Page logic for index and app pages. Server strings go in via `textContent` only. |
-| `theme-init.js` | Sets the theme before paint (external file because the CSP forbids inline script). |
-| `feedback.js` | Feedback modal to the Worker. Static template only. |
-| `style.css` | Styling + design tokens in `:root` (mirrored by the Flutter store app). |
-| `test/catalog.test.js` | Unit tests for `catalog.js`. |
-| `assets/brand`, `assets/icons/icon-*.png`, `apple-touch-icon.png` | Brand mark + PWA icons. Per-app icons and screenshots now come from the service; the old per-app files under `assets/icons/` and `assets/screenshots/` are unused leftovers. |
-
-## Data contract used
-
-`GET https://updates.pnsjy.in/v1/catalog` (anonymous = public apps only). Per app: `appId`, `name`,
-`icon` (service path or null), `platforms{android:{version,build,notes,sizeBytes,sha256,...}}` plus
-the metadata fields `tagline, category, color, beta, requiresAccount, packageId, about,
-requirements, screenshots[]`. Every metadata field is optional; missing ones are skipped in the UI.
-Download button: `https://updates.pnsjy.in/v1/apps/<id>/download?platform=android`. The Store app
-is the catalog entry with `appId = store`.
+| `catalog.json` & `v1/catalog` | Identical JSON catalog consumed by the native PNSJY Store Android app (`https://store.pnsjy.in/v1/catalog` and `/catalog.json`). |
+| `assets/icons/<appId>.png` | Static app icons served over HTTPS with content-hash cache busting (`?v=<sha8>`). |
+| `scripts/sync-icons.mjs` | Computes 8-char SHA-256 hashes for all icons, updates `catalog.json` and `v1/catalog`, and mirrors icons into `../pnsjy-store-app-private/assets/icons/`. |
+| `index.html`, `store-download.js`, `style.css` | Minimal direct Store APK download page for shared links (`https://store.pnsjy.in`). |
+| `privacy/` | Privacy policy pages linked from the Store app. |
+| `CNAME`, `.nojekyll` | GitHub Pages custom domain config (`store.pnsjy.in`). |
 
 ## Architecture - Critical Rules
 
-- Never render a server string with `innerHTML`; use `textContent` / `h()`. URLs from the server
-  must pass `Catalog.serviceUrl` (service-only), colors and hashes are regex-validated.
-- CSP allows only self, `updates.pnsjy.in`, the feedback Worker, Turnstile and Google Fonts. Any new
-  external host needs a CSP edit in BOTH HTML files.
-- No inline scripts or event handlers; no calls to api.github.com or GitHub Releases.
-- Never show or hint at admin-only or code-gated apps: the site only uses the anonymous catalog.
-- Public repo: zero credentials. Turnstile site key and Worker URL are public by design.
-- Design tokens live once in `style.css` `:root`.
+- **Icon cache busting (Hard Invariant)**: Whenever any app's icon changes, run:
+  `node scripts/sync-icons.mjs --app <appId> --from <path-to-png>`
+  (or `node scripts/sync-icons.mjs` after overwriting `assets/icons/<appId>.png`).
+  This updates `?v=<sha8>` in both `catalog.json` and `v1/catalog` and mirrors the PNG into `pnsjy-store-app-private/assets/icons/`.
+- **Headless hub**: No public app catalog UI, no `updates.pnsjy.in` dependency, no inline scripts/styles.
+- **Public repo**: Zero credentials or secrets.
 
 ## Features
 
-Authoritative registry. Add an entry BEFORE building. Never remove entries — mark final status.
-Status: `BUILT-AWAITING-VERIFY` / `VERIFIED` / `PENDING USER DECISION` / `NOT BUILDING`.
-Migrated from the former `features.md` + `progress.txt`; historical per-phase build notes live in
-git history.
-
-### F1 - App catalog from the update service
-Site lists every public app from `GET /v1/catalog`, per-app pages, offline/error state with retry.
-*Status: BUILT-AWAITING-VERIFY (needs the service CORS change deployed for a real browser check)*
-
-### F2 - Live version / size / sha256 / notes per app
-Taken from the catalog `platforms.android` release; no GitHub calls.
-*Status: BUILT-AWAITING-VERIFY*
-
-### F3 - Light/dark theme, glass + glow design
+### F1 - Headless Store Catalog & Icon Hub
+Serves `catalog.json`, `v1/catalog`, and content-hashed `assets/icons/*.png?v=<sha8>` over GitHub Pages (`store.pnsjy.in`), with APK binaries hosted on GitHub Releases tags.
 *Status: VERIFIED*
 
-### F4 - PWA install support
+### F2 - Minimal Shareable Store APK Download Page
+`index.html` + `store-download.js` reads only the `store` entry from `/catalog.json` and renders a 1-tap Store APK download card for recipients of shared links (`https://store.pnsjy.in`).
 *Status: BUILT-AWAITING-VERIFY*
 
-### F5 - BETA badge and Beta filter
-Driven by the catalog `beta` flag.
-*Status: BUILT-AWAITING-VERIFY*
+### F3 - Automated Icon Sync & Content-Hash Cache Busting
+`scripts/sync-icons.mjs` stamps `?v=<sha8>` onto every icon URL in `catalog.json` and `v1/catalog` and mirrors icons to `pnsjy-store-app-private`.
+*Status: VERIFIED*
 
-### F6 - Single-repo GitHub hub (APKs in Releases, apps.json, releases.json, sync workflow)
-*Status: RETIRED - replaced by updates.pnsjy.in; files deleted from the tree. Old GitHub releases and tags are left in place, untouched.*
-
-### F7 - Direct-to-hub publishing pattern
-*Status: RETIRED - apps publish to the update service.*
-
-### F8 - Direct in-site feedback to auto-filed GitHub issue
-Modal posts to the Cloudflare Worker; falls back to a prefilled issue link.
-*Status: BUILT-AWAITING-VERIFY*
-
-### F9 - Download logging via Apps Script + info gate
-*Status: RETIRED - the gate and Apps Script logger were removed (incompatible with the strict CSP; downloads are now direct links).*
-
-### F10 - Get the PNSJY Store app CTA
-Primary download button on the home page, from the `store` catalog entry, with sha256.
-*Status: BUILT-AWAITING-VERIFY*
-
-### F11 - Star ratings
-*Status: NOT BUILDING - needs a database; deferred by decision.*
-
-### F12 - Strict security posture
-CSP meta tag, textContent-only rendering, no inline handlers, rel=noopener on external links.
-*Status: BUILT-AWAITING-VERIFY*
+### F4 - Public Web Storefront Catalog UI
+*Status: RETIRED - replaced by native PNSJY Store Android app + shareable direct APK download link.*

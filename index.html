@@ -3,152 +3,36 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://challenges.cloudflare.com; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://updates.pnsjy.in; connect-src 'self' https://updates.pnsjy.in https://fleet.pnsjy.in https://app-store-feedback.jitendrajangid-codes.workers.dev; frame-src https://challenges.cloudflare.com; object-src 'none'; base-uri 'self'; form-action 'self'">
-<title>PNSJY — apps by Jitendra</title>
-<meta name="description" content="Apps built by Jitendra, ready to install. Reminder and more, added here only when explicitly listed.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<title>PNSJY Store — Download Android App</title>
+<meta name="description" content="Download the PNSJY Store Android app to install and update PNSJY apps.">
 <link rel="icon" type="image/png" href="assets/brand/pnsjy-mark.png">
-<link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
 <meta name="theme-color" content="#0a0e1a">
-<script src="theme-init.js"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Baloo+2:wght@700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=5">
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
+<link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
+<main class="page">
+  <section class="card" aria-label="Download PNSJY Store">
+    <img id="store-icon" class="app-icon" src="assets/icons/store.png" alt="PNSJY Store icon" width="84" height="84">
+    <h1>PNSJY Store</h1>
+    <p class="subtitle">Install and automatically update all PNSJY apps on Android.</p>
 
-<div class="glow-bg"><span class="g1"></span><span class="g2"></span><span class="g3"></span></div>
-
-<div class="topbar-wrap">
-  <div class="topbar">
-    <a class="wordmark" href="index.html">
-      <span id="nav-mark"></span>
-      <span class="byline">by Jitendra</span>
+    <a id="download-btn" class="download-btn" href="https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/store/pnsjy-store.apk" download>
+      Download PNSJY Store APK
     </a>
-    <div class="spacer"></div>
-    <div class="topbar-actions">
-      <button class="install-btn" type="button" hidden>Install app</button>
-      <button class="theme-toggle" type="button" aria-label="Toggle color theme">
-        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
-        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z"/></svg>
-      </button>
-    </div>
-  </div>
-</div>
 
-<div class="wrap">
+    <div id="release-meta" class="meta">Loading latest version...</div>
+    <div id="release-sha" class="sha" hidden></div>
 
-  <section class="hero-section">
-    <div class="hero-col">
-      <span class="eyebrow-chip">personal build catalog</span>
-      <div class="hero-buddies" id="hero-logo"></div>
-      <h1>Apps I've built, <span class="grad">ready to install.</span></h1>
-      <p>Explore the full catalog of apps. Download the PNSJY Store app to install and update any app with one tap once your account is approved.</p>
-      <div class="hero-actions">
-        <a href="#get-app" class="btn-primary">Get PNSJY Store</a>
-        <a href="#apps" class="btn-ghost">Browse catalog</a>
-      </div>
-    </div>
-
-    <div class="phone-stage">
-      <div class="phone">
-        <div class="phone-screen">
-          <div class="phone-notch"><span></span></div>
-          <div class="phone-title">
-            <span class="name">Reminder</span>
-            <span class="sub">3 upcoming today</span>
-          </div>
-          <div class="phone-list">
-            <div class="phone-item active">
-              <div class="dot" style="background:#2f7ee3;"></div>
-              <div class="txt"><span class="t">Pay electricity bill</span><span class="s">Today · 6:00 PM</span></div>
-            </div>
-            <div class="phone-item">
-              <div class="dot" style="background:#f0a92c;"></div>
-              <div class="txt"><span class="t">Call supplier</span><span class="s">Today · 8:30 PM</span></div>
-            </div>
-            <div class="phone-item">
-              <div class="dot" style="background:#3fae6a;"></div>
-              <div class="txt"><span class="t">Gym at 7</span><span class="s">Tomorrow · 7:00 AM</span></div>
-            </div>
-          </div>
-          <div class="phone-fab"><span>+</span></div>
-        </div>
-      </div>
-    </div>
+    <ol class="steps">
+      <li>Tap <strong>Download PNSJY Store APK</strong> above.</li>
+      <li>Open the downloaded file and allow <strong>Install unknown apps</strong> if prompted.</li>
+      <li>Sign in with your Google account to browse and install apps.</li>
+    </ol>
   </section>
-
-  <section class="store-cta" id="get-app">
-    <span class="store-cta-glow"></span>
-    <div class="store-cta-main">
-      <div class="store-cta-badge">
-        <img src="assets/brand/pnsjy-mark.png" alt="PNSJY Store logo" width="64" height="64">
-      </div>
-      <div class="store-cta-text">
-        <span class="eyebrow-chip">recommended — start here</span>
-        <h2>Get the <span class="grad">PNSJY Store</span> app</h2>
-        <p>Install it once and every app here is a single tap to install — with automatic update checks, a notification the moment a new version ships, and a store that keeps itself up to date. The best way to use this catalog.</p>
-        <div class="store-cta-chips">
-          <span class="store-feat">One-tap updates</span>
-          <span class="store-feat">Update notifications</span>
-          <span class="store-feat">Self-updating</span>
-        </div>
-      </div>
-    </div>
-    <div class="store-cta-action">
-      <a class="download-btn" id="store-download" aria-disabled="true">Checking latest release...</a>
-      <span class="store-cta-meta" id="store-meta">Android 8+ · direct APK</span>
-    </div>
-  </section>
-
-  <section class="stats-strip">
-    <div class="stat-tile"><span class="big">PNSJY Store</span><span class="small">one-tap installs and updates</span></div>
-    <div class="stat-tile"><span class="big" id="stat-accounts">…</span><span class="small" id="stat-accounts-sub">checking apps…</span></div>
-    <div class="stat-tile"><span class="big">Google Sign-In</span><span class="small">Direct & server-free</span></div>
-  </section>
-
-  <section id="apps">
-    <div class="section-label">
-      <h2>All apps</h2>
-      <span id="app-count"></span>
-    </div>
-    <!--
-      Apps and Games are the top split, the way a store shelf actually divides:
-      "Games" is the one category people arrive already knowing they do or do
-      not want. The finer categories stay on each card and on the app page, so
-      nothing is lost by not making every one of them a tab.
-
-      Pre-release is a filter rather than a category because it cuts across
-      both - it says how finished a thing is, not what kind of thing it is.
-    -->
-    <div class="category-tabs" id="category-tabs">
-      <button class="cat-pill active" data-cat="all">All</button>
-      <button class="cat-pill" data-cat="app">Apps</button>
-      <button class="cat-pill" data-cat="game">Games</button>
-      <button class="cat-pill" data-cat="beta">Beta</button>
-    </div>
-    <div class="app-grid" id="app-grid"></div>
-  </section>
-
-  <section class="about-card feedback-card" id="feedback">
-    <h2>Feedback & ideas</h2>
-    <p>Suggest an app or feature, report a bug, or send a note. It goes straight to the developer — no GitHub account, no tracking.</p>
-    <button class="feedback-open-btn" type="button" data-feedback-open>Send feedback</button>
-  </section>
-
-  <footer class="site-footer" id="install-tip">
-    <span>PNSJY — built and maintained by Jitendra.</span>
-    <span class="mono">updates.pnsjy.in</span>
-  </footer>
-</div>
-
-<script src="catalog.js"></script>
-<script src="script.js?v=9"></script>
-<script src="home.js"></script>
-<script src="feedback.js?v=1"></script>
-<script src="assets/diagnostics-telemetry.js"></script>
-<script>if (window.PnsjyTelemetry) PnsjyTelemetry.init('pnsjy-store');</script>
+  <footer class="footer">PNSJY Store &middot; Direct Android Installer</footer>
+</main>
+<script src="store-download.js" defer></script>
 </body>
 </html>
