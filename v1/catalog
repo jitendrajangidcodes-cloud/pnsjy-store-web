@@ -186,34 +186,6 @@
       }
     },
     {
-      "appId": "trackall",
-      "name": "TrackAll",
-      "icon": "/assets/icons/trackall.png?v=637acb29",
-      "tagline": "Track prices on Amazon, Flipkart, and Myntra with automated alerts.",
-      "category": "Shopping",
-      "color": "#047857",
-      "beta": false,
-      "requiresAccount": false,
-      "packageId": "com.pnsjy.trackall",
-      "about": "TrackAll monitors prices every 5 minutes across major Indian ecommerce platforms and alerts you via PNSJY Store Play Services when target prices or discount thresholds are reached.",
-      "requirements": "Android 7.0 or newer.",
-      "screenshots": [],
-      "platforms": {
-        "android": {
-          "appId": "trackall",
-          "platform": "android",
-          "version": "1.4.15",
-          "build": 32,
-          "notes": "Google Play Services auth recovery and native Google Drive AppData permission consent flow",
-          "sizeBytes": 59204508,
-          "sha256": "795f646e24c89fc275fcbbcbcf3f3b548a4f0902300a9262c644e25f137e0a44",
-          "fileName": "TrackAll-v1.4.15.apk",
-          "createdAt": 1795527180000,
-          "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/trackall/TrackAll-v1.4.15.apk"
-        }
-      }
-    },
-    {
       "appId": "twinclean",
       "name": "TwinClean",
       "icon": "/assets/icons/twinclean.png?v=c43ec3df",
@@ -297,5 +269,6 @@
         }
       }
     }
-  ]
+  ],
+  "generatedAt": 1795691630868
 }
