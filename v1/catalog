@@ -207,34 +207,6 @@
           "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/wallpaper/Wallpaper.apk"
         }
       }
-    },
-    {
-      "appId": "cardvault",
-      "name": "Card Utilization",
-      "icon": "/assets/icons/cardvault.png?v=df246fa1",
-      "tagline": "Private credit card statement visualizer, dues tracker & credit utilization enclave.",
-      "category": "Finance",
-      "color": "#2563eb",
-      "beta": false,
-      "requiresAccount": true,
-      "packageId": "in.pnsjy.cardvault",
-      "about": "Card Utilization is a private, zero-trust financial statement visualizer, dues tracker, and expense analyzer. It securely connects with Gmail to extract encrypted PDF statements, automatically derives unlock passwords in-memory, categorizes transactions, detects amortized EMI and FlexiPay plans, and provides actionable real-time repayment timelines and utilization metrics.",
-      "requirements": "Available as a Web PWA on Desktop and Mobile at https://cardvault.pnsjy.in. Restricted strictly to authorized owner jitujangid204@gmail.com.",
-      "screenshots": [],
-      "platforms": {
-        "web": {
-          "appId": "cardvault",
-          "platform": "web",
-          "version": "2.1.0",
-          "build": 2,
-          "notes": "Card Utilization 2.1 with unified sticky navigation, live credit limit utilization, redesigned charts, and PWA standalone installation.",
-          "sizeBytes": 780000,
-          "sha256": "52c036fcade443375936caf927f198e0b1ebf5d7b66678e78a6b8833940a3a8c",
-          "fileName": "cardvault",
-          "createdAt": 1795557300000,
-          "downloadPath": "https://cardvault.pnsjy.in/"
-        }
-      }
     }
   ],
   "generatedAt": 1795691630868

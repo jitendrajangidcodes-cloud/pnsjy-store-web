@@ -35,3 +35,9 @@ longer apply; nothing here reads GitHub Releases any more.
   2. Stripped the retired public web storefront UI down to a headless hub + minimal Store APK download page reading `/catalog.json`.
   3. Updated `AppIcon` in `pnsjy-store-app-private` to show the colored letter tile while loading instead of flashing a stale bundled asset.
 - **What NOT to Do / Invariant**: Never hardcode `?v=2` or manually edit only one of `catalog.json` / `v1/catalog`. Always run `node scripts/sync-icons.mjs` when updating any icon.
+
+## Web-only / PWA apps must not be listed in the Store catalog (2026-11-26)
+- **Symptom / Trigger**: Card Utilization (`cardvault`), a web-only PWA, appeared in the native PNSJY Store Android app under "More" with no Install/Get button.
+- **Root Cause**: `catalog.json` and `v1/catalog` included `cardvault` with only a `"web"` platform entry, and the native Android Store renders every app in the catalog regardless of whether an Android APK build exists.
+- **Fix / Resolution**: Removed `cardvault` from `catalog.json`, `v1/catalog`, and `assets/icons/cardvault.png` (and removed its `known_apps.dart`, `AndroidManifest.xml`, and icon entries in `pnsjy-store-app-private`).
+- **What NOT to Do / Invariant**: Never add web-only / PWA apps (such as `cardvault`, `taashclub`, `trackall`, `langkeeper`) to `pnsjy-store-web/catalog.json` or `v1/catalog`. Only native installable Android/desktop apps belong in the Store catalog.
