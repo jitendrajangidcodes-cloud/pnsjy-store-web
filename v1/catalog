@@ -1,34 +1,6 @@
 {
   "apps": [
     {
-      "appId": "langkeeper",
-      "name": "LangKeeper",
-      "icon": "/assets/icons/langkeeper.png?v=2",
-      "tagline": "Save, organize, and navigate to your locations with Google Drive cloud backup.",
-      "category": "Utilities",
-      "color": "#1e88e5",
-      "beta": false,
-      "requiresAccount": false,
-      "packageId": "com.pnsjy.langkeeper",
-      "about": "LangKeeper is your personal location manager. Instantly save your current GPS coordinates with reverse-geocoded address details, fine-tune pins on an interactive map, and launch one-tap turn-by-turn navigation in Google Maps. Sign in with your PNSJY account and back up or restore your locations privately in Google Drive AppData.",
-      "requirements": "Android 8.0 (Oreo) or newer. Distributed outside the Play Store -- Android will ask permission to install from this source the first time.",
-      "screenshots": [],
-      "platforms": {
-        "android": {
-          "appId": "langkeeper",
-          "platform": "android",
-          "version": "1.7.2",
-          "build": 23,
-          "notes": "Fix ML Kit camera scanner in release builds",
-          "sizeBytes": 73636662,
-          "sha256": "79d067e5cdbbab4e92aca58bbd06ef2118c83b3bf12dfe091d74858797de5481",
-          "fileName": "langkeeper.apk",
-          "createdAt": 1795603271000,
-          "downloadPath": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/langkeeper/langkeeper.apk"
-        }
-      }
-    },
-    {
       "appId": "mirrordrive",
       "name": "MirrorDrive",
       "icon": "/assets/icons/mirrordrive.png?v=2",
